@@ -193,4 +193,7 @@ h6 {
 }
 
 
-.work-process__img {}
+.work-process__img {
+	width: 9rem;
+	height: 4.5rem;
+}
