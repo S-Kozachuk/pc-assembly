@@ -163,3 +163,20 @@ h6 {
 .our-work__wrap {
 	display: flex;
 }
+
+.our-work__img {
+	width: 52.6rem;
+	height: 49.9rem;
+}
+
+.our-work__header {
+	margin-bottom: 4.5rem;
+	font-size: 4.8rem;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.our-work__descr {
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
