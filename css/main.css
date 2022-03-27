@@ -9,7 +9,7 @@ html, body {
 	с 16px до 10px(62.5%)
 	*/
 	font-size: 62.5%;
-	font-weight: normal;
+	font-weight: 400;
 	color: #fff;
 	background: linear-gradient(to right top, #060606 , #050504, #030303, #020201, #000000);
 }
@@ -84,6 +84,7 @@ h6 {
 
 .header-nav a {
 	font-size: 1.6rem;
+	line-height: 1.5;
 }
 
 .header-nav a:not(:last-child) {
