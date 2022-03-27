@@ -102,6 +102,7 @@ h6 {
 }
 
 .main-display .container {
+	padding-bottom: 22.8rem;
 	position: relative;
 	z-index: 2;
 }
@@ -165,8 +166,14 @@ h6 {
 }
 
 .our-work__img {
+	margin-right: 13.9rem;
 	width: 52.6rem;
 	height: 49.9rem;
+}
+
+.our-work__text {
+	padding-top: 6.9rem;
+	max-width: 63.5rem;
 }
 
 .our-work__header {
