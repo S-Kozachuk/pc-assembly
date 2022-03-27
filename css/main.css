@@ -135,10 +135,13 @@ h6 {
 
 .timer__digit {
 	font-size: 3.6rem;
+	font-weight: 700;
+	line-height: 1.4;
 }
 
 .timer__text {
 	font-size: 1.6rem;
+	line-height: 1.4;
 	opacity: 0.4;
 }
 
