@@ -215,3 +215,10 @@ h6 {
 	line-height: 1.6;
 	opacity: .5;
 }
+
+.work-process_part-header {
+	margin-bottom: 6.5rem;
+	font-size: 3.6rem;
+	font-weight: 700;
+	line-height: 1.4;
+}
