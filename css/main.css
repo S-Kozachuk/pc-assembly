@@ -203,3 +203,9 @@ h6 {
 	font-weight: 700;
 	line-height: 1.4;
 }
+
+.work-process__descr {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	opacity: .5;
+}
