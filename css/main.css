@@ -216,6 +216,14 @@ h6 {
 	opacity: .5;
 }
 
+.work-process__stages {
+	display: flex;
+}
+
+.work-process__part {
+	max-width: 30.6rem;
+}
+
 .work-process_part-header {
 	margin-bottom: 6.5rem;
 	font-size: 3.6rem;
