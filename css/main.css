@@ -218,7 +218,20 @@ h6 {
 
 .work-process__stages {
 	display: flex;
+	position: relative;
 }
+
+.work-process__stages:after {
+	position: absolute;
+	top: 7rem;
+	left: 50%;
+	transform: translate(-50%, 0);
+	content: "";
+	width: 130rem;
+	height: .2rem;
+	background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);;
+}
+
 
 .work-process__part {
 	max-width: 30.6rem;
