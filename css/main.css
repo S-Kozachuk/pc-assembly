@@ -209,6 +209,8 @@ h6 {
 }
 
 .work-process__descr {
+	margin-bottom: 8rem;
+	max-width: 41.1rem;
 	font-size: 1.6rem;
 	line-height: 1.6;
 	opacity: .5;
