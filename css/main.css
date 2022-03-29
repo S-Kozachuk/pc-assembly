@@ -269,4 +269,6 @@ h6 {
 	opacity: .5;
 }
 
-
+.our-team__img {
+	transform: rotate(315deg);
+}
