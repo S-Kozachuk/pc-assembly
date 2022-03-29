@@ -279,10 +279,16 @@ h6 {
 	width: 19rem;
 	height: 19rem;
 }
+
 .our-team__name {
-	
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 1.4;
+	text-align: center;
 }
+
 .our-team__role {
 }
+
 .our-team__button {
 }
