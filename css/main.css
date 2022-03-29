@@ -223,6 +223,8 @@ h6 {
 }
 
 .work-process__header {
+	padding-top: 1rem;
+	padding-left: 1rem;
 	font-size: 4.8rem;
 	font-weight: 700;
 	line-height: 1.4;
@@ -269,6 +271,6 @@ h6 {
 	opacity: .5;
 }
 
-.our-team__img {
+.our-team .work-process__img {
 	transform: rotate(315deg);
 }
