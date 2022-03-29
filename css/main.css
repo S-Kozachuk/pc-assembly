@@ -274,3 +274,15 @@ h6 {
 .our-team .work-process__img {
 	transform: rotate(315deg);
 }
+
+.our-team__foto {
+	width: 19rem;
+	height: 19rem;
+}
+.our-team__name {
+	
+}
+.our-team__role {
+}
+.our-team__button {
+}
