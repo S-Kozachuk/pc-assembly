@@ -329,6 +329,7 @@ h6 {
 
 .cta__wrapp {
 	display: grid;
+	justify-items: center;
 }
 
 .cta__title {
