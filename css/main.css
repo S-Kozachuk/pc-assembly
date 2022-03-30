@@ -356,8 +356,10 @@ h6 {
 }
 
 .cta-social {
+	margin: 0 auto;
 	display: grid;
 	grid: 1fr/repeat(4,1fr);
+    max-width: 290px;
 }
 
 .cta-social__item {
@@ -378,4 +380,8 @@ h6 {
 .cta-social__item img {
 	width: 2rem;
 	height: 2rem;
+}
+
+.cta-social__item:not(:last-child) {
+	margin-right: 3rem;
 }
