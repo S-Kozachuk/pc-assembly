@@ -343,14 +343,15 @@ h6 {
 	opacity: .5;
 }
 
-.cta {
+.cta__button {
+	background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
 }
 
-.button {
-}
 .cta-social {
 	display: grid;
 	grid: 1fr/repeat(4,1fr);
 	max-width: 300px;
 	max-width: 300px;
 }
+
+.cta-social__item
