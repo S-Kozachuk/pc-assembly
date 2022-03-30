@@ -351,11 +351,12 @@ h6 {
 .cta-social {
 	display: grid;
 	grid: 1fr/repeat(4,1fr);
-	max-width: 300px;
-	max-width: 300px;
 }
 
 .cta-social__item {
+	display: grid;
+	justify-content: center;
+	align-content: center;
 	width: 5rem;
 	height: 5rem;
 	background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);
