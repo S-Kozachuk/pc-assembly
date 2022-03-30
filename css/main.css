@@ -327,6 +327,10 @@ h6 {
 	cursor: pointer;
 }
 
+.cta {
+	padding-bottom: 15rem;
+}
+
 .cta__wrapp {
 	display: grid;
 	justify-items: center;
