@@ -330,16 +330,24 @@ h6 {
 .cta__wrapp {
 	display: grid;
 }
+
 .cta__title {
+	font-size: 4.8rem;
+	font-weight: 700;
+	line-height: 1.4;
 }
+
 .cta_descr {
 }
+
 .cta {
 }
+
 .button {
 }
 .cta-social {
 	display: grid;
 	grid: 1fr/repeat(4,1fr);
+	max-width: 300px;
 	max-width: 300px;
 }
