@@ -326,3 +326,20 @@ h6 {
 	border: .1rem solid #fff;
 	cursor: pointer;
 }
+
+.cta__wrapp {
+	display: grid;
+}
+.cta__title {
+}
+.cta_descr {
+}
+.cta {
+}
+.button {
+}
+.cta-social {
+	display: grid;
+	grid: 1fr/repeat(4,1fr);
+	max-width: 300px;
+}
