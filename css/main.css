@@ -360,3 +360,8 @@ h6 {
 	background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);
 	border-radius: 50%;
 }
+
+.cta-social__item img {
+	width: 2rem;
+	height: 2rem;
+}
