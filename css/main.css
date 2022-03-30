@@ -42,6 +42,8 @@ html, body {
 	font-weight: 400;
 	color: #fff;
 	background: linear-gradient(to right top, #060606 , #050504, #030303, #020201, #000000);
+	background-image: url(../img/bg_m.jpg);
+	background-repeat: repeat;
 }
 
 img {
@@ -302,8 +304,6 @@ h6 {
 
 .our-team__foto {
 	margin-bottom: 4rem;
-	width: 19rem;
-	height: 19rem;
 }
 
 .our-team__name {
@@ -324,4 +324,5 @@ h6 {
 .our-team__button {
 	display: inline-block;
 	border: .1rem solid #fff;
+	cursor: pointer;
 }
