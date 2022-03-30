@@ -281,6 +281,10 @@ h6 {
 	opacity: .5;
 }
 
+.our-team {
+	padding-bottom: 20rem;
+}
+
 .our-team .work-process__img {
 	transform: rotate(315deg);
 }
