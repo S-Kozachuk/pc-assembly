@@ -291,6 +291,11 @@ h6 {
 	justify-items: center;
 }
 
+.our-team_person {
+	display: grid;
+	justify-items: center;
+}
+
 .our-team__foto {
 	width: 19rem;
 	height: 19rem;
