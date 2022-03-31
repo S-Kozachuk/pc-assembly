@@ -28,6 +28,11 @@
 	font-display: swap;
 }
 
+:root {
+	--main-text: 1.6rem;
+}
+
+
 *, *::after, *::before {
 	box-sizing: border-box;
 }
@@ -88,7 +93,8 @@ h6 {
 .button {
 	padding: 1rem 3rem;
 	border-radius: 5rem;
-	font-size: 1.6rem;
+	font-size: var(--main-text);
+	font-weight: 700;
 	line-height: 1.5;
 	color: #fff;
 }
