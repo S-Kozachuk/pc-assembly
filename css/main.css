@@ -65,6 +65,11 @@ button, input {
 	cursor: pointer;
 }
 
+.button:hover {
+	opacity: .85;
+	transition: .8;
+}
+
 h1,
 h2,
 h3,
