@@ -237,7 +237,7 @@ h6 {
 }
 
 .work-process__title {
-	margin-bottom: 10rem;
+	margin-bottom: 4.9rem;
 	display: flex;
 }
 
@@ -297,6 +297,11 @@ h6 {
 
 .our-team {
 	padding-bottom: 20rem;
+}
+
+.our-team__title {
+	margin-bottom: 10rem;
+	display: flex;
 }
 
 .our-team .work-process__img {
