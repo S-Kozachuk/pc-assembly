@@ -377,16 +377,11 @@ h6 {
 	border-radius: 50%;
 }
 
+.cta-social__item:not(:last-child) {
+	margin-right: 3rem;
+}
+
 .cta-social__item:hover {
 	opacity: .5;
 	transition: .5s;
-}
-
-.cta-social__item img {
-	width: 2rem;
-	height: 2rem;
-}
-
-.cta-social__item:not(:last-child) {
-	margin-right: 3rem;
 }
