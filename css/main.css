@@ -94,7 +94,7 @@ h6 {
 	padding: 1rem 3rem;
 	border-radius: 5rem;
 	font-size: var(--main-text);
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 1.5;
 	color: #fff;
 }
@@ -190,6 +190,7 @@ h6 {
 }
 
 .main-display__button {
+	font-weight: 700;
 	background: linear-gradient(95deg, #DF5950 11.19%, #451046 93.72%);
 }
 
@@ -363,6 +364,7 @@ h6 {
 
 .cta__button {
 	margin-bottom: 4.1rem;
+	font-weight: 700;
 	background: linear-gradient(95deg, #DF5950 11.19%, #451046 93.72%);
 }
 
