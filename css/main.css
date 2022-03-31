@@ -127,7 +127,7 @@ h6 {
 }
 
 .header-nav a {
-	font-size: 1.6rem;
+	font-size: var(--main-text);;
 	line-height: 1.5;
 }
 
@@ -184,7 +184,7 @@ h6 {
 }
 
 .timer__text {
-	font-size: 1.6rem;
+	font-size: var(--main-text);;
 	line-height: 1.4;
 	opacity: 0.4;
 }
@@ -228,7 +228,7 @@ h6 {
 }
 
 .our-work__descr {
-	font-size: 1.6rem;
+	font-size: var(--main-text);;
 	line-height: 1.6;
 }
 
@@ -257,7 +257,7 @@ h6 {
 .work-process__descr {
 	margin-bottom: 8rem;
 	max-width: 41.1rem;
-	font-size: 1.6rem;
+	font-size: var(--main-text);;
 	line-height: 1.6;
 	opacity: .5;
 }
@@ -333,7 +333,7 @@ h6 {
 .our-team__role {
 	margin: 0;
 	margin-bottom: 3rem;
-	font-size: 1.6rem;
+	font-size: var(--main-text);;
 	line-height: 1.6;
 	opacity: .8;
 }
@@ -362,7 +362,7 @@ h6 {
 
 .cta_descr {
 	margin-bottom: 4.5rem;
-	font-size: 1.6rem;
+	font-size: var(--main-text);;
 	line-height: 1.625;
 	opacity: .5;
 }
