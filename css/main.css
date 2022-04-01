@@ -400,3 +400,9 @@ h6 {
 	opacity: .5;
 	transition: .5s;
 }
+
+.footer-copyright {
+	display: grid;
+	grid: repeat(2,1fr)/1fr;
+	justify-items: center;
+}
