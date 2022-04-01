@@ -72,7 +72,7 @@ button, input {
 
 .button:hover {
 	opacity: .85;
-	transition: .8;
+	transition: .5s;
 }
 
 h1,
