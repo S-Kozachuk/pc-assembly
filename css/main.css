@@ -30,6 +30,8 @@
 
 :root {
 	--main-text: 1.6rem;
+	--white: #fff;
+	--gradien-main: linear-gradient(95deg, #DF5950 11.19%, #451046 93.72%);
 }
 
 
@@ -45,7 +47,7 @@ html, body {
 	*/
 	font-size: 62.5%;
 	font-weight: 400;
-	color: #fff;
+	color: var(--white);
 	background: linear-gradient(to right top, #060606 , #050504, #030303, #020201, #000000);
 	background-image: url(../img/bg_m.jpg);
 	background-repeat: repeat;
@@ -96,7 +98,7 @@ h6 {
 	font-size: var(--main-text);
 	font-weight: 400;
 	line-height: 1.5;
-	color: #fff;
+	color: var(--white);
 }
 
 .header {
@@ -191,7 +193,7 @@ h6 {
 
 .main-display__button {
 	font-weight: 700;
-	background: linear-gradient(95deg, #DF5950 11.19%, #451046 93.72%);
+	background: var(--gradien-main);
 }
 
 .main-display__bg {
@@ -275,7 +277,7 @@ h6 {
 	content: "";
 	width: 130rem;
 	height: .2rem;
-	background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+	background: var(--gradien-main);
 }
 
 .work-process__part {
