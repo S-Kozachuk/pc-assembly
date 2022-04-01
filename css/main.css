@@ -405,4 +405,6 @@ h6 {
 	display: grid;
 	grid: repeat(2,1fr)/1fr;
 	justify-items: center;
+	font-size: 1.7rem;
+	opacity: .2;
 }
