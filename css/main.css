@@ -406,13 +406,12 @@ h6 {
 	grid: repeat(2,1fr)/1fr;
 	justify-items: center;
 	font-size: 1.7rem;
-	line-height: 1.6;
 	letter-spacing: 1.5px;
-	opacity: .4;
+	opacity: .2;
 }
 
 .footer-copyright-name {
-	margin-bottom: 7px;
+	margin-bottom: .5rem;
 }
 
 .footer-copyright-name a {
