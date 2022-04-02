@@ -277,7 +277,7 @@ h6 {
 	content: "";
 	width: 130rem;
 	height: .2rem;
-	background: var(--gradien-main);
+	background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);
 }
 
 .work-process__part {
