@@ -408,5 +408,15 @@ h6 {
 	font-size: 1.7rem;
 	line-height: 1.6;
 	letter-spacing: 1.5px;
-	opacity: .2;
+	opacity: .5;
+}
+
+.footer-copyright-name a {
+	text-decoration: underline;
+}
+
+.footer-copyright-name a:hover {
+	color: #c89afc;
+	text-decoration: none;
+	transition: .5s;
 }
