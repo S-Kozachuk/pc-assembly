@@ -317,6 +317,14 @@ h6 {
 	transform: rotate(315deg);
 }
 
+.our-team__header {
+	padding-top: 1.5rem;
+	padding-left: 3.9rem;
+	font-size: 4.8rem;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
 .our-team__performance {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
