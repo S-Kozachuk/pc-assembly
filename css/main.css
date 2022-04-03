@@ -473,9 +473,17 @@ h6 {
 }
 
 .modal-window__subtitle {
+	margin-left: 4rem;
+    margin-bottom: 4.5rem;
+    font-size: var(--main-text);
+    line-height: 1.625;
+    opacity: .5;
 }
 
 .modal-window-form {
+	font-size: 1.4rem;
+	line-height: 1.6;
+	opacity: .8;
 }
 
 .field__name {
