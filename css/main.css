@@ -301,11 +301,6 @@ h6 {
 	opacity: .5;
 }
 
-.work-process__part:not(last-child){
-	margin-right: 0;
-}
-
-
 .our-team {
 	padding-bottom: 20rem;
 }
