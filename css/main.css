@@ -161,6 +161,7 @@ h6 {
 }
 
 .main-display__timer {
+	margin-left: 0.4rem;
 	margin-bottom: 7.5rem;
 	display: flex;
 }
