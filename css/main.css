@@ -274,7 +274,7 @@ h6 {
 
 .work-process__stages:after {
 	position: absolute;
-	top: 7rem;
+	top: 6.5rem;
 	left: 50%;
 	transform: translate(-50%, 0);
 	content: "";
