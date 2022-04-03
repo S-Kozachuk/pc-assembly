@@ -454,3 +454,23 @@ h6 {
 	text-decoration: none;
 	transition: .5s;
 }
+
+.modal-window {
+	width: 66rem;
+	height: 55rem;
+	background: #2C2C2C;
+}
+.modal-window__wrapper {
+}
+.modal-window__title {
+}
+.modal-window__subtitle {
+}
+.modal-window-form {
+}
+.field__name {
+}
+.field__phone {
+}
+.field__mail {
+}
