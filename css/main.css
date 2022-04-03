@@ -433,7 +433,7 @@ h6 {
 
 .footer-copyright {
 	display: grid;
-	grid: repeat(2,1fr)/1fr;
+	grid: repeat(2,auto)/auto;
 	justify-items: center;
 	font-size: 1.7rem;
 	letter-spacing: 1.5px;
