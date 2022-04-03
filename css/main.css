@@ -310,7 +310,7 @@ h6 {
 	display: flex;
 }
 
-.our-team .work-process__img {
+.our-team__img {
 	transform: rotate(315deg);
 }
 
