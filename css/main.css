@@ -380,6 +380,7 @@ h6 {
 }
 
 .cta__title {
+	margin-left: 4rem;
 	margin-bottom: 3rem;
 	font-size: 4.8rem;
 	font-weight: 700;
