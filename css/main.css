@@ -388,6 +388,7 @@ h6 {
 }
 
 .cta_descr {
+	margin-left: 4rem;
 	margin-bottom: 4.5rem;
 	font-size: var(--main-text);;
 	line-height: 1.625;
