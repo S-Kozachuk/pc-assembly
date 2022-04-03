@@ -245,6 +245,7 @@ h6 {
 }
 
 .work-process__img {
+	margin-left: 1rem;
 	width: 8rem;
 	height: 8rem;
 }
