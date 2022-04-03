@@ -287,18 +287,24 @@ h6 {
 	max-width: 32.4rem;
 }
 
-.work-process_part-header {
+.work-process__part-header {
 	margin-bottom: 6.5rem;
 	font-size: 3.6rem;
 	font-weight: 700;
 	line-height: 1.4;
 }
 
-.work-process_part-descr {
+.work-process__part-descr {
+	margin-right: 2rem;
 	font-size: 1.4rem;
 	line-height: 1.6;
 	opacity: .5;
 }
+
+.work-process__part:not(last-child){
+	margin-right: 0;
+}
+
 
 .our-team {
 	padding-bottom: 20rem;
