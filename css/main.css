@@ -403,10 +403,9 @@ h6 {
 }
 
 .cta-social {
-	margin: 0 auto;
+	margin-left: 4.8rem;
 	display: grid;
-	grid: 1fr/repeat(4,1fr);
-    max-width: 290px;
+	grid: auto/repeat(4,auto);
 }
 
 .cta-social__item {
