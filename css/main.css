@@ -462,6 +462,9 @@ h6 {
 }
 
 .modal-window__wrapper {
+	display: grid;
+	grid: repeat(6,auto)/auto;
+	justify-items: center;
 }
 
 .modal-window__title {
