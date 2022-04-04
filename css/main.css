@@ -461,7 +461,7 @@ h6 {
 }
 
 .modal {
-	display: none;
+	/*display: none;*/
 	position: fixed;
 	inset: 0;
 	padding: 3rem 0;
@@ -474,6 +474,12 @@ h6 {
 }
 
 .modal-window__wrapper {
+	display: grid;
+	padding: 9rem;
+	max-width: 66rem;
+	max-height: 55rem;
+	background: #2C2C2C;
+	text-align: center;
 }
 
 .modal-window__title {
