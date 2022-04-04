@@ -487,12 +487,17 @@ h6 {
 }
 
 .field__item {
+	position: relative;
 	border-radius: 5rem;
 	background: #fff;
 	opacity: .25;
+	z-index: 1;
 }
 
 .field__name {
+	position: absolute;
+	color: #DF5950;
+	z-index: 23;
 }
 
 .field__phone {
