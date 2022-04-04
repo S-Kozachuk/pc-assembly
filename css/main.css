@@ -455,16 +455,13 @@ h6 {
 	transition: .5s;
 }
 
-.modal-window {
-	width: 66rem;
-	height: 55rem;
-	background: #2C2C2C;
-}
-
 .modal-window__wrapper {
 	display: grid;
 	grid: repeat(6,auto)/auto;
 	justify-items: center;
+	width: 66rem;
+	height: 55rem;
+	background: #2C2C2C;
 }
 
 .modal-window__title {

@@ -194,17 +194,24 @@
 				</div>
 			</div>
 		</footer>
-		<div class="modal-window">
+		<form action="#" class="modal-window__form">
 			<div class="modal-window__wrapper">
 				<h2 class="modal-window__title">Заявка на сборку ПК</h2>
 				<h3 class="modal-window__subtitle">Мы свяжемся с вами, чтобы обсудить детали заказа</h3>
-				<form action="" class="modal-window__form">
-					<input class="field__item" placeholder="Как вас зовут">
-					<input class="field__item" placeholder="Номер телефона" type="tel">
-					<input class="field__item" placeholder="E-mail" type="email">
-					<button class="modal__button">Отправить</button>
-				</form>
+				<div class="modal-window__elements">
+					<div class="modal__item">
+						<input class="modal__input" placeholder="Как вас зовут?">
+					</div>
+					<div class="modal__item">
+						<input class="modal__input" placeholder="Номер телефона" type="tel">
+					</div>
+					<div class="modal__item">
+						<input class="modal__input" placeholder="E-mail" type="email">
+					</div>
+					<button class="button cta__button" type="submit">Отправить</button>
+				</div>
 			</div>
+		</form>	
 		</div>
 	</body>
 </html>
