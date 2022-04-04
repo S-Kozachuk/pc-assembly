@@ -497,7 +497,12 @@ h6 {
     opacity: .5;
 }
 
+.modal-window__elements {
+	width: 45.4rem;
+}
+
 .modal__item {
+	margin: 0 auto;
 	margin-bottom: 1.6rem;
 	width: 95%;
 	height: 4.5rem;
