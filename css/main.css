@@ -475,8 +475,9 @@ h6 {
 }
 
 .modal-window__wrapper {
-	display: grid;
 	padding: 9rem;
+	display: grid;
+	justify-items: center;
 	max-width: 66rem;
 	background: #2C2C2C;
 	text-align: center;
