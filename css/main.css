@@ -486,6 +486,12 @@ h6 {
 	opacity: .8;
 }
 
+.field__item {
+	border-radius: 5rem;
+	background: #fff;
+	opacity: .25;
+}
+
 .field__name {
 }
 
