@@ -499,15 +499,23 @@ h6 {
 
 .modal-window__elements {
 	width: 45.4rem;
+	margin: 0 auto;
 }
 
 .modal__item {
 	margin: 0 auto;
-	margin-bottom: 1.6rem;
 	width: 95%;
-	height: 4.5rem;
+	height: 4.5rem;	
+}
+
+.modal__item:not(:last-child) {
+	margin-bottom: 1.6rem;
+}
+
+.modal__input {
+	width: 100%;
+	height: 100%;
 	background-color: rgb(158, 157, 157);
-	opacity: .25;
 	border-radius: 5rem;
 	font-size: 1.4rem;
 	font-weight: 400;
