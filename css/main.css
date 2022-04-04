@@ -481,6 +481,8 @@ h6 {
 }
 
 .modal-window-form {
+	display: grid;
+	grid: repeat(4, auto)/auto;
 	font-size: 1.4rem;
 	line-height: 1.6;
 	opacity: .8;
@@ -492,16 +494,4 @@ h6 {
 	background: #fff;
 	opacity: .25;
 	z-index: 1;
-}
-
-.field__name {
-	position: absolute;
-	color: #DF5950;
-	z-index: 23;
-}
-
-.field__phone {
-}
-
-.field__mail {
 }
