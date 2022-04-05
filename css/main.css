@@ -101,6 +101,10 @@ h6 {
 	color: var(--white);
 }
 
+.button--light {
+	background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+}
+
 .header {
 	position: absolute;
 	top: 0;
