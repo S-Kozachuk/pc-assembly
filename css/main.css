@@ -486,11 +486,11 @@ h6 {
 
 .modal__close {
 	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translate(-35%, 35%);
+	top: 2rem;
+	right: 2rem;
 	width: 4rem;
 	height: 4rem;
+	cursor: pointer;
 }
 
 .modal-window__title {
