@@ -13,11 +13,16 @@ modalBtn.forEach((item)=> {
 });
 
 
-//--- Исчезновение (закрытие) модального окна
+//--- Исчезновение (закрытие) модального окна по клику вне самого окна
 modalWindow.addEventListener('click', (e) => {
 	// Запись в переменную isModal по клику на высплывающее окно
 	const isModal = e.target.closest('.modal-window__wrapper');
 	if(!isModal) {
 		modalWindow.style.display = 'none';
 	}
+});
+
+//--- Исчезновение (закрытие) модального окна по клику на крест
+modalClose.addEventListener('click', () => {
+	modalWindow.style.display = 'none';
 });
