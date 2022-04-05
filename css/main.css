@@ -475,12 +475,22 @@ h6 {
 }
 
 .modal-window__wrapper {
+	position: relative;
 	padding: 9rem;
 	display: grid;
 	justify-items: center;
 	max-width: 66rem;
 	background: #2C2C2C;
 	text-align: center;
+}
+
+.modal__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(-35%, 35%);
+	width: 4rem;
+	height: 4rem;
 }
 
 .modal-window__title {
