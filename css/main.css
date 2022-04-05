@@ -370,9 +370,7 @@ h6 {
 }
 
 .our-team__button {
-	display: inline-block;
 	border: .1rem solid #fff;
-	cursor: pointer;
 }
 
 .cta {
