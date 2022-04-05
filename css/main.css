@@ -493,6 +493,11 @@ h6 {
 	cursor: pointer;
 }
 
+.modal__close img:hover {
+	opacity: .5;
+	transition: .5s;
+}
+
 .modal-window__title {
     margin-bottom: 1.3rem;
     font-size: 4.8rem;
