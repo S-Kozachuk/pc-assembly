@@ -107,6 +107,7 @@ h6 {
 }
 
 .button--dark {
+	font-weight: 700;
 	background: var(--dark-gradient);
 }
 
@@ -198,11 +199,6 @@ h6 {
 	font-size: var(--main-text);;
 	line-height: 1.4;
 	opacity: 0.4;
-}
-
-.main-display__button {
-	font-weight: 700;
-	background: var(--gradien-main);
 }
 
 .main-display__bg {
