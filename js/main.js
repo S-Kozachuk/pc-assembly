@@ -1,4 +1,5 @@
 const modalWindow = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 
 // -- Появление модального окна
@@ -12,7 +13,7 @@ modalBtn.forEach((item)=> {
 });
 
 
-// --- Исчезновение (закрытие) модального окна
+//--- Исчезновение (закрытие) модального окна
 modalWindow.addEventListener('click', (e) => {
 	// Запись в переменную isModal по клику на высплывающее окно
 	const isModal = e.target.closest('.modal-window__wrapper');
