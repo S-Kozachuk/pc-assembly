@@ -148,7 +148,6 @@ h6 {
 
 .header__button {
 	margin-left: 55.3rem;
-	background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
 }
 
 .main-display {
@@ -471,7 +470,7 @@ h6 {
 }
 
 .modal {
-	/*display: none;*/
+	display: none;
 	position: fixed;
 	inset: 0;
 	padding: 3rem 0;
