@@ -548,3 +548,8 @@ h6 {
 	color: var(--white);
 	opacity: .5;
 }
+
+.modal__button {
+	font-weight: 700;
+	background: linear-gradient(95deg, #DF5950 11.19%, #451046 93.72%);
+}
