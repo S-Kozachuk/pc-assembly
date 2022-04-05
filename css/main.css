@@ -499,8 +499,9 @@ h6 {
 }
 
 .modal-window__elements {
-	width: 45.4rem;
 	margin: 0 auto;
+	margin-bottom: 3rem;
+	width: 45.4rem;
 }
 
 .modal__item {
