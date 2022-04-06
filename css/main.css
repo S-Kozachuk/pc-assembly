@@ -549,3 +549,9 @@ h6 {
 	color: var(--white);
 	opacity: .5;
 }
+
+.noscroll {
+	overflow: hidden;
+	height: 100%;
+	
+}

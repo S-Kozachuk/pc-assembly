@@ -4,13 +4,12 @@ const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 
 // -- Появление модального окна
-// Перебор всех кнопок с классом .modal__btn
+// Перебор всех элементов (кнопок) с классом .modal__btn
 modalBtn.forEach((item)=> {
 	// На каждую кнопку по клику "вешается" обработчик
 	item.addEventListener('click', () => {
 		modalWindow.style.display = 'grid';
 	});
-	
 });
 
 
