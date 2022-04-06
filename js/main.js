@@ -6,8 +6,15 @@ const modalBtn = document.querySelectorAll('.modal__btn');
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
 modalBtn.forEach((item)=> {
-	// На каждую кнопку по клику "вешается" обработчик
+	/* 
+	На каждую кнопку "вешается" обработчик, который по клику
+	на любую из кнопок (item) зпускает стрелочную функцию ()=>
+	*/
 	item.addEventListener('click', () => {
+		/* 
+		Добавление к объекту maodalWindow CSS-правила (display: grid)
+		Оно и делает модальное окно видимым. По умолчанию display: none;
+		*/
 		modalWindow.style.display = 'grid';
 		// Добавление класса .noscroll к объекту body
 		body.classList.add('noscroll');
@@ -24,8 +31,8 @@ modalWindow.addEventListener('click', (e) => {
 	то выполняется код внутри условия.
 	*/
 	if(!isModal) {
-		// закрытие модального окна путём присвоения значения none
-		modalWindow.style.display = 'none';
+		// закрытие модального окна путём присвоения пустого значения
+		modalWindow.style.display = '';
 		// разблокировка верт. прокутки с помощью удаления класса noscroll
 		body.classList.remove('noscroll');
 	}
@@ -33,6 +40,6 @@ modalWindow.addEventListener('click', (e) => {
 
 // -- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
-	modalWindow.style.display = 'none';
+	modalWindow.style.display = '';
 	body.classList.remove('noscroll');
 });
