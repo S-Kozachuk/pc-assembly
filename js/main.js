@@ -21,10 +21,12 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__wrapper');
 	if(!isModal) {
 		modalWindow.style.display = 'none';
+		body.classList.remove('noscroll');
 	}
 });
 
 //--- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
 	modalWindow.style.display = 'none';
+	body.classList.remove('noscroll');
 });
