@@ -9,23 +9,29 @@ modalBtn.forEach((item)=> {
 	// На каждую кнопку по клику "вешается" обработчик
 	item.addEventListener('click', () => {
 		modalWindow.style.display = 'grid';
-		// Добавеление класса .noscroll к объекту body
+		// Добавление класса .noscroll к объекту body
 		body.classList.add('noscroll');
 	});
 });
 
 
-//--- Исчезновение (закрытие) модального окна по клику вне самого окна
+// -- Исчезновение (закрытие) модального окна по клику вне самого окна
 modalWindow.addEventListener('click', (e) => {
-	// Запись в переменную isModal по клику на высплывающее окно
+	// Получение в переменную isModal внешнего поля (затем. фон)
 	const isModal = e.target.closest('.modal-window__wrapper');
+	/*
+	Если клик приходится на внешнее поле (за пределами модального окна),
+	то выполняется код внутри условия.
+	*/
 	if(!isModal) {
+		// закрытие модального окна путём присвоения значения none
 		modalWindow.style.display = 'none';
+		// разблокировка верт. прокутки с помощью удаления класса noscroll
 		body.classList.remove('noscroll');
 	}
 });
 
-//--- Исчезновение (закрытие) модального окна по клику на крест
+// -- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
 	modalWindow.style.display = 'none';
 	body.classList.remove('noscroll');
