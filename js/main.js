@@ -9,6 +9,8 @@ modalBtn.forEach((item)=> {
 	// На каждую кнопку по клику "вешается" обработчик
 	item.addEventListener('click', () => {
 		modalWindow.style.display = 'grid';
+		// Добавеление класса .noscroll к объекту body
+		body.classList.add('noscroll');
 	});
 });
 
