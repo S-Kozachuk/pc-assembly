@@ -5,7 +5,8 @@ const modalBtn = document.querySelectorAll('.modal__btn');
 
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
-modalBtn.forEach((item)=> {
+
+modalBtn.forEach(item=> {
 	/* 
 	На каждую кнопку "вешается" обработчик, который по клику
 	на любую из кнопок (item) зпускает стрелочную функцию ()=>
