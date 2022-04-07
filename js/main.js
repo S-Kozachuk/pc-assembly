@@ -27,6 +27,8 @@ modalBtn.forEach(item=> {
 modalWindow.addEventListener('click', (e) => {
 	// Получение в переменную isModal внешнего поля (затем. фон)
 	const isModal = e.target.closest('.modal-window__wrapper');
+	// Также можно обратиться к напрямую к род. элементу
+	//const isModal = e.target.querySelector('.window__form')
 	/*
 	Если клик приходится на внешнее поле (за пределами модального окна),
 	то выполняется код внутри условия.
