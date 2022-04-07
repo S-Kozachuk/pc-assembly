@@ -5,7 +5,6 @@ const modalBtn = document.querySelectorAll('.modal__btn');
 
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
-
 modalBtn.forEach(item=> {
 	/* 
 	На каждую кнопку "вешается" обработчик, который по клику
@@ -13,7 +12,7 @@ modalBtn.forEach(item=> {
 	*/
 	item.addEventListener('click', () => {
 		/* 
-		Добавление к объекту maodalWindow CSS-правила (display: grid)
+		Добавление к объекту modalWindow CSS-правила (display: grid)
 		Оно и делает модальное окно видимым. По умолчанию display: none;
 		*/
 		modalWindow.style.display = 'grid';
@@ -23,9 +22,9 @@ modalBtn.forEach(item=> {
 });
 
 
-// -- Исчезновение (закрытие) модального окна по клику вне самого окна
+// -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
-	// Получение в переменную isModal внешнего поля (затем. фон)
+	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
 	const isModal = e.target.closest('.modal-window__wrapper');
 	// Также можно обратиться к напрямую к род. элементу
 	//const isModal = e.target.querySelector('.window__form')
@@ -41,7 +40,7 @@ modalWindow.addEventListener('click', (e) => {
 	}
 });
 
-// -- Исчезновение (закрытие) модального окна по клику на крест
+// -- Исчезновение (закрытие) модального окна по клику на кнопку крест
 modalClose.addEventListener('click', () => {
 	modalWindow.style.display = '';
 	body.classList.remove('noscroll');
