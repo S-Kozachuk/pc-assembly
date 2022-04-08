@@ -28,8 +28,8 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__wrapper');
 	console.log(isModal);
 	// Также можно обратиться к напрямую к род. элементу Не работает.
-	/*const isModal = e.target.querySelector('.modal-window__wrapper')
-	/*console.log(isModal);
+	//const isModal = e.target.querySelector('.modal-window__wrapper')
+	//console.log(isModal);
 	/*
 	Если клик приходится на внешнее поле т.е. не 
 	на объект в пер. isModal (за пределами модального окна (isModal)),
