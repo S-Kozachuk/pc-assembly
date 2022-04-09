@@ -15,7 +15,8 @@ modalBtn.forEach(item=> {
 		Добавление к объекту modalWindow CSS-правила (display: grid)
 		Оно и делает модальное окно видимым. По умолчанию display: none;
 		*/
-		modalWindow.style.display = 'grid';
+		//modalWindow.style.display = 'grid';
+		modalWindow.classList.add('modal-open')
 		// Добавление класса .noscroll к объекту body
 		body.classList.add('noscroll');
 	});
@@ -25,7 +26,7 @@ modalBtn.forEach(item=> {
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
 	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
-	const isModal = e.target.closest('.modal-window__elements');
+	const isModal = e.target.closest('.modal-window__wrapper');
 	// Также можно обратиться к напрямую к род. элементу
 	//const isModal = e.target.querySelector('.window__form')
 	/*
@@ -34,7 +35,8 @@ modalWindow.addEventListener('click', (e) => {
 	*/
 	if(!isModal) {
 		// закрытие модального окна путём присвоения пустого значения
-		modalWindow.style.display = '';
+		//modalWindow.style.display = '';
+		modalWindow.classList.remove('modal-open')
 		// разблокировка верт. прокутки с помощью удаления класса noscroll
 		body.classList.remove('noscroll');
 	}
@@ -42,6 +44,7 @@ modalWindow.addEventListener('click', (e) => {
 
 // -- Исчезновение (закрытие) модального окна по клику на кнопку крест
 modalClose.addEventListener('click', () => {
-	modalWindow.style.display = '';
+	//modalWindow.style.display = '';
+	modalWindow.classList.remove('modal-open')
 	body.classList.remove('noscroll');
 });

@@ -462,7 +462,7 @@ h6 {
 }
 
 .modal {
-	display: none;
+	display: grid;
 	position: fixed;
 	inset: 0;
 	padding: 3rem 0;
@@ -472,6 +472,8 @@ h6 {
 	overflow-y: auto;
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 5;
+	transform: perspective(600px) translate(0, 150%) rotateX(45deg);
+	transition: .8s;
 }
 
 .modal-window__wrapper {
@@ -547,6 +549,11 @@ h6 {
 	line-height: 1.6;
 	color: var(--white);
 	opacity: .5;
+}
+
+.modal-open {
+	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+	transition: .8s;
 }
 
 .noscroll {
