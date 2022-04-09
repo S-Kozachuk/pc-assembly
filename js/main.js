@@ -25,15 +25,12 @@ modalBtn.forEach(item=> {
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
 	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
-	const isModal = e.target.closest('.modal-window__wrapper');
-	console.log(isModal);
-	// Также можно обратиться к напрямую к род. элементу Не работает.
-	//const isModal = e.target.querySelector('.modal-window__wrapper')
-	//console.log(isModal);
+	const isModal = e.target.closest('.modal-window__elements');
+	// Также можно обратиться к напрямую к род. элементу
+	//const isModal = e.target.querySelector('.window__form')
 	/*
-	Если клик приходится на внешнее поле т.е. не 
-	на объект в пер. isModal (за пределами модального окна (isModal)),
-	то выполняется код внутри условия. Знак ! значит НЕ (отрицание).
+	Если клик приходится на внешнее поле (за пределами модального окна),
+	то выполняется код внутри условия.
 	*/
 	if(!isModal) {
 		// закрытие модального окна путём присвоения пустого значения
