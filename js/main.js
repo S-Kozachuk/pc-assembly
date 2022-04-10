@@ -3,6 +3,7 @@ const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const timeout = 800;
+let unlock = true;
 
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
@@ -53,6 +54,10 @@ modalClose.addEventListener('click', () => {
 // Устранение сдвига по гор. вправо при появлении модального окна
 function bodyLock() {
     // Calculating the scrollbar width
+	/*
+	В переменную lockPaddingValue записывается ширина полосы прокрутки (справа).
+	Она рассчитыватеся как разница между шириной объекта window и элемента body. 
+	*/
     const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
 
     if (lockPadding.length > 0) {
