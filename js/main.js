@@ -9,12 +9,12 @@ let unlock = true;
 // Перебор всех элементов (кнопок) с классом .modal__btn
 modalBtn.forEach(item=> {
 	/* 
-	На каждую кнопку "вешается" обработчик, который по клику
+	На каждую кнопку (item) "вешается" обработчик, который по клику
 	на любую из кнопок (item) зпускает стрелочную функцию ()=>
 	*/
 	item.addEventListener('click', () => {
 		/* 
-		Добавление к объекту modalWindow CSS-правила (display: grid)
+		Добавление к объекту modalWindow CSS-свойства (display: grid)
 		Оно и делает модальное окно видимым. По умолчанию display: none;
 		*/
 		//modalWindow.style.display = 'grid';
