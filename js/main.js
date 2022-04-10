@@ -5,6 +5,8 @@ const modalBtn = document.querySelectorAll('.modal__btn');
 const timeout = 800;
 let unlock = true;
 
+const lockPadding = document.querySelectorAll('.lock-padding');
+
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
 modalBtn.forEach(item=> {
@@ -18,9 +20,10 @@ modalBtn.forEach(item=> {
 		Оно и делает модальное окно видимым. По умолчанию display: none;
 		*/
 		//modalWindow.style.display = 'grid';
-		modalWindow.classList.add('modal-open')
+		modalWindow.classList.add('modal-open');
 		// Добавление класса .noscroll к объекту body
 		body.classList.add('noscroll');
+		bodyLock();
 	});
 });
 
@@ -38,9 +41,10 @@ modalWindow.addEventListener('click', (e) => {
 	if(!isModal) {
 		// закрытие модального окна путём присвоения пустого значения
 		//modalWindow.style.display = '';
-		modalWindow.classList.remove('modal-open')
+		modalWindow.classList.remove('modal-open');
 		// разблокировка верт. прокутки с помощью удаления класса noscroll
 		body.classList.remove('noscroll');
+		bodyUnLock();
 	}
 });
 
