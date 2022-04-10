@@ -2,6 +2,7 @@ const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
+const timeout = 800;
 
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
@@ -48,3 +49,39 @@ modalClose.addEventListener('click', () => {
 	modalWindow.classList.remove('modal-open')
 	body.classList.remove('noscroll');
 });
+
+// Устранение сдвига по гор. вправо при появлении модального окна
+function bodyLock() {
+    // Calculating the scrollbar width
+    const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+
+    if (lockPadding.length > 0) {
+        for (let index = 0; index < lockPadding.length; index++) {
+            const el = lockPadding[index];
+            el.style.paddingRight = lockPaddingValue;
+        }
+    }
+    body.style.paddingRight = lockPaddingValue;
+
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
+}
+
+// Устранение сдвига по гор. влево при закрытии модального окна
+function bodyUnLock() {
+    setTimeout(function () {
+        if (lockPadding.length > 0) {    
+            for (let index = 0; index < lockPadding.length; index++) {
+                const el = lockPadding[index];
+                el.style.paddingRight = '0px';
+            }
+        }    
+        body.style.paddingRight = '0px';
+    }, timeout);
+
+    unlock = false;
+    setTimeout(function () {
+        unlock = true;
+    }, timeout);
+}
