@@ -476,6 +476,10 @@ h6 {
 	transition: .8s;
 }
 
+.modal-body {
+	min-height: 95%;
+}
+
 .modal-window__wrapper {
 	position: relative;
 	padding: 9rem;
@@ -558,5 +562,4 @@ h6 {
 
 .noscroll {
 	overflow: hidden;
-	height: 100%;
 }

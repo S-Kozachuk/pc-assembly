@@ -3,13 +3,20 @@ const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const timeout = 800;
-let unlock = true;
-
 const lockPadding = document.querySelectorAll('.lock-padding');
 
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
 modalBtn.forEach(item=> {
+	console.log(window.innerWidth);
+	console.log(body.offsetWidth);
+	/*
+	let a = window.innerWidth;
+	console.log(typeof a)
+	let b = body.offetWidth;
+	lockPaddingValue = (a - b);
+	console.log(lockPaddingValue);
+	*/
 	/* 
 	На каждую кнопку (item) "вешается" обработчик, который по клику
 	на любую из кнопок (item) зпускает стрелочную функцию ()=>
@@ -25,6 +32,7 @@ modalBtn.forEach(item=> {
 		body.classList.add('noscroll');
 		bodyLock();
 	});
+	
 });
 
 
@@ -62,18 +70,21 @@ function bodyLock() {
 	В переменную lockPaddingValue записывается ширина полосы прокрутки (справа).
 	Она рассчитыватеся как разница между шириной объекта window и элемента body. 
 	*/
-    const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+    // const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
 
-    if (lockPadding.length > 0) {
+	if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const el = lockPadding[index];
-            el.style.paddingRight = lockPaddingValue;
+            el.style.paddingRight = '15px';
         }
     }
-    body.style.paddingRight = lockPaddingValue;
+	
+	body.style.paddingRight = '15px';
+
+	console.log(window.innerWidth);
+	console.log(body.offsetWidth);
 
     setTimeout(function () {
-        unlock = true;
     }, timeout);
 }
 
@@ -88,9 +99,7 @@ function bodyUnLock() {
         }    
         body.style.paddingRight = '0px';
     }, timeout);
-
-    unlock = false;
-    setTimeout(function () {
-        unlock = true;
+    
+	setTimeout(function () {
     }, timeout);
 }
