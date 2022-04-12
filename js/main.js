@@ -70,16 +70,16 @@ function bodyLock() {
 	В переменную lockPaddingValue записывается ширина полосы прокрутки (справа).
 	Она рассчитыватеся как разница между шириной объекта window и элемента body. 
 	*/
-    // const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+    const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
 
 	if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const el = lockPadding[index];
-            el.style.paddingRight = '15px';
+            el.style.paddingRight = lockPaddingValue;
         }
     }
 	
-	body.style.paddingRight = '15px';
+	body.style.paddingRight = lockPaddingValue;
 
 	console.log(window.innerWidth);
 	console.log(body.offsetWidth);
