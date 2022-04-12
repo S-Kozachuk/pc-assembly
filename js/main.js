@@ -2,19 +2,24 @@ const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
+const wrapper = document.querySelector('.wrapper')
+let x;
+let y;
 
-// -- Появление модального окна
-// Перебор всех элементов (кнопок) с классом .modal__btn
+
+// Получение начального положения (координат) окна
+function position () {
+	let c = wrapper.getBoundingClientRect();
+	x = c.x;
+	y = c.y;
+};
+
+position();
+
+
+body.addEventListener('resize', position);
+
 modalBtn.forEach(item=> {
-	console.log(window.innerWidth);
-	console.log(body.offsetWidth);
-	/*
-	let a = window.innerWidth;
-	console.log(typeof a)
-	let b = body.offetWidth;
-	lockPaddingValue = (a - b);
-	console.log(lockPaddingValue);
-	*/
 	/* 
 	На каждую кнопку (item) "вешается" обработчик, который по клику
 	на любую из кнопок (item) зпускает стрелочную функцию ()=>
@@ -24,15 +29,15 @@ modalBtn.forEach(item=> {
 		Добавление к объекту modalWindow CSS-свойства (display: grid)
 		Оно и делает модальное окно видимым. По умолчанию display: none;
 		*/
-		//modalWindow.style.display = 'grid';
 		modalWindow.classList.add('modal-open');
 		// Добавление класса .noscroll к объекту body
 		body.classList.add('noscroll');
-		bodyLock();
+		wrapper.classList.add('fixed');
+		wrapper.style.left = x + 'px';
+		wrapper.style.top = y + 'px';
 	});
 	
 });
-
 
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
@@ -40,7 +45,7 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__wrapper');
 	// Также можно обратиться к напрямую к род. элементу
 	//const isModal = e.target.querySelector('.window__form')
-	/*
+	/*  
 	Если клик приходится на внешнее поле (за пределами модального окна),
 	то выполняется код внутри условия.
 	*/
@@ -50,7 +55,7 @@ modalWindow.addEventListener('click', (e) => {
 		modalWindow.classList.remove('modal-open');
 		// разблокировка верт. прокутки с помощью удаления класса noscroll
 		body.classList.remove('noscroll');
-		bodyUnLock();
+		wrapper.classList.remove('fixed');
 	}
 });
 
@@ -60,23 +65,3 @@ modalClose.addEventListener('click', () => {
 	modalWindow.classList.remove('modal-open')
 	body.classList.remove('noscroll');
 });
-
-// Устранение сдвига по гор. вправо при появлении модального окна
-function bodyLock() {
-    // Calculating the scrollbar width
-	/*
-	В переменную lockPaddingValue записывается ширина полосы прокрутки (справа).
-	Она рассчитыватеся как разница между шириной объекта window и элемента body. 
-	*/
-    const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
-	body.style.paddingRight = lockPaddingValue;
-
-	console.log(window.innerWidth);
-	console.log(body.offsetWidth);
-
-}
-
-// Устранение сдвига по гор. влево при закрытии модального окна
-function bodyUnLock() {
-    body.style.paddingRight = '0px';
-}

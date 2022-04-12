@@ -563,3 +563,12 @@ h6 {
 .noscroll {
 	overflow: hidden;
 }
+
+.fixed {
+	position: fixed;
+}
+
+.wrapper {
+	margin: 0 auto;
+    width: 130rem;
+}
