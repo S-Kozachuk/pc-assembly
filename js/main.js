@@ -2,8 +2,6 @@ const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
-const timeout = 800;
-const lockPadding = document.querySelectorAll('.lock-padding');
 
 // -- Появление модального окна
 // Перебор всех элементов (кнопок) с классом .modal__btn
@@ -71,35 +69,14 @@ function bodyLock() {
 	Она рассчитыватеся как разница между шириной объекта window и элемента body. 
 	*/
     const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
-
-	if (lockPadding.length > 0) {
-        for (let index = 0; index < lockPadding.length; index++) {
-            const el = lockPadding[index];
-            el.style.paddingRight = lockPaddingValue;
-        }
-    }
-	
 	body.style.paddingRight = lockPaddingValue;
 
 	console.log(window.innerWidth);
 	console.log(body.offsetWidth);
 
-    setTimeout(function () {
-    }, timeout);
 }
 
 // Устранение сдвига по гор. влево при закрытии модального окна
 function bodyUnLock() {
-    setTimeout(function () {
-        if (lockPadding.length > 0) {    
-            for (let index = 0; index < lockPadding.length; index++) {
-                const el = lockPadding[index];
-                el.style.paddingRight = '0px';
-            }
-        }    
-        body.style.paddingRight = '0px';
-    }, timeout);
-    
-	setTimeout(function () {
-    }, timeout);
+    body.style.paddingRight = '0px';
 }
