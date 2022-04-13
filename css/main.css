@@ -572,3 +572,7 @@ h6 {
 	margin: 0 auto;
     width: 130rem;
 }
+
+.none {
+	display: none
+}

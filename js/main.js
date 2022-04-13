@@ -3,7 +3,7 @@ const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const wrapper = document.querySelector('.wrapper')
-let x, y, wrapperW, wrapperH, bodyW, bodyH, descrBody, descrWrapper;
+let x, y, wrapperW, wrapperH, bodyW, bodyH, bodyX, bodyY, descrBody, descrWrapper;
 
 // Получение начального положения (координат) body и wrapper
 function position () {
@@ -13,19 +13,24 @@ function position () {
 	wrapperW = wrapperPositon.width;
 	wrapperH = wrapperPositon.height;
 	let bodyPositon = body.getBoundingClientRect();
+	bodyX = bodyPositon.x;
+	bodyY = bodyPositon.y;
 	bodyW = bodyPositon.width;
 	bodyH = bodyPositon.height;
+	descrBodyPos = 'Position of body block:'
 	descrBody = 'Size of body block:'
+	descrWrapperPos = 'Position of wrapper block:'
 	descrWrapper = 'Size of wrapper block:'
 };
 
 position();
 
+console.log(descrBodyPos, bodyX, bodyY);
 console.log(descrBody, bodyW, bodyH);
+console.log(descrWrapperPos, x, y);
 console.log(descrWrapper, wrapperW, wrapperH);
-console.log(x, y);
 
-
+// Запуск функции position по событию resize
 body.addEventListener('resize', position);
 
 modalBtn.forEach(item=> {
@@ -41,11 +46,9 @@ modalBtn.forEach(item=> {
 		modalWindow.classList.add('modal-open');
 		// Добавление класса .noscroll к объекту body
 		body.classList.add('noscroll');
-		wrapper.classList.add('fixed');
 		wrapper.style.left = x + 'px';
-		wrapper.style.top = y + 'px';
+		wrapper.classList.add('fixed');
 	});
-	
 });
 
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
