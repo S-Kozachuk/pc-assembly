@@ -3,14 +3,7 @@ const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const wrapper = document.querySelector('.wrapper')
-let x;
-let y;
-let wrapperW;
-let wrapperH;
-let bodyW;
-let bodyH;
-let descrBody;
-let descrWrapper;
+let x, y, wrapperW, wrapperH, bodyW, bodyH, descrBody, descrWrapper;
 
 // Получение начального положения (координат) body и wrapper
 function position () {
