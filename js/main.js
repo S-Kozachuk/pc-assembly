@@ -5,16 +5,28 @@ const modalBtn = document.querySelectorAll('.modal__btn');
 const wrapper = document.querySelector('.wrapper')
 let x;
 let y;
+let wrapperW;
+let wrapperH;
+let bodyW;
+let bodyH;
 
-
-// Получение начального положения (координат) окна
+// Получение начального положения (координат) body и wrapper
 function position () {
-	let c = wrapper.getBoundingClientRect();
-	x = c.x;
-	y = c.y;
+	let wrapperPositon = wrapper.getBoundingClientRect();
+	x = wrapperPositon.x;
+	y = wrapperPositon.y;
+	wrapperW = wrapperPositon.width;
+	wrapperH = wrapperPositon.height;
+	let bodyPositon = body.getBoundingClientRect();
+	bodyW = bodyPositon.width;
+	bodyH = bodyPositon.height;
 };
 
 position();
+
+console.log('Size of body block: ' + bodyW, bodyH);
+console.log('Size of wrapper block: ' + wrapperW, wrapperH);
+console.log(x, y);
 
 
 body.addEventListener('resize', position);
