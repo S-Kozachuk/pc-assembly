@@ -2,7 +2,7 @@ const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
-const wrapper = document.querySelector('.wrapper')
+const wrapper = document.querySelector('.wrapper');
 let x, y, wrapperW, wrapperH, bodyW, bodyH, bodyX, bodyY, descrBody, descrWrapper;
 
 // Получение начального положения (координат) body и wrapper
@@ -33,34 +33,23 @@ console.log(descrWrapper, wrapperW, wrapperH);
 // Запуск функции position по событию resize
 body.addEventListener('resize', position);
 
+// Вешаем обработчик на кажду кнопку с помощью цикла forEach
 modalBtn.forEach(item=> {
 	/* 
 	На каждую кнопку (item) "вешается" обработчик, который по клику
 	на любую из кнопок (item) зпускает стрелочную функцию ()=>
 	*/
 	item.addEventListener('click', () => {
-		/* 
-		Добавление к объекту modalWindow CSS-свойства (display: grid)
-		Оно и делает модальное окно видимым. По умолчанию display: none;
-		*/
 		modalWindow.classList.add('modal-open');
-		// Добавление класса .noscroll к объекту body
+		wrapper.classList.add('fixed');
 		body.classList.add('noscroll');
 		wrapper.style.left = x + 'px';
-		wrapper.classList.add('fixed');
 	});
 });
 
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
-	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
 	const isModal = e.target.closest('.modal-window__wrapper');
-	// Также можно обратиться к напрямую к род. элементу
-	//const isModal = e.target.querySelector('.window__form')
-	/*  
-	Если клик приходится на внешнее поле (за пределами модального окна),
-	то выполняется код внутри условия.
-	*/
 	if(!isModal) {
 		// закрытие модального окна путём присвоения пустого значения
 		//modalWindow.style.display = '';
