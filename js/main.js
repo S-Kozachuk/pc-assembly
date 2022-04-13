@@ -73,4 +73,5 @@ modalClose.addEventListener('click', () => {
 	//modalWindow.style.display = '';
 	modalWindow.classList.remove('modal-open')
 	body.classList.remove('noscroll');
+	wrapper.classList.remove('fixed');
 });
