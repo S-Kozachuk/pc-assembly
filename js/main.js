@@ -9,6 +9,8 @@ let wrapperW;
 let wrapperH;
 let bodyW;
 let bodyH;
+let descrBody;
+let descrWrapper;
 
 // Получение начального положения (координат) body и wrapper
 function position () {
@@ -20,12 +22,14 @@ function position () {
 	let bodyPositon = body.getBoundingClientRect();
 	bodyW = bodyPositon.width;
 	bodyH = bodyPositon.height;
+	descrBody = 'Size of body block:'
+	descrWrapper = 'Size of wrapper block:'
 };
 
 position();
 
-console.log('Size of body block: ' + bodyW, bodyH);
-console.log('Size of wrapper block: ' + wrapperW, wrapperH);
+console.log(descrBody, bodyW, bodyH);
+console.log(descrWrapper, wrapperW, wrapperH);
 console.log(x, y);
 
 
