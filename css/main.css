@@ -167,7 +167,7 @@ h6 {
 	line-height: 1.35;
 }
 
-.main-display__timer {
+.header__timer {
 	margin-left: 0.4rem;
 	margin-bottom: 7.6rem;
 	display: flex;
@@ -197,13 +197,6 @@ h6 {
 	font-size: var(--main-text);;
 	line-height: 1.4;
 	opacity: 0.4;
-}
-
-.main-display__bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
 }
 
 .our-work {
