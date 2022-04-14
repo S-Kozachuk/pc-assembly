@@ -117,8 +117,7 @@ h6 {
     background-image: url(../img/main-screen__bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-	z-index: 5;
+	background-size: cover;
 }
 
 .header-menu {
@@ -153,6 +152,11 @@ h6 {
 
 .header-nav a:not(:last-child) {
 	margin-right: 7.1rem;
+}
+
+.header-content {
+	padding-top: 20rem;
+	padding-bottom: 25rem;
 }
 
 .main-display {
