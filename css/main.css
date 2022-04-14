@@ -113,19 +113,21 @@ h6 {
 }
 
 .header {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
-	padding: 4rem 11rem 4rem 8rem;
-	width: 100%;
-	z-index: 3;
+	
 }
 
 .header-wrapper {
+	margin: 0 auto;
+	padding: 4rem 11rem 4rem 8rem;
+	position: relative;
+	top: 0;
+	left: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+	max-width: 192rem;
+	z-index: 3;
 }
 
 .header-logo {
@@ -146,10 +148,6 @@ h6 {
 
 .header-nav a:not(:last-child) {
 	margin-right: 7.1rem;
-}
-
-.header__button {
-	margin-left: 55.3rem;
 }
 
 .main-display {
@@ -562,4 +560,8 @@ h6 {
 
 .noscroll {
 	overflow: hidden;
+}
+
+.none {
+	display: none;
 }
