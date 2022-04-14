@@ -113,10 +113,15 @@ h6 {
 }
 
 .header {
-	
+	position: relative;
+    background-image: url(../img/main-screen__bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	z-index: 5;
 }
 
-.header-wrapper {
+.header-menu {
 	margin: 0 auto;
 	padding: 4rem 11rem 4rem 8rem;
 	position: relative;
