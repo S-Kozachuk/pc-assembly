@@ -7,15 +7,14 @@ const lockPadding = document.querySelectorAll('.lock-padding');
 
 // -- Появление модального окна
 modalBtn.forEach(item=> {
-	console.log(window.innerWidth);
-	console.log(body.offsetWidth);
 	item.addEventListener('click', () => {
+		bodyLock();
 		modalWindow.classList.add('modal-open');
 		body.classList.add('noscroll');
-		bodyLock();
 	});
 });
-
+console.log(window.innerWidth);
+console.log(body.offsetWidth);
 
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
@@ -37,6 +36,9 @@ modalClose.addEventListener('click', () => {
 // Компенсация сдвига по гор. вправо при появлении модального окна
 function bodyLock() {
     const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+	console.log(window.innerWidth);
+	console.log(body.offsetWidth);
+	console.log(lockPaddingValue)
 	if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const el = lockPadding[index];
