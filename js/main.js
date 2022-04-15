@@ -43,3 +43,11 @@ function removeScrollIndent() {
 		body.classList.remove('noscroll');
 	}, timeout);
 }
+
+// Close popup if Esc click
+document.addEventListener ('keydown', function (e) {
+    if (e.keyKode == 27) {
+        modalWindow.classList.remove('modal-open');
+		removeScrollIndent();
+    }
+});
