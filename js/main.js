@@ -29,39 +29,25 @@ modalWindow.addEventListener('click', (e) => {
 
 // -- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
-	removeScrollIndent()
 	modalWindow.classList.remove('modal-open');
+	removeScrollIndent();
 	body.classList.remove('noscroll');
 });
 
 // Компенсация сдвига по гор. вправо при появлении модального окна
 function addScrollIndent() {
-    const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+	const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+		
 	console.log(window.innerWidth);
 	console.log(body.offsetWidth);
-	console.log(lockPaddingValue)
-	if (lockPadding.length > 0) {
-        for (let index = 0; index < lockPadding.length; index++) {
-            const el = lockPadding[index];
-            el.style.paddingRight = lockPaddingValue;
-        }
-    }
+	console.log(lockPaddingValue);
+
 	body.style.paddingRight = lockPaddingValue;
-	
-    setTimeout(function () {
-    }, timeout);
-		
 }
 
 // Компенсация сдвига по гор. влево при закрытии модального окна
-function removeScrollIndent() {
-        if (lockPadding.length > 0) {    
-            for (let index = 0; index < lockPadding.length; index++) {
-                const el = lockPadding[index];
-                el.style.paddingRight = '0px';
-            }
-        }    
-        body.style.paddingRight = '0px';
+function removeScrollIndent() {  
+    body.style.paddingRight = '0px';
 	setTimeout(function () {
     }, timeout);
 }
