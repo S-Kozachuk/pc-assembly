@@ -8,7 +8,7 @@ const lockPadding = document.querySelectorAll('.lock-padding');
 // -- Появление модального окна
 modalBtn.forEach(item=> {
 	item.addEventListener('click', () => {
-		bodyLock();
+		addScrollIndent();
 		modalWindow.classList.add('modal-open');
 		body.classList.add('noscroll');
 	});
@@ -21,7 +21,7 @@ modalWindow.addEventListener('click', (e) => {
 	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
 	const isModal = e.target.closest('.modal-window__wrapper');
 	if(!isModal) {
-		bodyUnLock();
+		removeScrollIndent();
 		modalWindow.classList.remove('modal-open');
 		body.classList.remove('noscroll');
 	}
@@ -29,13 +29,13 @@ modalWindow.addEventListener('click', (e) => {
 
 // -- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
-	bodyUnLock()
+	removeScrollIndent()
 	modalWindow.classList.remove('modal-open');
 	body.classList.remove('noscroll');
 });
 
 // Компенсация сдвига по гор. вправо при появлении модального окна
-function bodyLock() {
+function addScrollIndent() {
     const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
 	console.log(window.innerWidth);
 	console.log(body.offsetWidth);
@@ -54,7 +54,7 @@ function bodyLock() {
 }
 
 // Компенсация сдвига по гор. влево при закрытии модального окна
-function bodyUnLock() {
+function removeScrollIndent() {
         if (lockPadding.length > 0) {    
             for (let index = 0; index < lockPadding.length; index++) {
                 const el = lockPadding[index];
