@@ -21,14 +21,15 @@ modalWindow.addEventListener('click', (e) => {
 	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
 	const isModal = e.target.closest('.modal-window__wrapper');
 	if(!isModal) {
+		bodyUnLock();
 		modalWindow.classList.remove('modal-open');
 		body.classList.remove('noscroll');
-		bodyUnLock();
 	}
 });
 
 // -- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
+	bodyUnLock()
 	modalWindow.classList.remove('modal-open');
 	body.classList.remove('noscroll');
 });
@@ -45,15 +46,15 @@ function bodyLock() {
             el.style.paddingRight = lockPaddingValue;
         }
     }
-	
 	body.style.paddingRight = lockPaddingValue;
+	
     setTimeout(function () {
     }, timeout);
+		
 }
 
 // Компенсация сдвига по гор. влево при закрытии модального окна
 function bodyUnLock() {
-    setTimeout(function () {
         if (lockPadding.length > 0) {    
             for (let index = 0; index < lockPadding.length; index++) {
                 const el = lockPadding[index];
@@ -61,8 +62,6 @@ function bodyUnLock() {
             }
         }    
         body.style.paddingRight = '0px';
-    }, timeout);
-    
 	setTimeout(function () {
     }, timeout);
 }
