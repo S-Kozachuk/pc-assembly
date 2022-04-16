@@ -3,7 +3,6 @@ const modalWindow = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const timeout = 500;
-const lockPadding = document.querySelectorAll('.lock-padding');
 
 // -- Появление модального окна
 modalBtn.forEach(item=> {
