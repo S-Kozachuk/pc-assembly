@@ -46,7 +46,7 @@ function removeScrollIndent() {
 
 // Close popup if Esc click
 document.addEventListener ('keydown', function (e) {
-    if (e.which == 27) {
+    if (e.code == 'Escape') {
         modalWindow.classList.remove('modal-open');
 		removeScrollIndent();
     }
