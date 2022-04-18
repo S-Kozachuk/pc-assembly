@@ -52,6 +52,7 @@ html, body {
 	background: linear-gradient(to right top, #060606 , #050504, #030303, #020201, #000000);
 	background-image: url(../img/bg_m.jpg);
 	background-repeat: repeat;
+	scroll-behavior: smooth;
 }
 
 img {
