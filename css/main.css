@@ -563,7 +563,7 @@ h6 {
 	bottom: 2rem;
 	right: 3rem;
 	font-size: 5rem;
-	color: #fff;
+	color: #9e92e9;
 }
 
 a.scroll_arrow::before {
@@ -571,7 +571,7 @@ a.scroll_arrow::before {
 	top: 0.7rem;
 	right: -0.2rem;
 	content: "";
-	border: 0.3rem solid #fff;
+	border: 0.3rem solid #9e92e9;
 	border-radius: 50%;
 	height: 5.3rem;
 	width: 5.3rem;
