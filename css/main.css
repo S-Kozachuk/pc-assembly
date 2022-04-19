@@ -566,6 +566,8 @@ h6 {
 	background: var(--light-gradient);
 	height: 5.8rem;
 	width: 5.8rem;
+	opacity: 1;
+	transition: .8s;
 }
 
 a.scroll_arrow::before {
@@ -580,6 +582,11 @@ a.scroll_arrow::before {
 	border-bottom: 4rem solid #ffffff;
 	background: var(--dark-gradient);
 	border-radius: 2%;
+}
+
+.scroll__btn-hide {
+	opacity: 0;
+	transition: .5s;
 }
 
 .none {
