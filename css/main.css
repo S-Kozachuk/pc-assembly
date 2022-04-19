@@ -560,8 +560,8 @@ h6 {
 
 .scroll_arrow {
 	position: fixed;
-	bottom: 1rem;
-	right: 1rem;
+	bottom: 2rem;
+	right: 3rem;
 	font-size: 5rem;
 	color: #fff;
 }
