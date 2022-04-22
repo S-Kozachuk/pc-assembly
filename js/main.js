@@ -75,7 +75,7 @@ $('.modal').validate ({
 	rules: {
 		name: {
 			required: true,
-			/* проверка на строку*/
+			/* проверка на строку?*/
 		},
 		phone: {
 			required: true,
