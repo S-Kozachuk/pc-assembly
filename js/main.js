@@ -70,4 +70,31 @@ scrollBtn.onclick = () => {
 	window.scrollTo(0, 0);
 };
 
-// 
+// Form validate settings
+$('.modal').validate ({
+	rules: {
+		name: {
+			required: true,
+		},
+		phone: {
+			required: true,
+		},
+		email: {
+			required: true,
+			email: true
+		}
+	},
+	messages: {
+		name: {
+			required: 'Введите имя'
+		},
+		phone: {
+			required: 'Введите номер телефона',
+
+		},
+		email: {
+			required: 'Введите email',
+			email: 'Отсутствует символ @'
+		}
+	}
+})	
