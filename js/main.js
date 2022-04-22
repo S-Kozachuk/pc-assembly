@@ -75,9 +75,12 @@ $('.modal').validate ({
 	rules: {
 		name: {
 			required: true,
+			/* проверка на строку*/
 		},
 		phone: {
 			required: true,
+			digits: true,
+			rangelength: [6, 10]
 		},
 		email: {
 			required: true,
@@ -90,11 +93,19 @@ $('.modal').validate ({
 		},
 		phone: {
 			required: 'Введите номер телефона',
-
+			rangelength: jQuery.validator.format("От {0} до {1} цифр")
 		},
 		email: {
 			required: 'Введите email',
 			email: 'Отсутствует символ @'
 		}
 	}
-})	
+});	
+
+/*
+$.validator.addClassRules({
+	maxNumber: {
+		minlength: 5
+	}
+})
+*/
