@@ -71,7 +71,7 @@ scrollBtn.onclick = () => {
 };
 
 // Form validate settings
-$('.modal').validate ({
+$(modalWindow).validate ({
 	rules: {
 		name: {
 			required: true,
