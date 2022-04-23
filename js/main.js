@@ -100,12 +100,4 @@ $('.modal').validate ({
 			email: 'Отсутствует символ @'
 		}
 	}
-});	
-
-/*
-$.validator.addClassRules({
-	maxNumber: {
-		minlength: 5
-	}
-})
-*/
+});
