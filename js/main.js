@@ -75,7 +75,7 @@ $(modalWindow).validate ({
 	rules: {
 		name: {
 			required: true,
-			/* проверка на строку?*/
+			lettersonly: true
 		},
 		phone: {
 			required: true,
@@ -101,3 +101,8 @@ $(modalWindow).validate ({
 		}
 	}
 });
+
+// Custom rule to cheking a letter
+$.validator.addMethod('string', function(val) {
+	return !/[0-9]*/.test(val);
+},"Недопустимое значение");
