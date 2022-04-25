@@ -89,7 +89,7 @@ $(modalWindow).validate ({
 	},
 	messages: {
 		name: {
-			required: 'Введите имя'
+			required: 'Введите имя',
 		},
 		phone: {
 			required: 'Введите номер телефона',
@@ -103,6 +103,6 @@ $(modalWindow).validate ({
 });
 
 // Custom rule to cheking a letter
-$.validator.addMethod('string', function(val) {
-	return !/[0-9]*/.test(val);
-},"Недопустимое значение");
+$.validator.addMethod("lettersonly", function(value, element) {
+	return this.optional(element) || /^[a-zа-я]+$/i.test(value);
+}, "Вводите только буквы");
