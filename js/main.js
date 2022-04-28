@@ -75,7 +75,7 @@ $(modalWindow).validate ({
 	rules: {
 		name: {
 			required: true,
-			lettersonly: true
+			lettersOnly: true
 		},
 		phone: {
 			required: true,
@@ -103,6 +103,6 @@ $(modalWindow).validate ({
 });
 
 // Custom rule to cheking a letter
-$.validator.addMethod("lettersonly", function(value, element) {
+$.validator.addMethod("lettersOnly", function(value, element) {
 	return this.optional(element) || /^[a-zа-я]+$/i.test(value);
 }, "Вводите только буквы");
