@@ -75,6 +75,7 @@ $(modalWindow).validate ({
 	rules: {
 		name: {
 			required: true,
+			minlength: 3,
 			lettersOnly: true
 		},
 		phone: {
