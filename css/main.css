@@ -525,6 +525,7 @@ h6 {
 }
 
 .modal__item {
+	position: relative;
 	margin: 0 auto;
 	width: 95%;
 	height: 4.5rem;	
@@ -554,8 +555,12 @@ h6 {
 	opacity: .5;
 }
 
-.error {
-	font-size: 1.6rem;
+label.error {
+	position: absolute;
+	top: 0;
+    right: 50%;
+    transform: translate(58%, 1.5rem);
+	font-size: 1.4rem;
 	color: red;
 }
 
