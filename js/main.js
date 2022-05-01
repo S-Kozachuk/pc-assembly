@@ -91,9 +91,11 @@ $(modalWindow).validate ({
 	messages: {
 		name: {
 			required: 'Введите имя',
+			minlength: "Не меньше 3-х букв"
 		},
 		phone: {
 			required: 'Введите номер телефона',
+			digits: "Вводите только цифры",
 			rangelength: jQuery.validator.format("От {0} до {1} цифр")
 		},
 		email: {
