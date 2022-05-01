@@ -101,6 +101,9 @@ $(modalWindow).validate ({
 		email: {
 			required: 'Введите email',
 			email: 'Отсутствует символ @'
+		},
+		submitHandler: function (form) {
+			ajaxFormSubmit();
 		}
 	}
 });
@@ -109,3 +112,26 @@ $(modalWindow).validate ({
 $.validator.addMethod("lettersOnly", function(value, element) {
 	return this.optional(element) || /^[a-zа-я]+$/i.test(value);
 }, "Вводите только буквы");
+
+
+// AJAX query function on server
+function ajaxFormSubmit() {
+
+    let string = $("#contacts-form").serialize(); // Соханяем данные введенные в форму в строку.
+
+    //Формируем ajax запрос
+    $.ajax({
+        type: "POST", // Тип запроса - POST
+        url: "php/mail.php", // Куда отправляем запрос
+        data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+
+        // Функция если все прошло успешно
+        success: function (html) {
+            $("#contacts-form").slideUp(800);
+            $('#answer').html(html);
+        }
+    });
+
+    // Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
+    return false;
+}
