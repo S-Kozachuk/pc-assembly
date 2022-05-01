@@ -554,6 +554,11 @@ h6 {
 	opacity: .5;
 }
 
+.error {
+	font-size: 1.6rem;
+	color: red;
+}
+
 .noscroll {
 	overflow: hidden;
 }
