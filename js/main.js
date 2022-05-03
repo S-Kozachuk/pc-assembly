@@ -101,10 +101,10 @@ $(modalWindow).validate ({
 		email: {
 			required: 'Введите email',
 			email: 'Отсутствует символ @'
-		},
-		submitHandler: function (form) {
-			ajaxFormSubmit();
 		}
+	},
+	submitHandler: function (form) {
+		ajaxFormSubmit();
 	}
 });
 
