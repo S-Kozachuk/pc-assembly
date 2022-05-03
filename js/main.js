@@ -117,14 +117,14 @@ $.validator.addMethod("lettersOnly", function(value, element) {
 // AJAX query function on server
 function ajaxFormSubmit() {
     let string = $("#contacts-form").serialize(); // Соханяем данные введенные в форму в строку.
-    //Формируем ajax запрос
+    // Формируем ajax запрос
     $.ajax({
         type: "POST", // Тип запроса - POST
         url: "php/mail.php", // Куда отправляем запрос
         data: string, // Какие даные отправляем, в данном случае отправляем переменную string
-        // Функция если все прошло успешно
+        // Close the modal window (JQuery method slideUP)
         success: function (html) {
-            $("#contacts-form").slideUp(800);
+            $("#contacts-form").slideUp(800, removeScrollIndent());
             $('#answer').html(html);
         }
     });

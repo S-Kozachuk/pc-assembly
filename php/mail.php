@@ -28,20 +28,17 @@ $message = "<table style='width: 100%;'>$message</table>";
 
 // Function to save User data in file
 function send_user_data_in_txt_file ($message){
-
     //HERE SAVE TEXT INFO
 	$f = fopen('form_fill.html', 'a+');
 	fwrite($f, date('Y-m-d H:i:s'). "\n");
     fwrite($f, $message );
     fwrite($f, "\n" . "\n" . "\n" . "\n");
-
 }
 
 // Adjusting text encoding
 function adopt($text) {
 	return '=?UTF-8?B?'.base64_encode($text).'?=';
 }
-
 $form_subject = 'Заявка с сайта PC-Assembly';
 
 // Preparing header
