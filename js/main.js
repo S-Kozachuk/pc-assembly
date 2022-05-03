@@ -91,12 +91,12 @@ $(modalWindow).validate ({
 	messages: {
 		name: {
 			required: 'Введите имя',
-			minlength: "Не меньше 3-х букв"
+			minlength: 'Не меньше 3-х букв'
 		},
 		phone: {
 			required: 'Введите номер телефона',
-			digits: "Вводите только цифры",
-			rangelength: jQuery.validator.format("От {0} до {1} цифр")
+			digits: 'Вводите только цифры',
+			rangelength: jQuery.validator.format('От {0} до {1} цифр')
 		},
 		email: {
 			required: 'Введите email',
@@ -117,17 +117,17 @@ $.validator.addMethod("lettersOnly", function(value, element) {
 // AJAX query function on server
 function ajaxFormSubmit() {
     let string = $("#contacts-form").serialize(); // Соханяем данные введенные в форму в строку.
-    // Формируем ajax запрос
+    // AJAX query
     $.ajax({
-        type: "POST", // Тип запроса - POST
-        url: "php/mail.php", // Куда отправляем запрос
-        data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+        type: "POST",
+        url: "php/mail.php",
+        data: string,
         // Close the modal window (JQuery method slideUP)
         success: function (html) {
             $("#contacts-form").slideUp(800, removeScrollIndent());
             $('#answer').html(html);
         }
     });
-    // Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
+    // Block action if click to submit
     return false;
 }
