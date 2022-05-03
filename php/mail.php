@@ -42,7 +42,7 @@ function adopt($text) {
 	return '=?UTF-8?B?'.base64_encode($text).'?=';
 }
 
-$form_subject = 'Заявка с сайта Portfolio';
+$form_subject = 'Заявка с сайта PC-Assembly';
 
 // Preparing header
 $headers = "MIME-Version: 1.0" . PHP_EOL .
@@ -59,11 +59,11 @@ send_user_data_in_txt_file ($message);
 // header('location: ../thankyou.php');
 
 echo "<div class='contact-form__success'>
-		<h2 class='contact-form__success'>Заявка принята!<br>
-		Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
-		</h2>
-	  </div> ";
-
+			<h2 class='contact-form__success'>
+				Заявка принята!<br>
+				Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
+			</h2>
+	  </div>";
 ?>
 
 
