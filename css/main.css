@@ -449,6 +449,22 @@ h6 {
 	text-decoration: none;
 	transition: .5s;
 }
+
+.modal-window {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 5;
+	transition: .8s;
+	opacity: 0;
+	visibility: hidden;
+}
 	
 .window__form {
 	justify-content: center;
@@ -457,15 +473,6 @@ h6 {
 
 .modal {
 	display: grid;
-	position: fixed;
-	inset: 0;
-	padding: 3rem 0;
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background: rgba(0, 0, 0, 0.8);
-	z-index: 5;
 	transform: translate(0, 150%) rotateX(45deg);
 	transition: .8s;
 }
