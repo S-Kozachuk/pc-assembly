@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const modalWindow = document.querySelector('.modal');
+const modalWindow = document.querySelector('.modal-window');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const timeout = 500;
@@ -8,7 +8,7 @@ const timeout = 500;
 modalBtn.forEach(item=> {
 	item.addEventListener('click', () => {
 		addScrollIndent();
-		modalWindow.classList.add('modal-open');
+		modalWindow.classList.add('open');
 		body.classList.add('noscroll');
 	});
 });
