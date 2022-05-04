@@ -488,6 +488,10 @@ h6 {
 }
 
 .modal-window__body {
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	min-height: 95%;
 }
 
