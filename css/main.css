@@ -490,10 +490,12 @@ h6 {
 	display: grid;
 	justify-items: center;
 	max-width: 66rem;
-	background: #2C2C2C;
+	min-width: 50rem;
+    min-height: 20rem;
 	text-align: center;
 	transform: translate(0, 150%) rotateX(45deg);
 	transition: .8s;
+	background: #2C2C2C;
 }
 
 .modal-window__content.open {
