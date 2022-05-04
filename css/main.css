@@ -496,6 +496,10 @@ h6 {
 	transition: .8s;
 }
 
+.modal-window__content.open {
+	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+}
+
 .modal__close {
 	position: absolute;
 	top: 2rem;
