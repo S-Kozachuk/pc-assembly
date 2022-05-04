@@ -465,6 +465,11 @@ h6 {
 	opacity: 0;
 	visibility: hidden;
 }
+
+.modal-window.open {
+	opacity: 1;
+	visibility: visible;
+}
 	
 .window__form {
 	justify-content: center;
