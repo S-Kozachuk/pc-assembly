@@ -491,7 +491,7 @@ h6 {
 	min-height: 95%;
 }
 
-.modal-window__wrapper {
+.modal-window__content {
 	position: relative;
 	padding: 9rem;
 	display: grid;
