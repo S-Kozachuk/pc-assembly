@@ -476,23 +476,12 @@ h6 {
 	align-content: center;
 }
 
-.modal {
-	display: grid;
-	transform: translate(0, 150%) rotateX(45deg);
-	transition: .8s;
-}
-
-.modal-open {
-	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-	transition: .8s;
-}
-
 .modal-window__body {
     padding: 30px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-	min-height:form
+	min-height: 100%;
 }
 
 .modal-window__content {
@@ -503,6 +492,8 @@ h6 {
 	max-width: 66rem;
 	background: #2C2C2C;
 	text-align: center;
+	transform: translate(0, 150%) rotateX(45deg);
+	transition: .8s;
 }
 
 .modal__close {
