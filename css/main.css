@@ -498,7 +498,7 @@ h6 {
 	background: #2C2C2C;
 }
 
-.modal-window__content.open {
+.modal-window.open .modal-window__content {
 	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
 }
 
