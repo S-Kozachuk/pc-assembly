@@ -25,7 +25,7 @@ modalWindow.addEventListener('click', (e) => {
 
 // -- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
-	modalWindow.classList.remove('modal-open');
+	modalWindow.classList.remove('open');
 	removeScrollIndent();
 });
 
