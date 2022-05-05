@@ -16,9 +16,9 @@ modalBtn.forEach(item=> {
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
 	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
-	const isModal = e.target.closest('.modal-window__wrapper');
+	const isModal = e.target.closest('.modal-window__content');
 	if(!isModal) {
-		modalWindow.classList.remove('modal-open');
+		modalWindow.classList.remove('open');
 		removeScrollIndent();
 	}
 });
