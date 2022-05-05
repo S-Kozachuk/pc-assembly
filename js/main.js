@@ -4,6 +4,7 @@ const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const timeout = 800;
 
+// -- Modal window --
 // -- Появление модального окна
 modalBtn.forEach(item=> {
 	item.addEventListener('click', () => {
@@ -29,6 +30,14 @@ modalClose.addEventListener('click', () => {
 	removeScrollIndent();
 });
 
+// Close popup if Esc click
+document.addEventListener ('keydown', function (e) {
+	if (e.code == 'Escape') {
+		modalWindow.classList.remove('open');
+		removeScrollIndent();
+	}
+});
+
 // Компенсация сдвига по гор. вправо при появлении модального окна
 function addScrollIndent() {
 	const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
@@ -42,14 +51,6 @@ function removeScrollIndent() {
 		body.classList.remove('noscroll');
 	}, timeout);
 }
-
-// Close popup if Esc click
-document.addEventListener ('keydown', function (e) {
-    if (e.code == 'Escape') {
-        modalWindow.classList.remove('open');
-		removeScrollIndent();
-    }
-});
 
 // -- Кнопка для прокрутки вверх
 // Получаю в константу кнопку (стрелку)
