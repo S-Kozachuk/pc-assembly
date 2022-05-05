@@ -2,7 +2,7 @@ const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal-window');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
-const timeout = 500;
+const timeout = 800;
 
 // -- Появление модального окна
 modalBtn.forEach(item=> {
@@ -71,7 +71,7 @@ scrollBtn.onclick = () => {
 };
 
 // Form validate settings
-$(modalWindow).validate ({
+$('#contacts-form').validate ({
 	rules: {
 		name: {
 			required: true,
@@ -109,22 +109,22 @@ $(modalWindow).validate ({
 });
 
 // Custom rule to cheking a letter
-$.validator.addMethod("lettersOnly", function(value, element) {
+$.validator.addMethod('lettersOnly', function(value, element) {
 	return this.optional(element) || /^[a-zа-я]+$/i.test(value);
 }, "Вводите только буквы");
 
 
 // AJAX query function on server
 function ajaxFormSubmit() {
-    let string = $("#contacts-form").serialize(); // Соханяем данные введенные в форму в строку.
+    let string = $('#contacts-form').serialize(); // Сохраняем данные введенные в форму в строку.
     // AJAX query
     $.ajax({
-        type: "POST",
-        url: "php/mail.php",
+        type: 'POST',
+        url: 'php/mail.php',
         data: string,
         // Close the modal window (JQuery method slideUP)
         success: function (html) {
-            $("#contacts-form").slideUp(800, removeScrollIndent());
+            $('#contacts-form').slideUp(800);
             $('#answer').html(html);
         }
     });

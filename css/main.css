@@ -500,6 +500,7 @@ h6 {
 
 .modal-window.open .modal-window__content {
 	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+	transition: .8s
 }
 
 .modal__close {
