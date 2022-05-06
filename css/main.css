@@ -150,7 +150,7 @@ h6 {
 }
 
 .header-nav a {
-	font-size: var(--main-text);;
+	font-size: var(--main-text);
 	line-height: 1.5;
 }
 
@@ -469,6 +469,7 @@ h6 {
 .modal-window.open {
 	opacity: 1;
 	visibility: visible;
+	overflow: hidden;
 }
 	
 .window__form {
@@ -493,7 +494,7 @@ h6 {
 	min-width: 50rem;
     min-height: 20rem;
 	text-align: center;
-	transform: translate(0, 150%) rotateX(45deg);
+	transform: translate(0px, 100%) rotateX(45deg);
 	transition: .8s;
 	background: #2C2C2C;
 	opacity: 0;
