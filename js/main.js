@@ -7,7 +7,8 @@ const timeout = 800;
 // -- Modal window --
 // -- Появление модального окна
 modalBtn.forEach(item=> {
-	item.addEventListener('click', () => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
 		addScrollIndent();
 		modalWindow.classList.add('open');
 		body.classList.add('noscroll');
