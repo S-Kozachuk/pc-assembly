@@ -467,6 +467,7 @@ h6 {
 }
 
 .modal-window.open {
+	transform: perspective(500px) translate(0, 0) rotateX(0deg);
 	opacity: 1;
 	visibility: visible;
 }
@@ -493,14 +494,14 @@ h6 {
 	min-width: 50rem;
     min-height: 20rem;
 	text-align: center;
-	transform: translate(0, 150%) rotateX(45deg);
+	transform: translate(0, -150%) rotateX(45deg);
 	transition: .8s;
 	background: #2C2C2C;
 	opacity: 0;
 }
 
 .modal-window.open .modal-window__content {
-	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+	transform: perspective(500px) translate(0, 0) rotateX(0deg);
 	opacity: 1;
 }
 
