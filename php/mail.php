@@ -28,21 +28,18 @@ $message = "<table style='width: 100%;'>$message</table>";
 
 // Function to save User data in file
 function send_user_data_in_txt_file ($message){
-
     //HERE SAVE TEXT INFO
 	$f = fopen('form_fill.html', 'a+');
 	fwrite($f, date('Y-m-d H:i:s'). "\n");
     fwrite($f, $message );
     fwrite($f, "\n" . "\n" . "\n" . "\n");
-
 }
 
 // Adjusting text encoding
 function adopt($text) {
 	return '=?UTF-8?B?'.base64_encode($text).'?=';
 }
-
-$form_subject = 'Заявка с сайта Portfolio';
+$form_subject = 'Заявка с сайта PC-Assembly';
 
 // Preparing header
 $headers = "MIME-Version: 1.0" . PHP_EOL .
@@ -50,20 +47,19 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'From: '.adopt($project_name).' <'.$email_from.'>' . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
-// Sending email to admin
-mail($admin_email, $form_subject, $message, $headers );
+	// Sending email to admin
+	mail($admin_email, $form_subject, $message, $headers );
 
-// Saving user data in file
-send_user_data_in_txt_file ($message);
+	// Saving user data in file
+	send_user_data_in_txt_file ($message);
 
-// header('location: ../thankyou.php');
-
-echo "<div class='contact-form__success'>
-		<h2 class='contact-form__success'>Заявка принята!<br>
-		Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
-		</h2>
-	  </div> ";
-
+	// Message about successful sending
+	echo "<div class='contact-form__success'>
+				<h2 class='contact-form__success'>
+					Заявка принята!<br>
+					Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
+				</h2>
+		</div>";
 ?>
 
 

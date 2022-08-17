@@ -1,14 +1,15 @@
 const body = document.querySelector('body');
-const modalWindow = document.querySelector('.modal');
+const modalWindow = document.querySelector('.modal-window');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
-const timeout = 500;
+const timeout = 800;
 
+// -- Modal window --
 // -- Появление модального окна
 modalBtn.forEach(item=> {
 	item.addEventListener('click', () => {
 		addScrollIndent();
-		modalWindow.classList.add('modal-open');
+		modalWindow.classList.add('open');
 		body.classList.add('noscroll');
 	});
 });
@@ -16,17 +17,25 @@ modalBtn.forEach(item=> {
 // -- Исчезновение (закрытие) модального окна по клику вне модального окна
 modalWindow.addEventListener('click', (e) => {
 	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
-	const isModal = e.target.closest('.modal-window__wrapper');
+	const isModal = e.target.closest('.modal-window__content');
 	if(!isModal) {
-		modalWindow.classList.remove('modal-open');
+		modalWindow.classList.remove('open');
 		removeScrollIndent();
 	}
 });
 
 // -- Исчезновение (закрытие) модального окна по клику на крест
 modalClose.addEventListener('click', () => {
-	modalWindow.classList.remove('modal-open');
+	modalWindow.classList.remove('open');
 	removeScrollIndent();
+});
+
+// Close popup if Esc click
+document.addEventListener ('keydown', function (e) {
+	if (e.code == 'Escape') {
+		modalWindow.classList.remove('open');
+		removeScrollIndent();
+	}
 });
 
 // Компенсация сдвига по гор. вправо при появлении модального окна
@@ -42,14 +51,6 @@ function removeScrollIndent() {
 		body.classList.remove('noscroll');
 	}, timeout);
 }
-
-// Close popup if Esc click
-document.addEventListener ('keydown', function (e) {
-    if (e.code == 'Escape') {
-        modalWindow.classList.remove('modal-open');
-		removeScrollIndent();
-    }
-});
 
 // -- Кнопка для прокрутки вверх
 // Получаю в константу кнопку (стрелку)
@@ -71,11 +72,12 @@ scrollBtn.onclick = () => {
 };
 
 // Form validate settings
-$(modalWindow).validate ({
+$('#contacts-form').validate ({
 	rules: {
 		name: {
 			required: true,
-			lettersonly: true
+			minlength: 3,
+			lettersOnly: true
 		},
 		phone: {
 			required: true,
@@ -90,19 +92,43 @@ $(modalWindow).validate ({
 	messages: {
 		name: {
 			required: 'Введите имя',
+			minlength: 'Не меньше 3-х букв'
 		},
 		phone: {
 			required: 'Введите номер телефона',
-			rangelength: jQuery.validator.format("От {0} до {1} цифр")
+			digits: 'Вводите только цифры',
+			rangelength: jQuery.validator.format('От {0} до {1} цифр')
 		},
 		email: {
 			required: 'Введите email',
 			email: 'Отсутствует символ @'
 		}
+	},
+	submitHandler: function (form) {
+		ajaxFormSubmit();
 	}
 });
 
 // Custom rule to cheking a letter
-$.validator.addMethod("lettersonly", function(value, element) {
+$.validator.addMethod('lettersOnly', function(value, element) {
 	return this.optional(element) || /^[a-zа-я]+$/i.test(value);
 }, "Вводите только буквы");
+
+
+// AJAX query function on server
+function ajaxFormSubmit() {
+    let string = $('#contacts-form').serialize(); // Сохраняем данные введенные в форму в строку.
+    // AJAX query
+    $.ajax({
+        type: 'POST',
+        url: 'php/mail.php',
+        data: string,
+        // Close the modal window (JQuery method slideUP)
+        success: function (html) {
+            $('#contacts-form').slideUp(800);
+            $('#answer').html(html);
+        }
+    });
+    // Block action if click to submit
+    return false;
+}
