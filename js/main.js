@@ -11,6 +11,11 @@ let fieldClear = (()=>{
 	})
 });
 
+let errorFieldClear = (()=> {
+	const errorMessage = document.getElementById('name-error');
+	console.log(errorMessage);
+})
+
 // -- Modal window --
 // -- Появление модального окна
 modalBtn.forEach(item=> {
@@ -81,6 +86,7 @@ scrollBtn.onclick = () => {
 
 // Form validate settings
 $('#contacts-form').validate ({
+	focusCleanup: true,
 	rules: {
 		name: {
 			required: true,
