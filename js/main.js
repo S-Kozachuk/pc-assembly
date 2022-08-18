@@ -104,7 +104,7 @@ $('#contacts-form').validate ({
 			email: 'Отсутствует символ @'
 		}
 	},
-	submitHandler: function (form) {
+	submitHandler: function (ajaxFormSubmit) {
 		ajaxFormSubmit();
 	}
 });
