@@ -4,6 +4,13 @@ const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
 const timeout = 800;
 
+let fieldClear = (()=>{
+	const mainForm = document.querySelectorAll('.form__input');
+	mainForm.forEach(elem =>{
+		elem.value = "";
+	})
+});
+
 // -- Modal window --
 // -- Появление модального окна
 modalBtn.forEach(item=> {
@@ -11,6 +18,7 @@ modalBtn.forEach(item=> {
 		addScrollIndent();
 		modalWindow.classList.add('open');
 		body.classList.add('noscroll');
+		fieldClear();
 	});
 });
 
@@ -121,7 +129,7 @@ function ajaxFormSubmit() {
     // AJAX query
     $.ajax({
         type: 'POST',
-        url: 'php/mail.php',
+        url: '../php/mail.php',
         data: string,
         // Close the modal window (JQuery method slideUP)
         success: function (html) {
