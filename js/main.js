@@ -2,6 +2,7 @@ const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal-window');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
+const formElem = document.querySelector('.form-window__elements');
 const submitBtn = document.getElementById('btn-submit');
 const timeout = 800;
 
@@ -14,15 +15,16 @@ let fieldClear = (()=>{
 
 
 let errorFieldClear = (()=> {
-	document.addEventListener('submit', ()=> {
-		const errorMessage = document.body.childNodes;
-		console.log(errorMessage);
-	}) 
-	const getErrorMessage = document.querySelectorAll('form__item');
-	console.log(getErrorMessage);
+	submitBtn.addEventListener('click', ()=> {
+		const errorMessage = formElem.childNodes;
+		const nextErrorMessage = errorMessage;
+		const reBN = nextErrorMessage[3].childNodes[2];
+		const reth =reBN.previousElementSibling;
+		console.log(reth);
+	});
 });
 
-errorFieldClear()
+errorFieldClear();
 
 // -- Modal window --
 // -- Появление модального окна
