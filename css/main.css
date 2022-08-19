@@ -580,6 +580,10 @@ label.error {
 	color: red;
 }
 
+label.error-hide {
+	display: none;
+}
+
 .noscroll {
 	overflow: hidden;
 }
