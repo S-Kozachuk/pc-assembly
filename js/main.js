@@ -13,14 +13,17 @@ let fieldClear = (()=>{
 	})
 });
 
-
+// How get an error label node?
 let errorFieldClear = (()=> {
 	submitBtn.addEventListener('click', ()=> {
 		const errorMessage = formElem.childNodes;
-		const nextErrorMessage = errorMessage;
-		const reBN = nextErrorMessage[3].childNodes[2];
-		const reth =reBN.previousElementSibling;
-		console.log(reth);
+		console.log(errorMessage);
+		const childElem = errorMessage[3];
+		console.log(childElem);
+		setTimeout(()=>{
+			const errorLabel = document.getElementById('phone-error');
+			console.log(errorLabel);
+		}, 1)
 	});
 });
 
