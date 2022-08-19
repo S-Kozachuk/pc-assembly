@@ -580,6 +580,10 @@ label.error {
 	color: red;
 }
 
+label.error-show {
+	display: none;
+}
+
 label.error-hide {
 	display: none;
 }

@@ -5,6 +5,7 @@ const modalBtn = document.querySelectorAll('.modal__btn');
 const formElem = document.querySelector('.form-window__elements');
 const submitBtn = document.getElementById('btn-submit');
 const timeout = 800;
+let errorLabel;
 
 let fieldClear = (()=>{
 	const mainForm = document.querySelectorAll('.form__input');
@@ -13,7 +14,6 @@ let fieldClear = (()=>{
 	})
 });
 
-// How get an error label node?
 let errorFieldClear = (()=> {
 	submitBtn.addEventListener('click', ()=> {
 		const errorMessage = formElem.childNodes;
@@ -21,13 +21,13 @@ let errorFieldClear = (()=> {
 		const childElem = errorMessage[3];
 		console.log(childElem);
 		setTimeout(()=>{
-			const errorLabel = document.getElementById('phone-error');
-			console.log(errorLabel);
-		}, 1)
+			errorLabel = document.getElementById('phone-error');
+		}, 100);
 	});
 });
 
 errorFieldClear();
+
 
 // -- Modal window --
 // -- Появление модального окна
@@ -37,6 +37,8 @@ modalBtn.forEach(item=> {
 		modalWindow.classList.add('open');
 		body.classList.add('noscroll');
 		fieldClear();
+		// errorLabel.classList.add('error-show');
+		// errorLabel.classList.remove('error-hide');
 	});
 });
 
@@ -46,7 +48,8 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__content');
 	if(!isModal) {
 		modalWindow.classList.remove('open');
-		removeScrollIndent();
+		// How remove the  display: inline
+		errorLabel.classList.add('error-hide');
 	}
 });
 
