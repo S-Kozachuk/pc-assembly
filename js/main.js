@@ -14,8 +14,11 @@ let fieldClear = (()=>{
 	})
 });
 
-let errorFieldClear = (()=> {
+let getFieldsError = (()=> {
 	submitBtn.addEventListener('click', ()=> {
+
+		// Get element by id
+		/*
 		const errorMessage = formElem.childNodes;
 		console.log(errorMessage);
 		const childElem = errorMessage[3];
@@ -23,10 +26,27 @@ let errorFieldClear = (()=> {
 		setTimeout(()=>{
 			errorLabel = document.getElementById('phone-error');
 		}, 100);
+		*/
+
+		// Get collection by tag
+		errorLabel = formElem.getElementsByTagName('label');
+		console.log(errorLabel);
 	});
 });
+getFieldsError();
 
-errorFieldClear();
+let removeErrorsMessages = (()=> {
+	// errorLabel.forEach(elem=>{
+	// 	elem.remove();
+	// 	console.log('erere')
+	// })
+	if (errorLabel) {
+		for (let elem of errorLabel) {
+			elem.remove();
+			console.log('Removed')
+		}
+	}
+})
 
 
 // -- Modal window --
@@ -47,7 +67,9 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__content');
 	if(!isModal) {
 		modalWindow.classList.remove('open');
-		errorLabel.remove();
+		// errorLabel.remove();
+		removeErrorsMessages(); 	
+		console.log('test');
 	}
 });
 
