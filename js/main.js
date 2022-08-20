@@ -49,8 +49,7 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__content');
 	if(!isModal) {
 		modalWindow.classList.remove('open');
-		// How remove the  display: inline
-		errorLabel.classList.add('error-hide');
+		errorLabel.remove();
 	}
 });
 
