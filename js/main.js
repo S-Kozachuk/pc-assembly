@@ -38,8 +38,6 @@ modalBtn.forEach(item=> {
 		modalWindow.classList.add('open');
 		body.classList.add('noscroll');
 		fieldClear();
-		// errorLabel.classList.add('error-show');
-		// errorLabel.classList.remove('error-hide');
 	});
 });
 
