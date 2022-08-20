@@ -2,7 +2,32 @@ const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal-window');
 const modalClose = document.querySelector('.modal__close');
 const modalBtn = document.querySelectorAll('.modal__btn');
+const formElem = document.querySelector('.form-window__elements');
+const submitBtn = document.getElementById('btn-submit');
 const timeout = 800;
+let errorLabel;
+
+let fieldClear = (()=>{
+	const mainForm = document.querySelectorAll('.form__input');
+	mainForm.forEach(elem =>{
+		elem.value = "";
+	})
+});
+
+let errorFieldClear = (()=> {
+	submitBtn.addEventListener('click', ()=> {
+		const errorMessage = formElem.childNodes;
+		console.log(errorMessage);
+		const childElem = errorMessage[3];
+		console.log(childElem);
+		setTimeout(()=>{
+			errorLabel = document.getElementById('phone-error');
+		}, 100);
+	});
+});
+
+errorFieldClear();
+
 
 // -- Modal window --
 // -- Появление модального окна
@@ -12,6 +37,9 @@ modalBtn.forEach(item=> {
 		addScrollIndent();
 		modalWindow.classList.add('open');
 		body.classList.add('noscroll');
+		fieldClear();
+		// errorLabel.classList.add('error-show');
+		// errorLabel.classList.remove('error-hide');
 	});
 });
 
@@ -21,7 +49,8 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__content');
 	if(!isModal) {
 		modalWindow.classList.remove('open');
-		removeScrollIndent();
+		// How remove the  display: inline
+		errorLabel.classList.add('error-hide');
 	}
 });
 
@@ -74,6 +103,7 @@ scrollBtn.onclick = () => {
 
 // Form validate settings
 $('#contacts-form').validate ({
+	focusCleanup: true,
 	rules: {
 		name: {
 			required: true,
@@ -106,7 +136,7 @@ $('#contacts-form').validate ({
 		}
 	},
 	submitHandler: function (form) {
-		ajaxFormSubmit();
+		$(form).ajaxFormSubmit();
 	}
 });
 
@@ -122,7 +152,7 @@ function ajaxFormSubmit() {
     // AJAX query
     $.ajax({
         type: 'POST',
-        url: 'php/mail.php',
+        url: '../php/mail.php',
         data: string,
         // Close the modal window (JQuery method slideUP)
         success: function (html) {
