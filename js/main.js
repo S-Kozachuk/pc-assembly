@@ -40,10 +40,11 @@ let removeErrorsMessages = (()=> {
 	// 	elem.remove();
 	// 	console.log('erere')
 	// })
+
 	if (errorLabel) {
 		for (let elem of errorLabel) {
 			elem.remove();
-			console.log('Removed')
+			console.log('Removed fields');
 		}
 	}
 })
@@ -70,6 +71,7 @@ modalWindow.addEventListener('click', (e) => {
 		// errorLabel.remove();
 		removeErrorsMessages(); 	
 		console.log('test');
+		removeScrollIndent();
 	}
 });
 
@@ -122,7 +124,7 @@ scrollBtn.onclick = () => {
 
 // Form validate settings
 $('#contacts-form').validate ({
-	focusCleanup: true,
+	// focusCleanup: true,
 	rules: {
 		name: {
 			required: true,
