@@ -45,13 +45,12 @@ getFieldsError();
 
 let removeErrorsMessages = (()=> {
 	if (errorLabel) {
-		for (let el of errorLabel) {
-			el.remove();
+		for (let label of errorLabel) {
+			label.remove();
 			console.log('Removed error message');
 		}
 	}
 })
-
 
 // -- Modal window --
 // -- Появление модального окна
@@ -80,6 +79,7 @@ modalWindow.addEventListener('click', (e) => {
 modalClose.addEventListener('click', () => {
 	modalWindow.classList.remove('open');
 	removeScrollIndent();
+	removeErrorsMessages();
 });
 
 // Close popup if Esc click
@@ -87,6 +87,7 @@ document.addEventListener ('keydown', function (e) {
 	if (e.code == 'Escape') {
 		modalWindow.classList.remove('open');
 		removeScrollIndent();
+		removeErrorsMessages();
 	}
 });
 
