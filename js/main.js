@@ -29,8 +29,16 @@ let getFieldsError = (()=> {
 		*/
 
 		// Get collection by tag
+		/*
 		errorLabel = formElem.getElementsByTagName('label');
 		console.log(errorLabel);
+		*/
+
+		// Get collection by class (working version)
+		setTimeout(()=> {
+			errorLabel = formElem.querySelectorAll('label.error');
+			console.log(errorLabel);
+		}, 100);
 	});
 });
 getFieldsError();
@@ -42,8 +50,8 @@ let removeErrorsMessages = (()=> {
 	// })
 
 	if (errorLabel) {
-		for (let elem of errorLabel) {
-			elem.remove();
+		for (let el of errorLabel) {
+			el.remove();
 			console.log('Removed fields');
 		}
 	}
