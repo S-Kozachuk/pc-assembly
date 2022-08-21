@@ -44,15 +44,10 @@ let getFieldsError = (()=> {
 getFieldsError();
 
 let removeErrorsMessages = (()=> {
-	// errorLabel.forEach(elem=>{
-	// 	elem.remove();
-	// 	console.log('erere')
-	// })
-
 	if (errorLabel) {
 		for (let el of errorLabel) {
 			el.remove();
-			console.log('Removed fields');
+			console.log('Removed error message');
 		}
 	}
 })
@@ -76,10 +71,8 @@ modalWindow.addEventListener('click', (e) => {
 	const isModal = e.target.closest('.modal-window__content');
 	if(!isModal) {
 		modalWindow.classList.remove('open');
-		// errorLabel.remove();
-		removeErrorsMessages(); 	
-		console.log('test');
 		removeScrollIndent();
+		removeErrorsMessages();
 	}
 });
 
