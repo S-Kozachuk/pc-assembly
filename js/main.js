@@ -157,7 +157,7 @@ function ajaxFormSubmit() {
     // AJAX query
     $.ajax({
         type: 'POST',
-        url: '../php/mail.php',
+        url: 'php/mail.php',
         data: string,
         // Close the modal window (JQuery method slideUP)
         success: function (html) {
