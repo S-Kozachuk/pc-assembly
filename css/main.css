@@ -616,3 +616,10 @@ a.scroll_arrow::before {
 .none {
 	display: none;
 }
+
+.contact-form__success {
+	margin: 0 auto;
+	max-width: 500px;
+	text-align: center;
+	font-size: 14px;
+  }

@@ -14,7 +14,7 @@ let fieldClear = (()=>{
 	})
 });
 
-// The plugin adds error messages with a delayt
+// The plugin adds error messages with a delay
 let getFieldsError = (()=> {
 	submitBtn.addEventListener('click', ()=> {
 		setTimeout(()=> {
