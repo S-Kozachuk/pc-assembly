@@ -14,27 +14,9 @@ let fieldClear = (()=>{
 	})
 });
 
+// The plugin adds error messages with a delayt
 let getFieldsError = (()=> {
 	submitBtn.addEventListener('click', ()=> {
-
-		// Get element by id
-		/*
-		const errorMessage = formElem.childNodes;
-		console.log(errorMessage);
-		const childElem = errorMessage[3];
-		console.log(childElem);
-		setTimeout(()=>{
-			errorLabel = document.getElementById('phone-error');
-		}, 100);
-		*/
-
-		// Get collection by tag
-		/*
-		errorLabel = formElem.getElementsByTagName('label');
-		console.log(errorLabel);
-		*/
-
-		// Get collection by class (working version)
 		setTimeout(()=> {
 			errorLabel = formElem.querySelectorAll('label.error');
 			console.log(errorLabel);
@@ -50,7 +32,7 @@ let removeErrorsMessages = (()=> {
 			console.log('Removed error message');
 		}
 	}
-})
+});
 
 // -- Modal window --
 // -- Появление модального окна
