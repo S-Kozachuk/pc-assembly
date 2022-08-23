@@ -1,3 +1,6 @@
+import { timer } from "..modules/timer.js";
+timer();
+
 const body = document.querySelector('body');
 const modalWindow = document.querySelector('.modal-window');
 const modalClose = document.querySelector('.modal__close');
