@@ -1,65 +1,40 @@
-<?php
+<?php 
 
-//Script Foreach
-$c = true;
+require_once('phpmailer/PHPMailerAutoload.php');
+$mail = new PHPMailer;
+$mail->CharSet = 'utf-8';
 
-// For POST method only!
+$name = $_POST['user_name'];
+$phone = $_POST['user_phone'];
+$email = $_POST['user_email'];
 
-// Save Basic Form parametrs
-$project_name = trim($_POST["project_name"]);
-$admin_email  = trim($_POST["admin_email"]);
-$email_from  = trim($_POST["email_from"]);
-// $form_subject = trim($_POST["form_subject"]);
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-// Serialize form fields - that filled-in by User
-foreach ( $_POST as $key => $value ) {
-	if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "email_from" ) {
-		$message .= "
-		" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-		<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-		<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-	</tr>
-	";
-	}
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'dzharuzov@mail.ru'; // Ваш логин от почты с которой будут отправляться письма
+$mail->Password = '$dk820&123'; // Ваш пароль от почты с которой будут отправляться письма
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+
+$mail->setFrom('dzharuzov@mail.ru'); // от кого будет уходить письмо?
+$mail->addAddress('gomudusu@p33.org');     // Кому будет уходить письмо 
+//$mail->addAddress('ellen@example.com');               // Name is optional
+//$mail->addReplyTo('info@example.com', 'Information');
+//$mail->addCC('cc@example.com');
+//$mail->addBCC('bcc@example.com');
+//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
+
+$mail->Subject = 'Заявка с тестового сайта';
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
+$mail->AltBody = '';
+
+if(!$mail->send()) {
+    echo 'Error';
+} else {
+    header('location: thank-you.html');
 }
-
-// Create message text for sending on email
-$message = "<table style='width: 100%;'>$message</table>";
-
-// Function to save User data in file
-function send_user_data_in_txt_file ($message){
-    //HERE SAVE TEXT INFO
-	$f = fopen('form_fill.html', 'a+');
-	fwrite($f, date('Y-m-d H:i:s'). "\n");
-    fwrite($f, $message );
-    fwrite($f, "\n" . "\n" . "\n" . "\n");
-}
-
-// Adjusting text encoding
-function adopt($text) {
-	return '=?UTF-8?B?'.base64_encode($text).'?=';
-}
-$form_subject = 'Заявка с сайта PC-Assembly';
-
-// Preparing header
-$headers = "MIME-Version: 1.0" . PHP_EOL .
-"Content-Type: text/html; charset=utf-8" . PHP_EOL .
-'From: '.adopt($project_name).' <'.$email_from.'>' . PHP_EOL .
-'Reply-To: '.$admin_email.'' . PHP_EOL;
-
-	// Sending email to admin
-	mail($admin_email, $form_subject, $message, $headers );
-
-	// Saving user data in file
-	send_user_data_in_txt_file ($message);
-
-	// Message about successful sending
-	echo "<div class='contact-form__success'>
-				<h2 class='contact-form__success'>
-					Заявка принята!<br>
-					Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
-				</h2>
-		</div>";
 ?>
-
-
