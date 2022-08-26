@@ -1,6 +1,6 @@
 <?php 
 
-require_once('libs/phpmailer/PHPMailerAutoload.php');
+require_once('..\\libs/phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
@@ -11,7 +11,7 @@ $email = $_POST['email'];
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  																							// Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru'; 																						// Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'kozachuk-dev@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
 $mail->Password = 'goyqjmuxryikqwzm'; // Ваш пароль от почты с которой будут отправляться письма
@@ -32,9 +32,13 @@ $mail->Subject = 'Заявка с тестового сайта';
 $mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
 $mail->AltBody = '';
 
-if(!$mail->send()) {
-    echo 'Error';
-} else {
-    header('location: thank-you.html');
-}
+	success: function (html) {
+		$('#contacts-form').slideUp(800);
+		$('#answer').html(html);
+	}
+
+	echo '<script type="text/javascript">',
+	 'ajaxFormSubmit();'
+     '</script>'
+;
 ?>
