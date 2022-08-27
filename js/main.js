@@ -170,3 +170,9 @@ function ajaxFormSubmit() {
 }
 
 // Timer
+function timer() {
+	const timerDigit = document.querySelectorAll('.timer__digit');
+	console.log(timerDigit);
+}
+
+timer();
