@@ -8,11 +8,11 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+// $mail->SMTPDebug = 3; // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->isSMTP(); // Set mailer to use SMTP
 $mail->Host = 'smtp.yandex.ru'; 																						// Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->SMTPAuth = true; // Enable SMTP authentication
 $mail->Username = 'kozachuk-dev@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
 $mail->Password = 'goyqjmuxryikqwzm'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
@@ -26,13 +26,14 @@ $mail->Subject = 'Order from PC-Assembly.ru';
 $mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
 $mail->AltBody = '';
 
-	success: function (html) {
-		$('#contacts-form').slideUp(800);
-		$('#answer').html(html);
-	}
-
-	echo '<script type="text/javascript">',
-	 'ajaxFormSubmit();'
-     '</script>'
-;
+if ($mail->send()) {
+	echo 
+	"<div class='contact-form__success'>
+	<h2 class='contact-form__success'>Заявка принята!<br>
+	Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
+	</h2>
+  	</div> ";
+  } else {
+	echo 'Ошибка: ' . $mail->ErrorInfo;
+  }  
 ?>
