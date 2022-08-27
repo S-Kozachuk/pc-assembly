@@ -62,6 +62,7 @@ modalClose.addEventListener('click', () => {
 	modalWindow.classList.remove('open');
 	removeScrollIndent();
 	removeErrorsMessages();
+	const successMsg = document.querySelector('.contact-form__success');
 });
 
 // Close popup if Esc click

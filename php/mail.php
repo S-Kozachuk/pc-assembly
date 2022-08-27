@@ -18,7 +18,7 @@ $mail->Password = 'goyqjmuxryikqwzm'; // Ваш пароль от почты с 
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 $mail->setFrom('kozachuk-dev@yandex.ru', 'PC-Assembly.ru'); // от кого будет уходить письмо?
-$mail->addAddress('skozachuk91@yandex.ru'); // Кому будет уходить письмо 
+$mail->addAddress('kozachuk-dev@yandex.ru'); // Кому будет уходить письмо 
 //$mail->addReplyTo('info@example.com', 'Information');
 $mail->isHTML(true); // Set email format to HTML
 
@@ -29,9 +29,9 @@ $mail->AltBody = '';
 if ($mail->send()) {
 	echo 
 	"<div class='contact-form__success'>
-	<h2 class='contact-form__success'>Заявка принята!<br>
-	Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
-	</h2>
+		<h2 class='contact-form__success'>Заявка принята!<br>
+			Наш специалист свяжется с Вами в ближайшее время.
+		</h2>
   	</div> ";
   } else {
 	echo 'Ошибка: ' . $mail->ErrorInfo;
