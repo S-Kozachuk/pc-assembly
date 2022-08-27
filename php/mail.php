@@ -57,7 +57,7 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 	echo "<div class='contact-form__success'>
 				<h2 class='contact-form__success'>
 					Заявка принята!<br>
-					Я свяжусь с&nbsp;Вами в&nbsp;ближайшее время.
+					Наш специалист свяжется с Вами в ближайшее время.
 				</h2>
 		</div>";
 ?>
