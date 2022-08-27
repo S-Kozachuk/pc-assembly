@@ -1,10 +1,10 @@
-const body = document.querySelector('body');
-const modalWindow = document.querySelector('.modal-window');
-const modalClose = document.querySelector('.modal__close');
-const modalBtn = document.querySelectorAll('.modal__btn');
-const formElem = document.querySelector('.form-window__elements');
-const submitBtn = document.getElementById('btn-submit');
-const timeout = 800;
+const body = document.querySelector('body'),
+	modalWindow = document.querySelector('.modal-window'),
+	modalClose = document.querySelector('.modal__close'),
+	modalBtn = document.querySelectorAll('.modal__btn'),
+	formElem = document.querySelector('.form-window__elements'),
+	submitBtn = document.getElementById('btn-submit'),
+	timeout = 800;
 let errorLabel;
 
 let fieldClear = (()=>{
@@ -168,3 +168,5 @@ function ajaxFormSubmit() {
     // Block action if click to submit
     return false;
 }
+
+// Timer
