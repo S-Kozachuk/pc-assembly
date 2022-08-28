@@ -195,11 +195,17 @@ function timer() {
 	let sourceDate = new Date;
 	console.log(sourceDate);
 
-	let starMinutes = sourceDate.value;
-	console.log(minutes);
+	let basicMin = sourceDate.getMinutes();
+	console.log(basicMin);
 
-	let currentMin = sourceDate.getMinutes();
-	console.log(currentMin);
+	let timerId = setInterval(() => {
+		let sourceDate = new Date; 
+		let currentMin = sourceDate.getSeconds();
+		// 	console.log(currentMin);
+		timePeriod = basicMin - currentMin;
+		console.log(timePeriod);
+	}, 1000);
+
 }
 
 timer();
