@@ -177,6 +177,10 @@ between the current time and the time elapsed since the function was called.
 
 Formula: initial time (static, get when timer start) - current time
 
+Basic time (is const), current time (get by setInterval), initial value.
+Current time - basic time = last time 
+initial time - last time
+
 3. Use the next references:
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
 https://learn.javascript.ru/date
