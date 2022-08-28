@@ -174,6 +174,9 @@ function ajaxFormSubmit() {
 1. Get the current time (seconds).
 2. Write a function that gets the time in seconds as the difference 
 between the current time and the time elapsed since the function was called.
+
+Formula: initial time (static, get when timer start) - current time
+
 3. Use the next references:
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
 https://learn.javascript.ru/date
@@ -188,10 +191,10 @@ function timer() {
 	let sourceDate = new Date;
 	console.log(sourceDate);
 
-	let minutes = sourceDate.setMinutes(20);
-	console.log(minutes / 1000);
+	let starMinutes = sourceDate.value;
+	console.log(minutes);
 
-	let currentMin = sourceDate.getMinutes(20*100);
+	let currentMin = sourceDate.getMinutes();
 	console.log(currentMin);
 }
 
