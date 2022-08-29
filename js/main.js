@@ -216,15 +216,39 @@ timer();
 */
 const timerDigit = document.querySelectorAll('.timer__digit');
 let timerSeconds = timerDigit[3];
+let timerMinutes = timerDigit[2];
 let initialTime = 60;
+let initialMinutes = 18;
+let trigger;
 
-let timerId = setInterval(()=>{
-	console.log(initialTime--);	
-	timerSeconds.innerHTML = initialTime;
-	if (initialTime == 0) {
-		clearInterval(timerId);
-		console.log('Stop');
+setTimeout(secondsCounting, 500);
+
+function secondsCounting() {
+	let timerId = setInterval(()=>{
+		console.log(initialTime--);	
+		timerSeconds.innerHTML = initialTime;
+		if (initialTime == 0) {
+			clearInterval(timerId);
+			console.log('Stop');
+			minutesCounting();
+		}
+	}, 500);
+	trigger = 1;
+};
+
+function minutesCounting() {
+	if(trigger == 1) {
+		let timerId = setInterval(()=>{
+			console.log(initialMinutes--);	
+			timerMinutes.innerHTML = initialMinutes;
+			// secondsCounting();
+			if (initialMinutes == 0) {
+				clearInterval(timerId);
+				console.log('Stop');
+			}
+		}, 2000);
 	}
-}, 1000);
+}
 
-
+// Make a restart secondCounting if minutes value be less (-1 minutes)
+// But when minutes = 0, stoped the counting secondss. 
