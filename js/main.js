@@ -217,7 +217,7 @@ timer();
 const timerDigit = document.querySelectorAll('.timer__digit');
 let timerSeconds = timerDigit[3];
 let timerMinutes = timerDigit[2];
-let initialTime = 60;
+let initialSeconds = 60;
 let initialMinutes = 18;
 let trigger;
 
@@ -225,9 +225,9 @@ setTimeout(secondsCounting, 500);
 
 function secondsCounting() {
 	let timerId = setInterval(()=>{
-		console.log(initialTime--);	
-		timerSeconds.innerHTML = initialTime;
-		if (initialTime == 0) {
+		console.log(initialSeconds--);	
+		timerSeconds.innerHTML = initialSeconds;
+		if (initialSeconds == 0) {
 			clearInterval(timerId);
 			console.log('Stop');
 			minutesCounting();
@@ -241,7 +241,6 @@ function minutesCounting() {
 		let timerId = setInterval(()=>{
 			console.log(initialMinutes--);	
 			timerMinutes.innerHTML = initialMinutes;
-			// secondsCounting();
 			if (initialMinutes == 0) {
 				clearInterval(timerId);
 				console.log('Stop');
