@@ -215,7 +215,7 @@ function timer() {
 timer();
 */
 const timerDigit = document.querySelectorAll('.timer__digit');
-console.log(timerDigit);
+const timerSeconds = timerDigit[3];
 let initialTime = 60;
 
 let timerId = setInterval(()=>{
