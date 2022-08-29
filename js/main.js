@@ -215,14 +215,15 @@ function timer() {
 timer();
 */
 const timerDigit = document.querySelectorAll('.timer__digit');
-const timerSeconds = timerDigit[3];
+let timerSeconds = timerDigit[3];
 let initialTime = 60;
 
 let timerId = setInterval(()=>{
 	console.log(initialTime--);	
+	timerSeconds.innerHTML = initialTime;
 	if (initialTime == 0) {
 		clearInterval(timerId);
-		console.log('Stop')
+		console.log('Stop');
 	}
 }, 1000);
 
