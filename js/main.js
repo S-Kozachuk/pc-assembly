@@ -187,25 +187,43 @@ https://learn.javascript.ru/date
 https://itchief.ru/javascript/date
 
 */
-
+/*
 function timer() {
 	const timerDigit = document.querySelectorAll('.timer__digit');
 	console.log(timerDigit);
 	
-	let sourceDate = new Date;
-	console.log(sourceDate);
-
-	let basicMin = sourceDate.getMinutes();
-	console.log(basicMin);
+	let inputTime = 60;
+	let currentDate;
+	let timePeriod;
 
 	let timerId = setInterval(() => {
-		let sourceDate = new Date; 
-		let currentMin = sourceDate.getSeconds();
+		currentDate = new Date; // set the time value
+		let currentSeconds = currentDate.getSeconds();
 		// 	console.log(currentMin);
-		timePeriod = basicMin - currentMin;
+		timePeriod = inputTime - currentSeconds;
 		console.log(timePeriod);
 	}, 1000);
+
+	if (timePeriod === 1) {
+		clearInterval(timerId);
+	}
+	
+	console.log(currentDate);
 
 }
 
 timer();
+*/
+const timerDigit = document.querySelectorAll('.timer__digit');
+console.log(timerDigit);
+let initialTime = 60;
+
+let timerId = setInterval(()=>{
+	console.log(initialTime--);	
+	if (initialTime == 0) {
+		clearInterval(timerId);
+		console.log('Stop')
+	}
+}, 1000);
+
+
