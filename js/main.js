@@ -228,7 +228,8 @@ function secondsCounting() {
 		console.log(initialSeconds--);	
 		timerSeconds.innerHTML = initialSeconds;
 		if (initialSeconds == 0) {
-			clearInterval(timerId);
+			// clearInterval(timerId);
+			initialSeconds = 60;
 			console.log('Stop');
 			minutesCounting();
 		}
@@ -238,14 +239,12 @@ function secondsCounting() {
 
 function minutesCounting() {
 	if(trigger == 1) {
-		let timerId = setInterval(()=>{
-			console.log(initialMinutes--);	
+		
 			timerMinutes.innerHTML = initialMinutes;
 			if (initialMinutes == 0) {
 				clearInterval(timerId);
 				console.log('Stop');
 			}
-		}, 2000);
 	}
 }
 
