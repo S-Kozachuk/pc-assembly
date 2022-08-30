@@ -221,7 +221,7 @@ let timerSeconds = timerDigit[3],
 	timerDays = timerDigit[0],
 	initialSeconds = 60,
 	initialMinutes = 60,
-	initialHours = 60,
+	initialHours = 24,
 	initialDays = 18,
 	trigger;
 
@@ -237,7 +237,7 @@ function secondsCounting() {
 			console.log('Stop');
 			minutesCounting();
 		}
-	}, 10);
+	}, 2);
 };
 
 function minutesCounting() {
@@ -252,5 +252,9 @@ function minutesCounting() {
 
 function hoursCounting() {
 	initialHours--;
-	timerMinutes.innerHTML = initialHours;
+	timerHours.innerHTML = initialHours;
+	if (initialHours == 0) {
+		initialMinutes = 24;
+		daysCounting();;
+	}
 }
