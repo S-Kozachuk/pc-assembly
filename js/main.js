@@ -233,20 +233,10 @@ function secondsCounting() {
 			console.log('Stop');
 			minutesCounting();
 		}
-	}, 500);
-	trigger = 1;
+	}, 100);
 };
 
 function minutesCounting() {
-	if(trigger == 1) {
-		
-			timerMinutes.innerHTML = initialMinutes;
-			if (initialMinutes == 0) {
-				clearInterval(timerId);
-				console.log('Stop');
-			}
-	}
+		initialMinutes--;
+		timerMinutes.innerHTML = initialMinutes;
 }
-
-// Make a restart secondCounting if minutes value be less (-1 minutes)
-// But when minutes = 0, stoped the counting secondss. 
