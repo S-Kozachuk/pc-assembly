@@ -217,6 +217,7 @@ timer();
 const timerDigit = document.querySelectorAll('.timer__digit');
 let timerSeconds = timerDigit[3];
 let timerMinutes = timerDigit[2];
+let timerHours = timerDigit[1];
 let initialSeconds = 60;
 let initialMinutes = 60;
 let initialHours = 60;
@@ -235,13 +236,17 @@ function secondsCounting() {
 			console.log('Stop');
 			minutesCounting();
 		}
-	}, 100);
+	}, 10);
 };
 
 function minutesCounting() {
 	initialMinutes--;
 	timerMinutes.innerHTML = initialMinutes;
-	hoursCounting();
+	if (initialMinutes == 0) {
+		initialMinutes = 60;
+		hoursCounting();;
+	}
+	
 }
 
 function hoursCounting() {
