@@ -237,7 +237,7 @@ function secondsCounting() {
 			console.log('Stop');
 			minutesCounting();
 		}
-	}, 0.00000000001);
+	}, 0.1);
 };
 
 function minutesCounting() {
@@ -253,17 +253,23 @@ function minutesCounting() {
 function hoursCounting() {
 	initialHours--;
 	timerHours.innerHTML = initialHours;
-	if (initialHours == 1 & initialDays !== 0) {
+	if (initialDays == 0 && initialHours == 0) {
+		initialHours = 0;
+	} else {
 		initialHours = 3;
 		daysCounting();
 	}
+	
 }
 
 function daysCounting() {
 	initialDays--;
-	timerDays.innerHTML = initialDays;
-	if(initialSeconds == 0 && initialMinutes == 0 && initialHours == 0 && initialDays == 0) {
+	if(initialDays == 0) {
 		clearInterval(timerId);
+		initialDays = 0
 		console.log('Finished');
+	}
+	if(initialDays !== 0) {
+		timerDays.innerHTML = initialDays;
 	}
 }
