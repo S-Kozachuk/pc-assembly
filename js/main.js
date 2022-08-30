@@ -215,14 +215,15 @@ function timer() {
 timer();
 */
 const timerDigit = document.querySelectorAll('.timer__digit');
-let timerSeconds = timerDigit[3];
-let timerMinutes = timerDigit[2];
-let timerHours = timerDigit[1];
-let initialSeconds = 60;
-let initialMinutes = 60;
-let initialHours = 60;
-let initialDays = 18;
-let trigger;
+let timerSeconds = timerDigit[3],
+	timerMinutes = timerDigit[2],
+	timerHours = timerDigit[1],
+	timerDays = timerDigit[0],
+	initialSeconds = 60,
+	initialMinutes = 60,
+	initialHours = 60,
+	initialDays = 18,
+	trigger;
 
 setTimeout(secondsCounting, 500);
 
