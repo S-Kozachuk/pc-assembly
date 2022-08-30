@@ -218,7 +218,9 @@ const timerDigit = document.querySelectorAll('.timer__digit');
 let timerSeconds = timerDigit[3];
 let timerMinutes = timerDigit[2];
 let initialSeconds = 60;
-let initialMinutes = 18;
+let initialMinutes = 60;
+let initialHours = 60;
+let initialDays = 18;
 let trigger;
 
 setTimeout(secondsCounting, 500);
@@ -237,6 +239,12 @@ function secondsCounting() {
 };
 
 function minutesCounting() {
-		initialMinutes--;
-		timerMinutes.innerHTML = initialMinutes;
+	initialMinutes--;
+	timerMinutes.innerHTML = initialMinutes;
+	hoursCounting();
+}
+
+function hoursCounting() {
+	initialHours--;
+	timerMinutes.innerHTML = initialHours;
 }
