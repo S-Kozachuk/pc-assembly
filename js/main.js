@@ -221,31 +221,31 @@ let timerSeconds = timerDigit[3],
 	timerDays = timerDigit[0],
 	initialSeconds = 60,
 	initialMinutes = 60,
-	initialHours = 24,
-	initialDays = 18,
+	initialHours = 4,
+	initialDays = 3,
+	timerId,
 	trigger;
 
 setTimeout(secondsCounting, 500);
 
 function secondsCounting() {
-	let timerId = setInterval(()=>{
+	timerId = setInterval(()=>{
 		console.log(initialSeconds--);	
 		timerSeconds.innerHTML = initialSeconds;
 		if (initialSeconds == 0) {
-			// clearInterval(timerId);
 			initialSeconds = 60;
 			console.log('Stop');
 			minutesCounting();
 		}
-	}, 2);
+	}, 0.00000000001);
 };
 
 function minutesCounting() {
 	initialMinutes--;
 	timerMinutes.innerHTML = initialMinutes;
-	if (initialMinutes == 0) {
+	if (initialMinutes == 1 && initialHours !== 0) {
 		initialMinutes = 60;
-		hoursCounting();;
+		hoursCounting();
 	}
 	
 }
@@ -253,8 +253,17 @@ function minutesCounting() {
 function hoursCounting() {
 	initialHours--;
 	timerHours.innerHTML = initialHours;
-	if (initialHours == 0) {
-		initialMinutes = 24;
-		daysCounting();;
+	if (initialHours == 1 & initialDays !== 0) {
+		initialHours = 3;
+		daysCounting();
+	}
+}
+
+function daysCounting() {
+	initialDays--;
+	timerDays.innerHTML = initialDays;
+	if(initialSeconds == 0 && initialMinutes == 0 && initialHours == 0 && initialDays == 0) {
+		clearInterval(timerId);
+		console.log('Finished');
 	}
 }
