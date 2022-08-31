@@ -243,33 +243,31 @@ function secondsCounting() {
 function minutesCounting() {
 	initialMinutes--;
 	timerMinutes.innerHTML = initialMinutes;
-	if (initialMinutes == 1 && initialHours !== 0) {
+	if (initialMinutes == 0) {
 		initialMinutes = 60;
 		hoursCounting();
-	}
-	
+	} 
 }
 
 function hoursCounting() {
 	initialHours--;
 	timerHours.innerHTML = initialHours;
-	if (initialDays == 0 && initialHours == 0) {
-		initialHours = 0;
-	} else {
-		initialHours = 3;
+	if (initialHours == 0 & initialDays !== 0) {
+		initialHours = 3 ;
 		daysCounting();
-	}
-	
+	} 
 }
 
 function daysCounting() {
 	initialDays--;
+	timerDays.innerHTML = initialDays;
 	if(initialDays == 0) {
+		trigger = 1
+		//initialDays = 0
 		clearInterval(timerId);
-		initialDays = 0
 		console.log('Finished');
 	}
-	if(initialDays !== 0) {
-		timerDays.innerHTML = initialDays;
-	}
+	// if(initialDays !== 0) {
+	// 	timerDays.innerHTML = initialDays;
+	// }
 }
