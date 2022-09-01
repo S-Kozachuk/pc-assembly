@@ -170,95 +170,40 @@ function ajaxFormSubmit() {
 }
 
 // Timer
-/*
-1. Get the current time (seconds).
-2. Write a function that gets the time in seconds as the difference 
-between the current time and the time elapsed since the function was called.
+// Link to the autor https://alekscher1993.github.io/PC-collect/#
+const timer = () => {
+const timers = document.querySelectorAll(".timer__digit");
+let timerId;
 
-Formula: initial time (static, get when timer start) - current time
-
-Basic time (is const), current time (get by setInterval), initial value.
-Current time - basic time = last time 
-initial time - last time
-
-3. Use the next references:
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
-https://learn.javascript.ru/date
-https://itchief.ru/javascript/date
-
-*/
-/*
-function timer() {
-	const timerDigit = document.querySelectorAll('.timer__digit');
-	console.log(timerDigit);
-	
-	let inputTime = 60;
-	let currentDate;
-	let timePeriod;
-
-	let timerId = setInterval(() => {
-		currentDate = new Date; // set the time value
-		let currentSeconds = currentDate.getSeconds();
-		// 	console.log(currentMin);
-		timePeriod = inputTime - currentSeconds;
-		console.log(timePeriod);
-	}, 1000);
-
-	if (timePeriod === 1) {
+function timerHandler() {
+	const date = new Date();
+	const newDate = new Date(
+		date.getFullYear(),
+		date.getMonth(),
+		date.getDate() + 1
+	);
+	const dateTime = date.getTime();
+	const newDateTime = newDate.getTime();
+	const diff = newDateTime - dateTime;
+	  
+	let newSec = Math.floor((diff / 1000) % 60);
+	let newMin = Math.floor((diff / 1000 / 60) % 60);
+	let newHour = Math.floor((diff / 1000 / 60 / 60) % 60);
+	  
+	let hour = newHour < 10 ? "0" + newHour : newHour;
+	let min = newMin < 10 ? "0" + newMin : newMin;
+	let sec = newSec < 10 ? "0" + newSec : newSec;
+	  
+	timers[1].innerHTML = hour;
+	timers[2].innerHTML = min;
+	timers[3].innerHTML = sec;
+}
+	  
+timerId = setInterval(timerHandler, 500);
+	if (window.innerWidth <= 500) {
 		clearInterval(timerId);
 	}
-	
-	console.log(currentDate);
-
 }
 
 timer();
-*/
-// const timerDigit = document.querySelectorAll('.timer__digit');
-// let timerSeconds = timerDigit[3],
-// 	timerMinutes = timerDigit[2],
-// 	timerHours = timerDigit[1],
-// 	timerDays = timerDigit[0],
-// 	initialSeconds = 60,
-// 	initialMinutes = 60,
-// 	initialHours = 2,
-// 	initialDays = 2,
-// 	timerId,
-// 	trigger,
-// 	triggerM;
-
-	const timer = () => {
-		const timers = document.querySelectorAll(".timer__digit");
-		let timerId;
-
-		function timerHandler() {
-		  const date = new Date();
-		  const newDate = new Date(
-			date.getFullYear(),
-			date.getMonth(),
-			date.getDate() + 1
-		  );
-		  const dateTime = date.getTime();
-		  const newDateTime = newDate.getTime();
-		  const diff = newDateTime - dateTime;
-	  
-		  let newSec = Math.floor((diff / 1000) % 60);
-		  let newMin = Math.floor((diff / 1000 / 60) % 60);
-		  let newHour = Math.floor((diff / 1000 / 60 / 60) % 60);
-	  
-		  let hour = newHour < 10 ? "0" + newHour : newHour;
-		  let min = newMin < 10 ? "0" + newMin : newMin;
-		  let sec = newSec < 10 ? "0" + newSec : newSec;
-	  
-		  timers[1].innerHTML = hour;
-		  timers[2].innerHTML = min;
-		  timers[3].innerHTML = sec;
-		}
-	  
-		timerId = setInterval(timerHandler, 1);
-		
-		
-	  }
-
-	  timer();
 	  
