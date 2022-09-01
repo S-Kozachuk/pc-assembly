@@ -214,77 +214,51 @@ function timer() {
 
 timer();
 */
-const timerDigit = document.querySelectorAll('.timer__digit');
-let timerSeconds = timerDigit[3],
-	timerMinutes = timerDigit[2],
-	timerHours = timerDigit[1],
-	timerDays = timerDigit[0],
-	initialSeconds = 60,
-	initialMinutes = 60,
-	initialHours = 4,
-	initialDays = 3,
-	timerId,
-	trigger;
+// const timerDigit = document.querySelectorAll('.timer__digit');
+// let timerSeconds = timerDigit[3],
+// 	timerMinutes = timerDigit[2],
+// 	timerHours = timerDigit[1],
+// 	timerDays = timerDigit[0],
+// 	initialSeconds = 60,
+// 	initialMinutes = 60,
+// 	initialHours = 2,
+// 	initialDays = 2,
+// 	timerId,
+// 	trigger,
+// 	triggerM;
 
-setTimeout(secondsCounting, 500);
+	const timer = () => {
+		const timers = document.querySelectorAll(".timer__digit");
+		let timerId;
 
-function secondsCounting() {
-	timerId = setInterval(()=>{
-		// console.log(initialSeconds--);
-		initialSeconds--;	
-		timerSeconds.innerHTML = initialSeconds;
-		if (initialSeconds == 0) {
-			initialSeconds = 60;
-			console.log('Stop');
-			minutesCounting();
+		function timerHandler() {
+		  const date = new Date();
+		  const newDate = new Date(
+			date.getFullYear(),
+			date.getMonth(),
+			date.getDate() + 1
+		  );
+		  const dateTime = date.getTime();
+		  const newDateTime = newDate.getTime();
+		  const diff = newDateTime - dateTime;
+	  
+		  let newSec = Math.floor((diff / 1000) % 60);
+		  let newMin = Math.floor((diff / 1000 / 60) % 60);
+		  let newHour = Math.floor((diff / 1000 / 60 / 60) % 60);
+	  
+		  let hour = newHour < 10 ? "0" + newHour : newHour;
+		  let min = newMin < 10 ? "0" + newMin : newMin;
+		  let sec = newSec < 10 ? "0" + newSec : newSec;
+	  
+		  timers[1].innerHTML = hour;
+		  timers[2].innerHTML = min;
+		  timers[3].innerHTML = sec;
 		}
-	}, 0.1);
-	if (trigger == 3) {
-		clearInterval(timerId);
-		console.log('Finished');
-	}
-};
+	  
+		timerId = setInterval(timerHandler, 1);
+		
+		
+	  }
 
-function minutesCounting() {
-	initialMinutes--;
-	timerMinutes.innerHTML = initialMinutes;
-	if (initialMinutes == 0) {
-		initialMinutes = 60;
-		hoursCounting();
-	} 
-	if (trigger == 2) {
-		initialMinutes = 0;
-		trigger = 3;
-	}
-}
-
-function hoursCounting() {
-	initialHours--;
-	if (initialHours == 0) {
-		initialHours = 3;
-	}
-	if (trigger == 1){
-		initialHours = 0;
-		trigger = 2;
-	} 
-	timerHours.innerHTML = initialHours;
-	daysCounting();
-}
-
-function daysCounting() {
-	if(initialDays !== 0) {
-		initialDays--;
-		timerDays.innerHTML = initialDays;
-		//initialDays = 0
-	}
-	else {
-		initialDays = 0;
-		// clearInterval(timerId);
-		// console.log('Finished');
-		trigger = 1;
-		console.log(trigger);
-	}
-	// if(initialDays !== 0) {
-	// 	timerDays.innerHTML = initialDays;
-	// }
-}
+	  timer();
+	  
