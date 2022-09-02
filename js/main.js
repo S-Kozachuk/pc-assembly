@@ -254,9 +254,12 @@ function hoursCounting() {
 	initialHours--;
 	if (initialHours == 0) {
 		initialHours = 3;
+		daysCounting();
+	}
+	if (trigger == 1){
+		initialHours = 0;
 	}
 	timerHours.innerHTML = initialHours;
-	daysCounting();
 }
 
 function daysCounting() {
@@ -266,7 +269,7 @@ function daysCounting() {
 		//initialDays = 0
 	}
 	else {
-		initialDays = 0;	
+		initialDays = 0;
 		trigger = 1;
 		console.log(trigger);
 	}
