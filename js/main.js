@@ -235,8 +235,11 @@ function secondsCounting() {
 		timerSeconds.innerHTML = initialSeconds;
 		if (initialSeconds == 0) {
 			initialSeconds = 60;
-			console.log('Stop');
 			minutesCounting();
+		}
+		if (trigger == 3) {
+			clearInterval(timerId);
+			console.log('Timer is stopped');
 		}
 	}, 0.1);
 };
@@ -249,6 +252,7 @@ function minutesCounting() {
 	}
 	if (trigger == 2) {
 		initialMinutes = 0;
+		trigger = 3;
 	}
 	timerMinutes.innerHTML = initialMinutes;
 }
