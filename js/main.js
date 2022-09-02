@@ -219,8 +219,8 @@ let timerSeconds = timerDigit[3],
 	timerMinutes = timerDigit[2],
 	timerHours = timerDigit[1],
 	timerDays = timerDigit[0],
-	initialSeconds = 60,
-	initialMinutes = 60,
+	initialSeconds = 59,
+	initialMinutes = 59,
 	initialHours = 4,
 	initialDays = 3,
 	timerId,
@@ -232,29 +232,29 @@ function secondsCounting() {
 	timerId = setInterval(()=>{
 		// console.log(initialSeconds--);
 		initialSeconds--;	
-		timerSeconds.innerHTML = initialSeconds;
+		timerSeconds.innerHTML = initialSeconds< 10 ? "0" + initialSeconds : initialSeconds;
 		if (initialSeconds == 0) {
-			initialSeconds = 60;
+			initialSeconds = 59;
 			minutesCounting();
 		}
 		if (trigger == 3) {
 			clearInterval(timerId);
 			console.log('Timer is stopped');
 		}
-	}, 0.1);
+	}, 100);
 };
 
 function minutesCounting() {
 	initialMinutes--;
 	if (initialMinutes == 0 && trigger !== 2) {
-		initialMinutes = 60;
 		hoursCounting();
+		initialMinutes = 59;
 	}
 	if (trigger == 2) {
 		initialMinutes = 0;
 		trigger = 3;
 	}
-	timerMinutes.innerHTML = initialMinutes;
+	timerMinutes.innerHTML = initialMinutes< 10 ? "0" + initialMinutes : initialMinutes;
 }
 
 function hoursCounting() {
