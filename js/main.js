@@ -239,10 +239,6 @@ function secondsCounting() {
 			minutesCounting();
 		}
 	}, 0.1);
-	if (trigger == 3) {
-		clearInterval(timerId);
-		console.log('Finished');
-	}
 };
 
 function minutesCounting() {
@@ -251,10 +247,6 @@ function minutesCounting() {
 	if (initialMinutes == 0) {
 		initialMinutes = 60;
 		hoursCounting();
-	} 
-	if (trigger == 2) {
-		initialMinutes = 0;
-		trigger = 3;
 	}
 }
 
@@ -263,10 +255,6 @@ function hoursCounting() {
 	if (initialHours == 0) {
 		initialHours = 3;
 	}
-	if (trigger == 1){
-		initialHours = 0;
-		trigger = 2;
-	} 
 	timerHours.innerHTML = initialHours;
 	daysCounting();
 }
@@ -278,13 +266,8 @@ function daysCounting() {
 		//initialDays = 0
 	}
 	else {
-		initialDays = 0;
-		// clearInterval(timerId);
-		// console.log('Finished');
+		initialDays = 0;	
 		trigger = 1;
 		console.log(trigger);
 	}
-	// if(initialDays !== 0) {
-	// 	timerDays.innerHTML = initialDays;
-	// }
 }
