@@ -243,11 +243,14 @@ function secondsCounting() {
 
 function minutesCounting() {
 	initialMinutes--;
-	timerMinutes.innerHTML = initialMinutes;
-	if (initialMinutes == 0) {
+	if (initialMinutes == 0 && trigger !== 2) {
 		initialMinutes = 60;
 		hoursCounting();
 	}
+	if (trigger == 2) {
+		initialMinutes = 0;
+	}
+	timerMinutes.innerHTML = initialMinutes;
 }
 
 function hoursCounting() {
@@ -258,6 +261,7 @@ function hoursCounting() {
 	}
 	if (trigger == 1){
 		initialHours = 0;
+		trigger = 2;
 	}
 	timerHours.innerHTML = initialHours;
 }
