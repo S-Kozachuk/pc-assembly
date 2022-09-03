@@ -221,8 +221,8 @@ let timerSeconds = timerDigit[3],
 	timerDays = timerDigit[0],
 	initialSeconds = 59,
 	initialMinutes = 59,
-	initialHours = 4,
-	initialDays = 3,
+	initialHours = 15,
+	initialDays = 10,
 	timerId,
 	trigger;
 
