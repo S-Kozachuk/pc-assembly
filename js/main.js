@@ -170,40 +170,72 @@ function ajaxFormSubmit() {
 }
 
 // Timer
-// Link to the autor https://alekscher1993.github.io/PC-collect/#
-const timer = () => {
-const timers = document.querySelectorAll(".timer__digit");
-let timerId;
+const timerDigit = document.querySelectorAll('.timer__digit');
+let timerSeconds = timerDigit[3],
+	timerMinutes = timerDigit[2],
+	timerHours = timerDigit[1],
+	timerDays = timerDigit[0],
+	initialSeconds = 59,
+	initialMinutes = 59,
+	initialHours = 15,
+	initialDays = 10,
+	timerId,
+	trigger;
 
-function timerHandler() {
-	const date = new Date();
-	const newDate = new Date(
-		date.getFullYear(),
-		date.getMonth(),
-		date.getDate() + 1
-	);
-	const dateTime = date.getTime();
-	const newDateTime = newDate.getTime();
-	const diff = newDateTime - dateTime;
-	  
-	let newSec = Math.floor((diff / 1000) % 60);
-	let newMin = Math.floor((diff / 1000 / 60) % 60);
-	let newHour = Math.floor((diff / 1000 / 60 / 60) % 60);
-	  
-	let hour = newHour < 10 ? "0" + newHour : newHour;
-	let min = newMin < 10 ? "0" + newMin : newMin;
-	let sec = newSec < 10 ? "0" + newSec : newSec;
-	  
-	timers[1].innerHTML = hour;
-	timers[2].innerHTML = min;
-	timers[3].innerHTML = sec;
+setTimeout(secondsCounting, 500);
+
+function secondsCounting() {
+	timerId = setInterval(()=>{
+		// console.log(initialSeconds--);
+		initialSeconds--;	
+		timerSeconds.innerHTML = initialSeconds< 10 ? "0" + initialSeconds : initialSeconds;
+		if (initialSeconds == 0) {
+			initialSeconds = 59;
+			minutesCounting();
+		}
+		if (trigger == 3) {
+			clearInterval(timerId);
+			console.log('Timer is stopped');
+		}
+	}, 1000);
+};
+
+function minutesCounting() {
+	initialMinutes--;
+	if (initialMinutes == 0 && trigger !== 2) {
+		hoursCounting();
+		initialMinutes = 59;
+	}
+	if (trigger == 2) {
+		initialMinutes = 0;
+		trigger = 3;
+	}
+	timerMinutes.innerHTML = initialMinutes< 10 ? "0" + initialMinutes : initialMinutes;
 }
-	  
-timerId = setInterval(timerHandler, 500);
-	if (window.innerWidth <= 500) {
-		clearInterval(timerId);
+
+function hoursCounting() {
+	initialHours--;
+	if (initialHours == 0) {
+		initialHours = 3;
+		daysCounting();
+	}
+	if (trigger == 1){
+		initialHours = 0;
+		trigger = 2;
+	}
+	timerHours.innerHTML = initialHours;
+}
+
+function daysCounting() {
+	if(initialDays !== 0) {
+		initialDays--;
+		timerDays.innerHTML = initialDays;
+		//initialDays = 0
+	}
+	else {
+		initialDays = 0;
+		trigger = 1;
+		console.log(trigger);
 	}
 }
-
-timer();
 	  
