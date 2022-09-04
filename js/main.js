@@ -180,7 +180,7 @@ let timerId;
 		const newDate = new Date(
 			date.getFullYear(),
 			date.getMonth(),
-			date.getDate() + 1,
+			date.getDate() +1,
 		);
 		console.log('Date:', date);
 		console.log('New date:', newDate);
@@ -188,6 +188,14 @@ let timerId;
 		const dateTime = date.getTime();
 		const newDateTime = newDate.getTime();
 		const diff = newDateTime - dateTime;
+		console.log('NewDate time:', newDateTime);
+		console.log('Date time:', dateTime);
+		console.log('Diff:', diff);
+
+
+
+		let diffDate = new Date(diff);
+		console.log(diffDate);
 		
 		
 		let newSec = Math.floor((diff / 1000) % 60);
