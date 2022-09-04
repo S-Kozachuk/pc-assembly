@@ -192,12 +192,10 @@ let timerId;
 		console.log('Date time:', dateTime);
 		console.log('Diff:', diff);
 
-
-
 		let diffDate = new Date(diff);
 		console.log(diffDate);
 		
-		
+
 		let newSec = Math.floor((diff / 1000) % 60);
 		let newMin = Math.floor((diff / 1000 / 60) % 60);
 		let newHour = Math.floor((diff / 1000 / 60 / 60) % 60);
