@@ -241,7 +241,7 @@ function secondsCounting() {
 			clearInterval(timerId);
 			console.log('Timer is stopped');
 		}
-	}, 100);
+	}, 1000);
 };
 
 function minutesCounting() {
