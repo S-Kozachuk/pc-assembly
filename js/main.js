@@ -209,14 +209,11 @@ let timerId;
 		timers[3].innerHTML = sec;
 	}
 	
-	timerHandler();
-
-	/*
 	timerId = setInterval(timerHandler, 500);
 	if (window.innerWidth <= 500) {
 		clearInterval(timerId);
 	}
-	*/
+
 }
 
 timer();
