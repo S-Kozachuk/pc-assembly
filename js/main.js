@@ -217,6 +217,4 @@ let timerId;
 	}
 
 }
-
-timer();
 	  
