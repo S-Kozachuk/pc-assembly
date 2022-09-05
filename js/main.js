@@ -195,7 +195,6 @@ let timerId;
 		let diffDate = new Date(diff);
 		console.log(diffDate);
 		
-
 		let newSec = Math.floor((diff / 1000) % 60);
 		let newMin = Math.floor((diff / 1000 / 60) % 60);
 		let newHour = Math.floor((diff / 1000 / 60 / 60) % 60);
@@ -208,6 +207,9 @@ let timerId;
 		timers[2].innerHTML = min;
 		timers[3].innerHTML = sec;
 	}
+
+	// Use insead of setInterval for testing
+	// timerHandler()
 	
 	timerId = setInterval(timerHandler, 500);
 	if (window.innerWidth <= 500) {
