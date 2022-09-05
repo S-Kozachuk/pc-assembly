@@ -170,50 +170,6 @@ function ajaxFormSubmit() {
 }
 
 // Timer
-/*
-1. Get the current time (seconds).
-2. Write a function that gets the time in seconds as the difference 
-between the current time and the time elapsed since the function was called.
-
-Formula: initial time (static, get when timer start) - current time
-
-Basic time (is const), current time (get by setInterval), initial value.
-Current time - basic time = last time 
-initial time - last time
-
-3. Use the next references:
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
-https://learn.javascript.ru/date
-https://itchief.ru/javascript/date
-
-*/
-/*
-function timer() {
-	const timerDigit = document.querySelectorAll('.timer__digit');
-	console.log(timerDigit);
-	
-	let inputTime = 60;
-	let currentDate;
-	let timePeriod;
-
-	let timerId = setInterval(() => {
-		currentDate = new Date; // set the time value
-		let currentSeconds = currentDate.getSeconds();
-		// 	console.log(currentMin);
-		timePeriod = inputTime - currentSeconds;
-		console.log(timePeriod);
-	}, 1000);
-
-	if (timePeriod === 1) {
-		clearInterval(timerId);
-	}
-	
-	console.log(currentDate);
-
-}
-
-timer();
-*/
 const timerDigit = document.querySelectorAll('.timer__digit');
 let timerSeconds = timerDigit[3],
 	timerMinutes = timerDigit[2],
@@ -221,8 +177,8 @@ let timerSeconds = timerDigit[3],
 	timerDays = timerDigit[0],
 	initialSeconds = 59,
 	initialMinutes = 59,
-	initialHours = 4,
-	initialDays = 3,
+	initialHours = 15,
+	initialDays = 10,
 	timerId,
 	trigger;
 
