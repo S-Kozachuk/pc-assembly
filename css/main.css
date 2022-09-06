@@ -103,4 +103,76 @@ h6 {
   font-weight: 700;
   background: var(--dark-gradient);
 }
+
+.header {
+  position: relative;
+  background-image: url(../img/main-screen__bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header-menu {
+  margin: 0 auto;
+  padding: 4rem 11rem 4rem 8rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 192rem;
+  z-index: 3;
+}
+
+.header-logo {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav a {
+  font-size: var(--main-text);
+  line-height: 1.5;
+}
+.header-nav a :not(:last-child) {
+  margin-right: 7.1rem;
+}
+
+.header-content {
+  padding-top: 20rem;
+  padding-bottom: 25rem;
+}
+
+.header__title {
+  margin-bottom: 5rem;
+  max-width: 75rem;
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.header__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0.4rem;
+  margin-bottom: 7.6rem;
+}
 /*# sourceMappingURL=main.css.map */
