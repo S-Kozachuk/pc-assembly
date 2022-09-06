@@ -104,6 +104,43 @@ h6 {
   background: var(--dark-gradient);
 }
 
+.scroll_arrow {
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  border-radius: 50%;
+  background: var(--light-gradient);
+  height: 5.8rem;
+  width: 5.8rem;
+  opacity: 1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+a.scroll_arrow::before {
+  position: absolute;
+  content: "";
+  bottom: 1.3rem;
+  right: 0.9rem;
+  width: 0;
+  height: 0;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-bottom: 4rem solid #ffffff;
+  background: var(--dark-gradient);
+  border-radius: 2%;
+}
+
+.scroll__btn-hide {
+  opacity: 0;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+.none {
+  display: none;
+}
+
 .header {
   position: relative;
   background-image: url(../img/main-screen__bg.jpg);
@@ -345,6 +382,7 @@ h6 {
 .our-team__performance {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
@@ -650,5 +688,9 @@ label.error {
   max-width: 500px;
   text-align: center;
   font-size: 14px;
+}
+
+.noscroll {
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
