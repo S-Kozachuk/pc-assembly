@@ -175,4 +175,39 @@ h6 {
   margin-left: 0.4rem;
   margin-bottom: 7.6rem;
 }
+
+.timer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10.2rem;
+  height: 11.2rem;
+  background-color: #121212;
+}
+
+.timer__item:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.timer__digit {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.timer__text {
+  font-size: var(--main-text);
+  line-height: 1.4;
+  opacity: 0.4;
+}
 /*# sourceMappingURL=main.css.map */
