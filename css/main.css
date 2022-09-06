@@ -210,4 +210,37 @@ h6 {
   line-height: 1.4;
   opacity: 0.4;
 }
+
+.our-work {
+  padding: 20rem 0 21rem;
+}
+
+.our-work__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.our-work__img {
+  margin-right: 13.9rem;
+  width: 54.6rem;
+  height: 54.9rem;
+}
+
+.our-work__text {
+  padding-top: 6.9rem;
+  max-width: 63.5rem;
+}
+
+.our-work__header {
+  margin-bottom: 4.9rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.our-work__descr {
+  font-size: var(--main-text);
+  line-height: 1.6;
+}
 /*# sourceMappingURL=main.css.map */
