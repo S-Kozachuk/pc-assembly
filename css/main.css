@@ -314,4 +314,77 @@ h6 {
   line-height: 1.6;
   opacity: 0.5;
 }
+
+.our-team {
+  padding-bottom: 20rem;
+}
+
+.our-team__title {
+  margin-bottom: 11.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.our-team__img {
+  margin-left: 3rem;
+  width: 7.7rem;
+  height: 7.7rem;
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+.our-team__header {
+  padding-top: 1.5rem;
+  padding-left: 4.6rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.our-team__performance {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.our-team_person {
+  margin-left: 3rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.our-team_person:nth-of-type(2) {
+  margin-left: 4.5rem;
+}
+
+.our-team_person:nth-of-type(3) {
+  margin-left: 6rem;
+}
+
+.our-team__foto {
+  margin-bottom: 3.8rem;
+}
+
+.our-team__name {
+  margin-bottom: 1.35rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.our-team__role {
+  margin: 0;
+  margin-bottom: 3rem;
+  font-size: var(--main-text);
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.our-team__button {
+  border: 0.1rem solid #fff;
+}
 /*# sourceMappingURL=main.css.map */
