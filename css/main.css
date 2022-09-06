@@ -184,11 +184,11 @@ a.scroll_arrow::before {
           align-items: center;
 }
 
-.header-nav a {
+.header-nav {
   font-size: var(--main-text);
   line-height: 1.5;
 }
-.header-nav a :not(:last-child) {
+.header-nav a:not(:last-child) {
   margin-right: 7.1rem;
 }
 
