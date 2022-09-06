@@ -75,4 +75,13 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
+.wrapper {
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 130rem;
+}
 /*# sourceMappingURL=main.css.map */
