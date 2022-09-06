@@ -48,4 +48,9 @@ img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 /*# sourceMappingURL=main.css.map */
