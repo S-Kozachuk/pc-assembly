@@ -172,17 +172,18 @@ a.scroll_arrow::before {
   height: 4rem;
 }
 
-.header-menu {
-  display: flex;
-  align-items: center;
-}
-
 .header-nav {
+  display: none;
   font-size: var(--main-text);
   line-height: 1.5;
 }
 .header-nav a:not(:last-child) {
   margin-right: 7.1rem;
+}
+@media (min-width: 1200px) {
+  .header-nav {
+    display: block;
+  }
 }
 
 .header-content {

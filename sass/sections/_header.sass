@@ -26,17 +26,18 @@
 	width: 4rem
 	height: 4rem
 
-.header-menu 
-	display: flex
-	align-items: center
-
 .header-nav 
+	display: none
+	
 	a 
 	font-size: var(--main-text)
 	line-height: 1.5
 	
 	a:not(:last-child) 
 		margin-right: 7.1rem
+	
+	@media (min-width: 1200px)
+		display: block
 
 .header-content 
 	padding-top: 20rem
