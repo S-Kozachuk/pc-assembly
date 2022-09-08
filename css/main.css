@@ -239,8 +239,12 @@ a.scroll_arrow::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 0.4rem;
   margin-bottom: 7.6rem;
+}
+@media (min-with: 1200px) {
+  .header__timer {
+    margin-left: 0.4rem;
+  }
 }
 
 .toggle-menu {
