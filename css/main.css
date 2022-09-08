@@ -295,11 +295,11 @@ a.scroll_arrow::before {
 }
 
 .timer__item:not(:last-child) {
-  margin-right: 3rem;
+  margin-right: 1.2rem;
 }
 
 .timer__digit {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -310,9 +310,14 @@ a.scroll_arrow::before {
 }
 
 .timer__text {
-  font-size: var(--main-text);
+  font-size: calc(var(--main-text) - 30%);
   line-height: 1.4;
   opacity: 0.4;
+}
+@media (min-width: 1200px) {
+  .timer__text {
+    font-size: var(--main-text);
+  }
 }
 
 .our-work {

@@ -8,10 +8,10 @@
 	background-color: #121212
 
 .timer__item:not(:last-child) 
-	margin-right: 3rem
+	margin-right: 1.2rem
 
 .timer__digit 
-	font-size: 3.2rem
+	font-size: 3rem
 	font-weight: 700
 	line-height: 1.4
 
@@ -19,6 +19,9 @@
 		font-size: 3.6rem
 
 .timer__text 
-	font-size: var(--main-text)
-	line-height: 1.4
+	font-size: calc(var(--main-text) - 30%) 
+	line-height: 1.4	
 	opacity: 0.4
+
+	@media (min-width: 1200px)
+		font-size: var(--main-text)
