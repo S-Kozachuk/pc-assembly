@@ -187,6 +187,15 @@ a.scroll_arrow::before {
   }
 }
 
+.header__button {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .header__button {
+    display: block;
+  }
+}
+
 .header-content {
   padding-top: 20rem;
   padding-bottom: 25rem;
