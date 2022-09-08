@@ -82,7 +82,7 @@ h6 {
 
 .container {
   margin: 0 auto;
-  width: 24rem;
+  width: 28rem;
 }
 @media (min-width: 1200px) {
   .container {
