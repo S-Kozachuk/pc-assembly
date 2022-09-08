@@ -624,6 +624,17 @@ a.scroll_arrow::before {
   transition: 0.5s;
 }
 
+.modal__btn {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .modal__btn {
+    margin: unset;
+  }
+}
+
 .modal-window {
   position: fixed;
   top: 0;
