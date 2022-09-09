@@ -92,6 +92,7 @@
 		font-size: 4.4rem
 
 	@media (min-width: 1200px)
+		margin: unset
 		margin-bottom: 5rem
 		max-width: 75rem
 		font-size: 6.4rem
@@ -102,8 +103,12 @@
 	display: flex
 	margin-bottom: 7.6rem
 
-	@media (min-with: 1200px)
+	@media (min-width: 768px)
+		justify-content: center
+
+	@media (min-width: 1200px)
 		margin-left: 0.4rem
+		justify-content: unset
 
 .toggle-menu
 	display: flex

@@ -273,6 +273,7 @@ a.scroll_arrow::before {
 }
 @media (min-width: 1200px) {
   .header__title {
+    margin: unset;
     margin-bottom: 5rem;
     max-width: 75rem;
     font-size: 6.4rem;
@@ -285,9 +286,15 @@ a.scroll_arrow::before {
   display: flex;
   margin-bottom: 7.6rem;
 }
-@media (min-with: 1200px) {
+@media (min-width: 768px) {
+  .header__timer {
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
   .header__timer {
     margin-left: 0.4rem;
+    justify-content: unset;
   }
 }
 
