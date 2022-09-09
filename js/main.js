@@ -1,4 +1,7 @@
 const body = document.querySelector('body'),
+	menuToggle = document.querySelector('.toggle-menu'),
+	mobMenu = document.querySelector('.header-nav'),
+	overlayEl = document.querySelector('#overlay'),
 	modalWindow = document.querySelector('.modal-window'),
 	modalClose = document.querySelector('.modal__close'),
 	modalBtn = document.querySelectorAll('.modal__btn'),
