@@ -38,12 +38,20 @@ window.addEventListener('resize', function() {
 });
 
 //Closing Mobile menu if click to overlay
-overlayEl.addEventListener('click', function(){
+overlayEl.addEventListener('click', closeMobileMenu);
 	this.classList.remove('active');
 	mobMenu.classList.remove('active');
 	menuToggle.classList.remove('active');
 	body.classList.remove('noscroll');
-});
+
+
+// Refactoring mobile menu script
+function closeMobileMenu() {
+	overlayEl.classList.remove('active');
+	mobMenu.classList.remove('active');
+	menuToggle.classList.remove('active');
+	body.classList.remove('noscroll');
+}
 
 // -- Form checking --
 let fieldClear = (()=>{
