@@ -181,6 +181,12 @@ a.scroll_arrow::before {
     max-width: 40rem;
   }
 }
+@media (min-width: 768px) {
+  .header-menu {
+    padding: 2rem 1.5rem;
+    max-width: 73rem;
+  }
+}
 @media (min-width: 1200px) {
   .header-menu {
     padding: 4rem 11rem 4rem 8rem;
