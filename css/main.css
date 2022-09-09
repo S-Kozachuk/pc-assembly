@@ -212,10 +212,11 @@ a.scroll_arrow::before {
   .header-nav {
     padding: 0.5rem 2rem;
     display: block;
-    background-color: rgba(18, 18, 18, 0.6);
+    background: rgb(18, 18, 18);
+    background: linear-gradient(90deg, rgba(18, 18, 18, 0.3340686616) 0%, rgba(18, 18, 18, 0.5) 100%);
   }
 }
-@media (min-widt: 1200px) {
+@media (min-width: 1200px) {
   .header-nav {
     padding: unset;
     background-color: unset;
