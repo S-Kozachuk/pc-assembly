@@ -168,6 +168,11 @@ a.scroll_arrow::before {
 }
 @media (min-width: 1200px) {
   .header {
+    background-position: 100% 0px;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
     background-position: center;
   }
 }
