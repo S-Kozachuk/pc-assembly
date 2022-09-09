@@ -263,6 +263,14 @@ a.scroll_arrow::before {
     font-size: 3.5rem;
   }
 }
+@media (min-width: 768px) {
+  .header__title {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    max-width: 54rem;
+    font-size: 4.4rem;
+  }
+}
 @media (min-width: 1200px) {
   .header__title {
     margin-bottom: 5rem;
