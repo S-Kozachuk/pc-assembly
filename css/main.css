@@ -84,7 +84,7 @@ h6 {
   margin: 0 auto;
   width: 28rem;
 }
-@media (min-widt: 425px) {
+@media (min-width: 425px) {
   .container {
     width: 37rem;
   }
@@ -236,6 +236,12 @@ a.scroll_arrow::before {
   line-height: 1.35;
   text-align: center;
   background: rgba(18, 18, 18, 0.6);
+}
+@media (min-width: 425px) {
+  .header__title {
+    max-width: 37rem;
+    font-size: 3.6rem;
+  }
 }
 @media (min-width: 1200px) {
   .header__title {
