@@ -650,13 +650,10 @@ a.scroll_arrow::before {
   transition: 0.5s;
 }
 
-.modal__btn {
-  margin: 0 auto;
-  display: grid;
-}
 @media (min-width: 1200px) {
   .modal__btn {
-    margin: unset;
+    margin: uset;
+    display: grid;
   }
 }
 
