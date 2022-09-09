@@ -171,7 +171,7 @@ a.scroll_arrow::before {
     background-position: 100% 0px;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1920px) {
   .header {
     background-position: center;
   }
