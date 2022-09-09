@@ -84,6 +84,11 @@ h6 {
   margin: 0 auto;
   width: 28rem;
 }
+@media (min-widt: 425px) {
+  .container {
+    width: 37rem;
+  }
+}
 @media (min-width: 1200px) {
   .container {
     width: 130rem;
