@@ -239,12 +239,14 @@ a.scroll_arrow::before {
 }
 @media (min-width: 425px) {
   .header__title {
+    margin-bottom: 8rem;
     max-width: 37rem;
     font-size: 3.6rem;
   }
 }
 @media (min-width: 1200px) {
   .header__title {
+    margin-bottom: 5rem;
     max-width: 75rem;
     font-size: 6.4rem;
     text-align: unset;
