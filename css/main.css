@@ -148,8 +148,13 @@ a.scroll_arrow::before {
   position: relative;
   background-image: url(../img/main-screen__bg.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 89% 0px;
   background-size: cover;
+}
+@media (min-width: 1200px) {
+  .header {
+    background-position: center;
+  }
 }
 
 .header-menu {
@@ -164,6 +169,12 @@ a.scroll_arrow::before {
   width: 100%;
   max-width: 32rem;
   z-index: 3;
+}
+@media (min-width: 425px) {
+  .header-menu {
+    padding: 1rem 1.5rem;
+    max-width: 40rem;
+  }
 }
 @media (min-width: 1200px) {
   .header-menu {
@@ -219,12 +230,14 @@ a.scroll_arrow::before {
   font-weight: 700;
   line-height: 1.35;
   text-align: center;
+  background: rgba(18, 18, 18, 0.6);
 }
 @media (min-width: 1200px) {
   .header__title {
     max-width: 75rem;
     font-size: 6.4rem;
     text-align: unset;
+    background: unset;
   }
 }
 
@@ -301,11 +314,12 @@ a.scroll_arrow::before {
   align-items: center;
   width: 10.2rem;
   height: 8rem;
-  background-color: #121212;
+  background-color: rgba(18, 18, 18, 0.6);
 }
 @media (min-width: 1200px) {
   .timer__item {
     height: 11.2rem;
+    background-color: #121212;
   }
 }
 

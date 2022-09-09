@@ -2,8 +2,11 @@
 	position: relative
 	background-image: url(../img/main-screen__bg.jpg)
 	background-repeat: no-repeat
-	background-position: center
+	background-position: 89% 0px
 	background-size: cover 
+
+	@media (min-width: 1200px)
+		background-position: center	
 
 .header-menu
 	margin: 0 auto
@@ -17,6 +20,10 @@
 	width: 100%
 	max-width: 32rem
 	z-index: 3
+
+	@media (min-width: 425px)
+		padding: 1rem 1.5rem
+		max-width: 40rem
 
 	@media (min-width: 1200px)
 		padding: 4rem 11rem 4rem 8rem
@@ -54,7 +61,6 @@
 		padding-top: 20rem
 		padding-bottom: 25rem
 		
-
 .header__title 
 	margin-bottom: 5rem
 	max-width: 30rem
@@ -62,11 +68,13 @@
 	font-weight: 700
 	line-height: 1.35
 	text-align: center
+	background: #12121299
 
 	@media (min-width: 1200px)
 		max-width: 75rem
 		font-size: 6.4rem
 		text-align: unset
+		background: unset
 
 .header__timer 
 	display: flex
