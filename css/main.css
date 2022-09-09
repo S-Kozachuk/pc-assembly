@@ -96,6 +96,11 @@ h6 {
 }
 @media (min-width: 1200px) {
   .container {
+    width: 110rem;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
     width: 130rem;
   }
 }
