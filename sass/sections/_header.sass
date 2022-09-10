@@ -83,7 +83,38 @@
 .header-nav.active
 	transform: translateX(0%)
 	transition: .5s
+
+.header-nav > li
+	margin-left: 20px
+	padding: 10px 0
+	font-size: 17px
+
+	&:first-child
+		padding-top: 18px
+
+	&:nth-of-type(2) 
+		padding-top: 25px
+
+	@media (min-width: 425px)
+		margin-left: 38px
+		padding: 5px 0
+		font-size: unset
+		
+		&:first-child
+			display: none
+			padding-top: unset
+		
+		&:nth-of-type(2)
+			padding: 0
+
+.header-nav > li > a
+	text-decoration: none
+	color: #202020
+	transition: .4s
 	
+	&:hover
+		color: #5528ff
+
 button.header__button
 	display: none
 
