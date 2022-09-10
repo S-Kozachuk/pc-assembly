@@ -99,9 +99,8 @@
 	&:nth-of-type(2) 
 		padding-top: 25px
 
-	@media (min-width: 425px)
+	@media (min-width: 375px)
 		margin-left: 38px
-		padding: 5px 0
 		font-size: unset
 		
 		&:first-child
@@ -110,11 +109,24 @@
 		
 		&:nth-of-type(2)
 			padding: 0
+			padding-top: 70px
+			padding-bottom: 10px
+		
+		&:nth-of-type(4)
+			padding-bottom: 30px
 	
 	@media (min-width: 768px)
+		padding: unset
+		
 		&:last-child
 			display: none
 			padding-top: unset
+		
+		&:nth-of-type(2)
+			padding: unset
+
+		&:nth-of-type(4)
+			padding-bottom: unset
 
 .header-nav > li > a
 	text-decoration: none
