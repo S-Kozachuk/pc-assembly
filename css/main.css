@@ -391,6 +391,11 @@ body.lock {
   opacity: 0.5;
 }
 
+.nav.active {
+  transform: translateX(0%);
+  transition: 0.5s;
+}
+
 .timer__item {
   display: flex;
   flex-direction: column;
