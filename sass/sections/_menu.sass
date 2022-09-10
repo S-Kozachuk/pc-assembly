@@ -50,7 +50,6 @@
 			transform: rotate(-45deg)
 			background: var(--dark-gradient)
 
-
 .noscroll
 	overflow: hidden
 
@@ -76,3 +75,14 @@ body.lock
 .nav.active
 	transform: translateX(0%)
 	transition: .5s
+
+.header-nav .cta-social
+	margin-left: 0
+	max-width: 25rem
+
+.header-nav .cta-social .cta-social__item
+	width: 4rem
+	height: 4rem
+
+.header-nav .cta-social .cta-social__item:not(:last-child)
+	margin-right: 0
