@@ -365,6 +365,10 @@ button.header__button {
   background-color: red;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 .timer__item {
   display: flex;
   flex-direction: column;
