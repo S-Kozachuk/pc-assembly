@@ -194,6 +194,11 @@ a.scroll_arrow::before {
   max-width: 32rem;
   z-index: 3;
 }
+@media (min-width: 375px) {
+  .header-menu {
+    max-width: 37rem;
+  }
+}
 @media (min-width: 425px) {
   .header-menu {
     padding: 1rem 1.5rem;
