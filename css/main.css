@@ -76,6 +76,10 @@ h6 {
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .wrapper {
   position: relative;
 }
@@ -217,23 +221,32 @@ a.scroll_arrow::before {
 
 .header-nav {
   display: none;
+  list-style-type: none;
+}
+.header-nav a {
   font-size: var(--main-text);
   line-height: 1.5;
-}
-.header-nav a:not(:last-child) {
-  margin-right: 7.1rem;
 }
 @media (min-width: 768px) {
   .header-nav {
     padding: 0.5rem 3rem;
-    display: block;
+    display: flex;
     background: linear-gradient(90deg, rgba(18, 18, 18, 0.3340686616) 0%, rgba(18, 18, 18, 0.5) 100%);
+  }
+  .header-nav li {
+    padding: 5px 0;
+  }
+  .header-nav li:not(:last-child) {
+    margin-right: 7.1rem;
   }
 }
 @media (min-width: 1200px) {
   .header-nav {
     padding: unset;
     background-color: unset;
+  }
+  .header-nav li {
+    margin-right: 5rem;
   }
 }
 

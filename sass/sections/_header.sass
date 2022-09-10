@@ -41,24 +41,31 @@
 	width: 4rem
 	height: 4rem
 
-.header-nav 
+.header-nav
 	display: none
+	list-style-type: none
 
-	a 
-	font-size: var(--main-text)
-	line-height: 1.5
-	
-	a:not(:last-child) 
-		margin-right: 7.1rem
+	a
+		font-size: var(--main-text)
+		line-height: 1.5
 	
 	@media (min-width: 768px)
 		padding: 0.5rem 3rem
-		display: block
+		display: flex
 		background: linear-gradient(90deg, rgba(18,18,18,0.33406866164434523) 0%, rgba(18,18,18,50%) 100%)
-	
+
+		li
+			padding: 5px 0
+		
+		li:not(:last-child) 
+			margin-right: 7.1rem
+
 	@media (min-width: 1200px)
 		padding: unset
 		background-color: unset
+
+		li
+			margin-right: 5rem
 	
 button.header__button
 	display: none
