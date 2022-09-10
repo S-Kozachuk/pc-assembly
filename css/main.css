@@ -296,11 +296,11 @@ a.scroll_arrow::before {
 
 .header-nav > li > a {
   text-decoration: none;
-  color: #202020;
+  color: #fff;
   transition: 0.4s;
 }
 .header-nav > li > a:hover {
-  color: #5528ff;
+  opacity: 0.5;
 }
 
 button.header__button {
