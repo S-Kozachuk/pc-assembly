@@ -240,11 +240,12 @@ a.scroll_arrow::before {
 @media (min-width: 768px) {
   .header-nav {
     position: unset;
-    max-width: unset;
-    transform: unset;
-    width: unset;
     padding: 0.5rem 3rem;
     display: flex;
+    align-items: center;
+    width: unset;
+    max-width: unset;
+    transform: unset;
     background: linear-gradient(90deg, rgba(18, 18, 18, 0.3340686616) 0%, rgba(18, 18, 18, 0.5) 100%);
   }
   .header-nav li {
