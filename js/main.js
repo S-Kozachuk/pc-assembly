@@ -38,12 +38,12 @@ window.addEventListener('resize', function() {
 });
 
 //Closing Mobile menu if click to overlay
-overlayEl.addEventListener('click', closeMobileMenu);
-	this.classList.remove('active');
-	mobMenu.classList.remove('active');
-	menuToggle.classList.remove('active');
-	body.classList.remove('noscroll');
-
+// overlayEl.addEventListener('click', function() {
+// 	this.classList.remove('active');
+// 	mobMenu.classList.remove('active');
+// 	menuToggle.classList.remove('active');
+// 	body.classList.remove('noscroll');
+// });
 
 // Refactoring mobile menu script
 function closeMobileMenu() {
