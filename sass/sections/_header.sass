@@ -42,8 +42,18 @@
 	height: 4rem
 
 .header-nav
-	display: none
+	position: fixed
+	top: 0
+	right: 0
+	height: 100%
+	margin: 0
+	padding: 0
+	width: 100%
+	max-width: 360px
 	list-style-type: none
+	background-color: #fff
+	transform: translateX(100%)
+	transition: .5s
 
 	a
 		font-size: var(--main-text)
@@ -66,6 +76,10 @@
 
 		li
 			margin-right: 5rem
+
+.nav.active
+	transform: translateX(0%)
+	transition: .5s
 	
 button.header__button
 	display: none

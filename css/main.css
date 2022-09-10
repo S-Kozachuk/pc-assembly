@@ -220,8 +220,18 @@ a.scroll_arrow::before {
 }
 
 .header-nav {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 360px;
   list-style-type: none;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: 0.5s;
 }
 .header-nav a {
   font-size: var(--main-text);
@@ -248,6 +258,11 @@ a.scroll_arrow::before {
   .header-nav li {
     margin-right: 5rem;
   }
+}
+
+.nav.active {
+  transform: translateX(0%);
+  transition: 0.5s;
 }
 
 button.header__button {
