@@ -12,16 +12,47 @@
 	<body>
 		<div class="wrapper">
 			<header class="header" id="header">
+				<div id="overlay"></div>
 				<div class="header-menu">
 					<a href="#" class="header-logo">
 						<img src="img/logo.svg" alt="логотип">
 					</a>
 					<nav class="header-nav">
-						<a href="#our-work">Чем занимается</a>
-						<a href="#work-process">Процесс работы</a>
-						<a href="#our-team">Команда</a>
+						<li>
+							<a href="#" class="header-logo">
+								<img src="img/logo.svg" alt="логотип">
+							</a>
+						</li>
+						<li>
+							<a href="#our-work">Чем занимается</a>
+						</li>	
+						<li>
+							<a href="#work-process">Процесс работы</a>
+						</li>	
+						<li>
+							<a href="#our-team">Команда</a>
+						</li>
+						<li>
+							<div class="cta-social">
+								<a href="#" class="cta-social__item">
+									<img src="img/social-icon__vk.svg" alt="">
+								</a>
+								<a href="#" class="cta-social__item">
+									<img src="img/social-icon__youtube.svg" alt="">
+								</a>
+								<a href="#" class="cta-social__item">
+									<img src="img/social-icon__facebook.svg" alt="">
+								</a>
+								<a href="#" class="cta-social__item">
+									<img src="img/social-icon__inst.svg" alt="">
+								</a>
+							</div>
+						</li>
 					</nav>
 					<button type="button" class="button button--light header__button modal__btn">Оставить заявку</button>
+					<div class="toggle-menu">
+						<span></span>
+					</div>
 				</div>
 				<div class="container">
 					<div class="header-content">
@@ -51,7 +82,7 @@
 				</div>
 			</header>
 			<main class="main">
-				<section class="our-work" id="our-work">
+				<section class="our-work none" id="our-work">
 					<div class="container">
 						<div class="our-work__wrap">
 							<div class="our-work__img">
@@ -70,7 +101,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="work-process" id="work-process">
+				<section class="work-process none" id="work-process">
 					<div class="container">
 						<div class="work-process__wrapp"> 
 							<div class="work-process__title">
@@ -118,7 +149,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="our-team" id="our-team">
+				<section class="our-team none" id="our-team">
 					<div class="container">
 						<div class="our-team__wrapp">
 							<div class="our-team__title">
@@ -156,7 +187,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="cta">
+				<section class="cta none">
 					<div class="container">
 						<div class="cta__wrapp">
 							<h2 class="cta__title">Закажите свою уникальную сборку</h2>
@@ -180,7 +211,7 @@
 					</div>
 				</section>
 			</main>
-			<footer class="footer">
+			<footer class="footer none">
 			<div class="container">
 				<div class="footer-wrapper">
 					<div class="footer-copyright">

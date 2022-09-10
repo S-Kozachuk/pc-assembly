@@ -1,4 +1,7 @@
 const body = document.querySelector('body'),
+	menuToggle = document.querySelector('.toggle-menu'),
+	mobMenu = document.querySelector('.header-nav'),
+	overlayEl = document.querySelector('#overlay'),
 	modalWindow = document.querySelector('.modal-window'),
 	modalClose = document.querySelector('.modal__close'),
 	modalBtn = document.querySelectorAll('.modal__btn'),
@@ -7,6 +10,50 @@ const body = document.querySelector('body'),
 	timeout = 800;
 let errorLabel;
 
+
+// -- Mobile menu --
+
+//Click to Hamburger icon
+menuToggle.addEventListener('click', function(){
+	this.classList.toggle('active');
+	mobMenu.classList.toggle('active');
+	overlayEl.classList.toggle('active');
+	body.classList.toggle('noscroll');
+});
+
+//Click to Mobile memu
+mobMenu.addEventListener('click', function(){
+	this.classList.remove('active');
+	menuToggle.classList.remove('active');
+	overlayEl.classList.remove('active');
+	body.classList.remove('noscroll');
+});
+
+//Closing Mobile menu if screen resizing
+window.addEventListener('resize', function() {
+	mobMenu.classList.remove('active');
+	menuToggle.classList.remove('active');
+	overlayEl.classList.remove('active');
+	body.classList.remove('noscroll');
+});
+
+// Closing Mobile menu if click to overlay
+overlayEl.addEventListener('click', function() {
+	this.classList.remove('active');
+	mobMenu.classList.remove('active');
+	menuToggle.classList.remove('active');
+	body.classList.remove('noscroll');
+});
+
+// Refactoring mobile menu script
+// function closeMobileMenu() {
+// 	overlayEl.classList.remove('active');
+// 	mobMenu.classList.remove('active');
+// 	menuToggle.classList.remove('active');
+// 	body.classList.remove('noscroll');
+// }
+
+// -- Form checking --
 let fieldClear = (()=>{
 	const mainForm = document.querySelectorAll('.form__input');
 	mainForm.forEach(elem =>{
