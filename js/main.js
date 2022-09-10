@@ -37,21 +37,21 @@ window.addEventListener('resize', function() {
 	body.classList.remove('noscroll');
 });
 
-//Closing Mobile menu if click to overlay
-// overlayEl.addEventListener('click', function() {
-// 	this.classList.remove('active');
-// 	mobMenu.classList.remove('active');
-// 	menuToggle.classList.remove('active');
-// 	body.classList.remove('noscroll');
-// });
-
-// Refactoring mobile menu script
-function closeMobileMenu() {
-	overlayEl.classList.remove('active');
+// Closing Mobile menu if click to overlay
+overlayEl.addEventListener('click', function() {
+	this.classList.remove('active');
 	mobMenu.classList.remove('active');
 	menuToggle.classList.remove('active');
 	body.classList.remove('noscroll');
-}
+});
+
+// Refactoring mobile menu script
+// function closeMobileMenu() {
+// 	overlayEl.classList.remove('active');
+// 	mobMenu.classList.remove('active');
+// 	menuToggle.classList.remove('active');
+// 	body.classList.remove('noscroll');
+// }
 
 // -- Form checking --
 let fieldClear = (()=>{
