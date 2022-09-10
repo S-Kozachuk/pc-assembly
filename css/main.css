@@ -251,9 +251,6 @@ a.scroll_arrow::before {
   .header-nav li {
     padding: 5px 0;
   }
-  .header-nav li:not(:last-child) {
-    margin-right: 7.1rem;
-  }
 }
 @media (min-width: 1200px) {
   .header-nav {
@@ -293,6 +290,8 @@ a.scroll_arrow::before {
   .header-nav > li:nth-of-type(2) {
     padding: 0;
   }
+}
+@media (min-width: 768px) {
   .header-nav > li:last-child {
     display: none;
     padding-top: unset;
