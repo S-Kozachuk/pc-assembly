@@ -424,12 +424,12 @@ button.header__button {
 .toggle-menu.active span::before {
   top: 0;
   transform: rotate(45deg);
-  background-color: red;
+  background: var(--dark-gradient);
 }
 .toggle-menu.active span::after {
   bottom: 0;
   transform: rotate(-45deg);
-  background-color: red;
+  background: var(--dark-gradient);
 }
 
 .noscroll {
