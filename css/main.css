@@ -227,9 +227,9 @@ a.scroll_arrow::before {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 360px;
+  max-width: 32rem;
   list-style-type: none;
-  background-color: #fff;
+  background-color: #000;
   transform: translateX(100%);
   transition: 0.5s;
 }
@@ -260,7 +260,7 @@ a.scroll_arrow::before {
   }
 }
 
-.nav.active {
+.header-nav.active {
   transform: translateX(0%);
   transition: 0.5s;
 }
