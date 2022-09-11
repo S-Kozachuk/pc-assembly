@@ -35,6 +35,78 @@ function openCloseMobileMenu() {
 }
 openCloseMobileMenu();
 
+function timer() {
+	const timerDigit = document.querySelectorAll('.timer__digit');
+	let timerSeconds = timerDigit[3],
+		timerMinutes = timerDigit[2],
+		timerHours = timerDigit[1],
+		timerDays = timerDigit[0],
+		initialSeconds = 59,
+		initialMinutes = 59,
+		initialHours = 15,
+		initialDays = 10,
+		timerId,
+		trigger;
+
+	setTimeout(secondsCounting, 500);
+
+	function secondsCounting() {
+		timerId = setInterval(()=>{
+			// console.log(initialSeconds--);
+			initialSeconds--;	
+			timerSeconds.innerHTML = initialSeconds< 10 ? "0" + initialSeconds : initialSeconds;
+			if (initialSeconds == 0) {
+				initialSeconds = 59;
+				minutesCounting();
+			}
+			if (trigger == 3) {
+				clearInterval(timerId);
+				console.log('Timer is stopped');
+			}
+		}, 1000);
+	};
+
+	function minutesCounting() {
+		initialMinutes--;
+		if (initialMinutes == 0 && trigger !== 2) {
+			hoursCounting();
+			initialMinutes = 59;
+		}
+		if (trigger == 2) {
+			initialMinutes = 0;
+			trigger = 3;
+		}
+		timerMinutes.innerHTML = initialMinutes< 10 ? "0" + initialMinutes : initialMinutes;
+	}
+
+	function hoursCounting() {
+		initialHours--;
+		if (initialHours == 0) {
+			initialHours = 3;
+			daysCounting();
+		}
+		if (trigger == 1){
+			initialHours = 0;
+			trigger = 2;
+		}
+		timerHours.innerHTML = initialHours;
+	}
+
+	function daysCounting() {
+		if(initialDays !== 0) {
+			initialDays--;
+			timerDays.innerHTML = initialDays;
+			//initialDays = 0
+		}
+		else {
+			initialDays = 0;
+			trigger = 1;
+			console.log(trigger);
+		}
+	}
+}
+timer()
+
 // -- Form checking --
 let fieldClear = (()=>{
 	const mainForm = document.querySelectorAll('.form__input');
@@ -196,74 +268,4 @@ function ajaxFormSubmit() {
     });
     // Block action if click to submit
     return false;
-}
-
-// Timer
-const timerDigit = document.querySelectorAll('.timer__digit');
-let timerSeconds = timerDigit[3],
-	timerMinutes = timerDigit[2],
-	timerHours = timerDigit[1],
-	timerDays = timerDigit[0],
-	initialSeconds = 59,
-	initialMinutes = 59,
-	initialHours = 15,
-	initialDays = 10,
-	timerId,
-	trigger;
-
-setTimeout(secondsCounting, 500);
-
-function secondsCounting() {
-	timerId = setInterval(()=>{
-		// console.log(initialSeconds--);
-		initialSeconds--;	
-		timerSeconds.innerHTML = initialSeconds< 10 ? "0" + initialSeconds : initialSeconds;
-		if (initialSeconds == 0) {
-			initialSeconds = 59;
-			minutesCounting();
-		}
-		if (trigger == 3) {
-			clearInterval(timerId);
-			console.log('Timer is stopped');
-		}
-	}, 1000);
-};
-
-function minutesCounting() {
-	initialMinutes--;
-	if (initialMinutes == 0 && trigger !== 2) {
-		hoursCounting();
-		initialMinutes = 59;
-	}
-	if (trigger == 2) {
-		initialMinutes = 0;
-		trigger = 3;
-	}
-	timerMinutes.innerHTML = initialMinutes< 10 ? "0" + initialMinutes : initialMinutes;
-}
-
-function hoursCounting() {
-	initialHours--;
-	if (initialHours == 0) {
-		initialHours = 3;
-		daysCounting();
-	}
-	if (trigger == 1){
-		initialHours = 0;
-		trigger = 2;
-	}
-	timerHours.innerHTML = initialHours;
-}
-
-function daysCounting() {
-	if(initialDays !== 0) {
-		initialDays--;
-		timerDays.innerHTML = initialDays;
-		//initialDays = 0
-	}
-	else {
-		initialDays = 0;
-		trigger = 1;
-		console.log(trigger);
-	}
 }
