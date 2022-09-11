@@ -8,7 +8,9 @@ const body = document.querySelector('body'),
 	formElem = document.querySelector('.form-window__elements'),
 	submitBtn = document.getElementById('btn-submit'),
 	timeout = 800;
-let errorLabel;
+let errorLabel,
+	fieldClear,
+	removeErrorsMessages;
 
 function openCloseMobileMenu() {
 	function openMobileMenu() {
@@ -226,36 +228,36 @@ function formCheck() {
 	}
 	setJQueryValidate();
 
+	fieldClear = (()=>{
+		const mainForm = document.querySelectorAll('.form__input');
+		mainForm.forEach(elem =>{
+			elem.value = "";
+		})
+	});
+
+	let getFieldsError = (()=> {
+		submitBtn.addEventListener('click', ()=> {
+			setTimeout(()=> {
+				errorLabel = formElem.querySelectorAll('label.error');
+				console.log(errorLabel);
+			}, 100);
+		});
+	});
+	getFieldsError();
+
+	removeErrorsMessages = (()=> {
+		if (errorLabel) {
+			for (let label of errorLabel) {
+				label.remove();
+				console.log('Removed error message');
+			}
+		}
+	});
 }
 formCheck()
 
-// -- Form checking --
-let fieldClear = (()=>{
-	const mainForm = document.querySelectorAll('.form__input');
-	mainForm.forEach(elem =>{
-		elem.value = "";
-	})
-});
 
-// The plugin adds error messages with a delay
-let getFieldsError = (()=> {
-	submitBtn.addEventListener('click', ()=> {
-		setTimeout(()=> {
-			errorLabel = formElem.querySelectorAll('label.error');
-			console.log(errorLabel);
-		}, 100);
-	});
-});
-getFieldsError();
 
-let removeErrorsMessages = (()=> {
-	if (errorLabel) {
-		for (let label of errorLabel) {
-			label.remove();
-			console.log('Removed error message');
-		}
-	}
-});
 
 
 
@@ -263,6 +265,7 @@ let removeErrorsMessages = (()=> {
 
 
 // Custom rule to cheking a letter
+
 $.validator.addMethod('lettersOnly', function(value, element) {
 	return this.optional(element) || /^[a-zа-я]+$/i.test(value);
 }, "Вводите только буквы");
