@@ -105,7 +105,23 @@ function timer() {
 		}
 	}
 }
-timer()
+timer();
+
+function scrollUpArrow() {
+	const scrollBtn = document.querySelector('.scroll_arrow');
+	window.onscroll = () => {
+		if(window.scrollY > 400) {
+			scrollBtn.classList.remove('scroll__btn-hide');
+		}
+		else if (window.scrollY < 400) {
+			scrollBtn.classList.add('scroll__btn-hide');
+		}
+	};
+	scrollBtn.onclick = () => {
+		window.scrollTo(0, 0);
+	};
+}
+scrollUpArrow();
 
 function modalWindowOpenClose() {
 	function modalWindowOpen(){
@@ -168,6 +184,51 @@ function modalWindowOpenClose() {
 }
 modalWindowOpenClose();
 
+function formCheck() {
+	function setJQueryValidate() {
+		$('#contacts-form').validate ({
+			// focusCleanup: true,
+			rules: {
+				name: {
+					required: true,
+					minlength: 3,
+					lettersOnly: true
+				},
+				phone: {
+					required: true,
+					digits: true,
+					rangelength: [6, 10]
+				},
+				email: {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				name: {
+					required: 'Введите имя',
+					minlength: 'Не меньше 3-х букв'
+				},
+				phone: {
+					required: 'Введите номер телефона',
+					digits: 'Вводите только цифры',
+					rangelength: jQuery.validator.format('От {0} до {1} цифр')
+				},
+				email: {
+					required: 'Введите email',
+					email: 'Отсутствует символ @'
+				}
+			},
+			submitHandler: function (form) {
+				ajaxFormSubmit();
+			}
+		});
+	}
+	setJQueryValidate();
+
+}
+formCheck()
+
 // -- Form checking --
 let fieldClear = (()=>{
 	const mainForm = document.querySelectorAll('.form__input');
@@ -196,62 +257,10 @@ let removeErrorsMessages = (()=> {
 	}
 });
 
-function scrollUpArrow() {
-	const scrollBtn = document.querySelector('.scroll_arrow');
-	window.onscroll = () => {
-		if(window.scrollY > 400) {
-			scrollBtn.classList.remove('scroll__btn-hide');
-		}
-		else if (window.scrollY < 400) {
-			scrollBtn.classList.add('scroll__btn-hide');
-		}
-	};
-
-	scrollBtn.onclick = () => {
-		window.scrollTo(0, 0);
-	};
-}
-scrollUpArrow()
 
 
-// Form validate settings
-$('#contacts-form').validate ({
-	// focusCleanup: true,
-	rules: {
-		name: {
-			required: true,
-			minlength: 3,
-			lettersOnly: true
-		},
-		phone: {
-			required: true,
-			digits: true,
-			rangelength: [6, 10]
-		},
-		email: {
-			required: true,
-			email: true
-		}
-	},
-	messages: {
-		name: {
-			required: 'Введите имя',
-			minlength: 'Не меньше 3-х букв'
-		},
-		phone: {
-			required: 'Введите номер телефона',
-			digits: 'Вводите только цифры',
-			rangelength: jQuery.validator.format('От {0} до {1} цифр')
-		},
-		email: {
-			required: 'Введите email',
-			email: 'Отсутствует символ @'
-		}
-	},
-	submitHandler: function (form) {
-		ajaxFormSubmit();
-	}
-});
+
+
 
 // Custom rule to cheking a letter
 $.validator.addMethod('lettersOnly', function(value, element) {
