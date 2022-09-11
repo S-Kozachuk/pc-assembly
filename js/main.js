@@ -10,31 +10,30 @@ const body = document.querySelector('body'),
 	timeout = 800;
 let errorLabel;
 
+function openCloseMobileMenu() {
+	function openMobileMenu() {
+		menuToggle.classList.toggle('active');
+		mobMenu.classList.toggle('active');
+		overlayEl.classList.toggle('active');
+		body.classList.toggle('noscroll');
+	}
+ 
+	function closeMobileMenu() {
+		overlayEl.classList.remove('active');
+		mobMenu.classList.remove('active');
+		menuToggle.classList.remove('active');
+		body.classList.remove('noscroll');
+	}
 
-// -- Mobile menu --
+	menuToggle.addEventListener('click', openMobileMenu);
 
-//Click to Hamburger icon
-menuToggle.addEventListener('click', function(){
-	this.classList.toggle('active');
-	mobMenu.classList.toggle('active');
-	overlayEl.classList.toggle('active');
-	body.classList.toggle('noscroll');
-});
+	mobMenu.addEventListener('click',closeMobileMenu);
 
+	window.addEventListener('resize', closeMobileMenu);
 
-mobMenu.addEventListener('click',closeMobileMenu);
-
-window.addEventListener('resize', closeMobileMenu);
-
-overlayEl.addEventListener('click', closeMobileMenu);
-
-// Refactoring mobile menu script
-function closeMobileMenu() {
-	overlayEl.classList.remove('active');
-	mobMenu.classList.remove('active');
-	menuToggle.classList.remove('active');
-	body.classList.remove('noscroll');
+	overlayEl.addEventListener('click', closeMobileMenu);
 }
+openCloseMobileMenu();
 
 // -- Form checking --
 let fieldClear = (()=>{
