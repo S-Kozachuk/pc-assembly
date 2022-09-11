@@ -263,11 +263,13 @@ a.scroll_arrow::before {
   }
 }
 @media (min-width: 1200px) {
-  .header-nav {
-    background-color: unset;
-  }
   .header-nav li {
     margin-right: 5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .header-nav {
+    background: unset;
   }
 }
 
