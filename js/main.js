@@ -196,27 +196,23 @@ let removeErrorsMessages = (()=> {
 	}
 });
 
+function scrollUpArrow() {
+	const scrollBtn = document.querySelector('.scroll_arrow');
+	window.onscroll = () => {
+		if(window.scrollY > 400) {
+			scrollBtn.classList.remove('scroll__btn-hide');
+		}
+		else if (window.scrollY < 400) {
+			scrollBtn.classList.add('scroll__btn-hide');
+		}
+	};
 
+	scrollBtn.onclick = () => {
+		window.scrollTo(0, 0);
+	};
+}
+scrollUpArrow()
 
-
-// -- Кнопка для прокрутки вверх
-// Получаю в константу кнопку (стрелку)
-const scrollBtn = document.querySelector('.scroll_arrow');
-window.onscroll = () => {
-	// Появление кнопки при вертикальной прокрутке вниз (более чем на 400 px)
-	if(window.scrollY > 400) {
-		scrollBtn.classList.remove('scroll__btn-hide');
-	}
-	// Исчезновение кнопки при вертикальной прокрутке вверх (менее 400 px)
-	else if (window.scrollY < 400) {
-		scrollBtn.classList.add('scroll__btn-hide');
-	}
-};
-
-// Прокрутка вверх (по координатам) по нажатию кнопки (стрелки)
-scrollBtn.onclick = () => {
-	window.scrollTo(0, 0);
-};
 
 // Form validate settings
 $('#contacts-form').validate ({
