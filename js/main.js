@@ -253,25 +253,17 @@ function formCheck() {
 			}
 		}
 	});
+
+	function checkingForLetters() {
+		$.validator.addMethod('lettersOnly', function(value, element) {
+			return this.optional(element) || /^[a-zа-я]+$/i.test(value);
+		}, "Вводите только буквы");
+	}
+	checkingForLetters();
 }
 formCheck()
 
 
-
-
-
-
-
-
-
-// Custom rule to cheking a letter
-
-$.validator.addMethod('lettersOnly', function(value, element) {
-	return this.optional(element) || /^[a-zа-я]+$/i.test(value);
-}, "Вводите только буквы");
-
-
-// AJAX query function on server
 function ajaxFormSubmit() {
     let string = $('#contacts-form').serialize(); // Сохраняем данные введенные в форму в строку.
     // AJAX query
