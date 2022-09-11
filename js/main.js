@@ -107,6 +107,67 @@ function timer() {
 }
 timer()
 
+function modalWindowOpenClose() {
+	function modalWindowOpen(){
+		modalBtn.forEach(item=> {
+			item.addEventListener('click', (e) => {
+				e.preventDefault();
+				addScrollIndent();
+				modalWindow.classList.add('open');
+				body.classList.add('noscroll');
+				fieldClear();
+			});
+		});
+	}
+	modalWindowOpen();
+
+	function closeOutlineModalWindow() {
+		modalWindow.addEventListener('click', (e) => {
+		const isModal = e.target.closest('.modal-window__content');
+			if(!isModal) {
+				modalWindow.classList.remove('open');
+				removeScrollIndent();
+				removeErrorsMessages();
+			}
+		});
+	}
+	closeOutlineModalWindow();
+	
+
+	function closeCrossModalWindow() {
+		modalClose.addEventListener('click', () => {
+			modalWindow.classList.remove('open');
+			removeScrollIndent();
+			removeErrorsMessages();
+		});
+	}
+	closeCrossModalWindow();
+
+	function closeEcsModalWindow() {
+		document.addEventListener ('keydown', function (e) {
+			if (e.code == 'Escape') {
+				modalWindow.classList.remove('open');
+				removeScrollIndent();
+				removeErrorsMessages();
+			}
+		});
+	}
+	closeEcsModalWindow();
+
+	function addScrollIndent() {
+		const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
+		body.style.paddingRight = lockPaddingValue;
+	}
+
+	function removeScrollIndent() {  
+		setTimeout(function() {
+			body.style.paddingRight = '0px';
+			body.classList.remove('noscroll');
+		}, timeout);
+	}
+}
+modalWindowOpenClose();
+
 // -- Form checking --
 let fieldClear = (()=>{
 	const mainForm = document.querySelectorAll('.form__input');
@@ -135,58 +196,8 @@ let removeErrorsMessages = (()=> {
 	}
 });
 
-// -- Modal window --
-// -- Появление модального окна
-modalBtn.forEach(item=> {
-	item.addEventListener('click', (e) => {
-		e.preventDefault();
-		addScrollIndent();
-		modalWindow.classList.add('open');
-		body.classList.add('noscroll');
-		fieldClear();
-	});
-});
 
-// -- Исчезновение (закрытие) модального окна по клику вне модального окна
-modalWindow.addEventListener('click', (e) => {
-	// Получение по клику (e - событие) в переменную isModal внешнего поля (затем. фон)
-	const isModal = e.target.closest('.modal-window__content');
-	if(!isModal) {
-		modalWindow.classList.remove('open');
-		removeScrollIndent();
-		removeErrorsMessages();
-	}
-});
 
-// -- Исчезновение (закрытие) модального окна по клику на крест
-modalClose.addEventListener('click', () => {
-	modalWindow.classList.remove('open');
-	removeScrollIndent();
-	removeErrorsMessages();
-});
-
-// Close popup if Esc click
-document.addEventListener ('keydown', function (e) {
-	if (e.code == 'Escape') {
-		modalWindow.classList.remove('open');
-		removeScrollIndent();
-		removeErrorsMessages();
-	}
-});
-
-// Компенсация сдвига по гор. вправо при появлении модального окна
-function addScrollIndent() {
-	const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
-	body.style.paddingRight = lockPaddingValue;
-}
-
-// Компенсация сдвига по гор. влево при закрытии модального окна
-function removeScrollIndent() {  
-	setTimeout(function() {
-		body.style.paddingRight = '0px';
-		body.classList.remove('noscroll');
-	}, timeout);
-}
 
 // -- Кнопка для прокрутки вверх
 // Получаю в константу кнопку (стрелку)
