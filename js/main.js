@@ -30,21 +30,10 @@ mobMenu.addEventListener('click', function(){
 });
 
 //Closing Mobile menu if screen resizing
-window.addEventListener('resize', function() {
-	mobMenu.classList.remove('active');
-	menuToggle.classList.remove('active');
-	overlayEl.classList.remove('active');
-	body.classList.remove('noscroll');
-});
+window.addEventListener('resize', closeMobileMenu);
 
-// Closing Mobile menu if click to overlay
-// overlayEl.addEventListener('click', function() {
-// 	this.classList.remove('active');
-// 	mobMenu.classList.remove('active');
-// 	menuToggle.classList.remove('active');
-// 	body.classList.remove('noscroll');
-// });
-	overlayEl.addEventListener('click', closeMobileMenu);
+
+overlayEl.addEventListener('click', closeMobileMenu);
 
 // Refactoring mobile menu script
 function closeMobileMenu() {
