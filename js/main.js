@@ -21,17 +21,10 @@ menuToggle.addEventListener('click', function(){
 	body.classList.toggle('noscroll');
 });
 
-//Click to Mobile memu
-mobMenu.addEventListener('click', function(){
-	this.classList.remove('active');
-	menuToggle.classList.remove('active');
-	overlayEl.classList.remove('active');
-	body.classList.remove('noscroll');
-});
 
-//Closing Mobile menu if screen resizing
+mobMenu.addEventListener('click',closeMobileMenu);
+
 window.addEventListener('resize', closeMobileMenu);
-
 
 overlayEl.addEventListener('click', closeMobileMenu);
 
