@@ -38,20 +38,21 @@ window.addEventListener('resize', function() {
 });
 
 // Closing Mobile menu if click to overlay
-overlayEl.addEventListener('click', function() {
-	this.classList.remove('active');
-	mobMenu.classList.remove('active');
-	menuToggle.classList.remove('active');
-	body.classList.remove('noscroll');
-});
-
-// Refactoring mobile menu script
-// function closeMobileMenu() {
-// 	overlayEl.classList.remove('active');
+// overlayEl.addEventListener('click', function() {
+// 	this.classList.remove('active');
 // 	mobMenu.classList.remove('active');
 // 	menuToggle.classList.remove('active');
 // 	body.classList.remove('noscroll');
-// }
+// });
+	overlayEl.addEventListener('click', closeMobileMenu);
+
+// Refactoring mobile menu script
+function closeMobileMenu() {
+	overlayEl.classList.remove('active');
+	mobMenu.classList.remove('active');
+	menuToggle.classList.remove('active');
+	body.classList.remove('noscroll');
+}
 
 // -- Form checking --
 let fieldClear = (()=>{
