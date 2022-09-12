@@ -606,7 +606,12 @@ body.lock {
 
 .our-work__text {
   padding-top: 6.9rem;
-  max-width: 63.5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 1200px) {
+  .our-work__text {
+    max-width: 63.5rem;
+  }
 }
 
 .our-work__header {
