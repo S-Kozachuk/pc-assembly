@@ -594,10 +594,12 @@ body.lock {
   }
 }
 
-.our-work__img {
-  margin-right: 13.9rem;
-  width: 54.6rem;
-  height: 54.9rem;
+@media (min-width: 1200px) {
+  .our-work__img {
+    margin-right: 13.9rem;
+    width: 54.6rem;
+    height: 54.9rem;
+  }
 }
 
 .our-work__text {
