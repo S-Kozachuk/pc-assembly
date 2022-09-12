@@ -1,5 +1,6 @@
 .our-work
-	padding: 20rem 0 21rem
+	@media (min-width: 1200px)
+		padding: 20rem 0 21rem
 
 .our-work__wrap
 	display: flex
@@ -30,5 +31,8 @@
 		
 
 .our-work__descr
-	font-size: var(--main-text)
-	line-height: 1.6
+	font-size: calc(var(--main-text) - 25%)
+
+	@media (min-width: 1200px)
+		font-size: var(--main-text)
+		line-height: 1.6
