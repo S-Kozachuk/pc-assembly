@@ -586,6 +586,12 @@ body.lock {
 
 .our-work__wrap {
   display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 1200px) {
+  .our-work__wrap {
+    flex-direction: unset;
+  }
 }
 
 .our-work__img {
