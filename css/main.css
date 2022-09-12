@@ -361,6 +361,11 @@ button.header__button {
     padding-bottom: 25rem;
   }
 }
+@media (min-width: 1440px) {
+  .header-content {
+    padding-top: 15.3rem;
+  }
+}
 
 .header__title {
   margin: 0 auto;
