@@ -364,6 +364,7 @@ button.header__button {
 @media (min-width: 1440px) {
   .header-content {
     padding-top: 15.3rem;
+    padding-bottom: 22.8rem;
   }
 }
 
