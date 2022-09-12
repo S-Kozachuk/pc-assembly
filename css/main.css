@@ -269,7 +269,7 @@ a.scroll_arrow::before {
 }
 @media (min-width: 1440px) {
   .header-nav {
-    margin-right: 5.2rem;
+    margin-right: 4rem;
     background: unset;
   }
 }
