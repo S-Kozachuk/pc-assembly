@@ -25,9 +25,13 @@
 	line-height: 1.6
 	opacity: .5
 
-.work-process__stages 
-	display: flex
+.work-process__stages
 	position: relative
+	display: flex
+	flex-direction: column
+
+	@media (min-width: 1200px)
+		flex-direction: unset
 
 .work-process__stages:after
 	position: absolute

@@ -738,8 +738,14 @@ body.lock {
 }
 
 .work-process__stages {
-  display: flex;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1200px) {
+  .work-process__stages {
+    flex-direction: unset;
+  }
 }
 
 .work-process__stages:after {
