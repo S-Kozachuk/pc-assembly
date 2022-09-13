@@ -684,7 +684,12 @@ body.lock {
 }
 @media (min-width: 1200px) {
   .our-work__descr {
-    font-size: var(--main-text);
+    font-size: calc(var(--main-text) + 10%);
+  }
+}
+@media (min-width: 1440px) {
+  .our-work__descr {
+    font-size: --main-text;
     line-height: 1.6;
   }
 }
