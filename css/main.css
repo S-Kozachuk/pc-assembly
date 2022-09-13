@@ -742,12 +742,18 @@ body.lock {
 }
 
 .work-process__descr {
-  margin-left: 0.8rem;
-  margin-bottom: 8.2rem;
-  max-width: 41.1rem;
-  font-size: var(--main-text);
+  margin-bottom: 2rem;
+  font-size: calc(var(--main-text) - 60%);
   line-height: 1.6;
   opacity: 0.5;
+}
+@media (min-width: 1200px) {
+  .work-process__descr {
+    margin-bottom: 8.2rem;
+    margin-left: 0.8rem;
+    max-width: 41.1rem;
+    font-size: var(--main-text);
+  }
 }
 
 .work-process__stages {
