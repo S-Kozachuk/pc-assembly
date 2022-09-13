@@ -581,7 +581,7 @@ body.lock {
 }
 
 .our-work {
-  padding-bottom: 5rem;
+  padding: 5rem 7rem;
 }
 @media (min-width: 1200px) {
   .our-work {
@@ -599,6 +599,10 @@ body.lock {
   }
 }
 
+.our-work__img {
+  width: 54.6rem;
+  height: 54.9rem;
+}
 @media (min-width: 1200px) {
   .our-work__img {
     margin-right: 13.9rem;
