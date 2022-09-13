@@ -809,6 +809,9 @@ body.lock {
     margin-bottom: 6.5rem;
     font-size: 3.6rem;
   }
+  .work-process__part-header::after {
+    display: none;
+  }
 }
 
 .work-process__part-descr {
