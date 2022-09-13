@@ -682,6 +682,7 @@ body.lock {
 
 .our-work__descr {
   font-size: calc(var(--main-text) - 60%);
+  line-height: 1.6;
 }
 @media (min-width: 425px) {
   .our-work__descr {
@@ -701,7 +702,6 @@ body.lock {
 @media (min-width: 1440px) {
   .our-work__descr {
     font-size: var(--main-text);
-    line-height: 1.6;
   }
 }
 
@@ -789,7 +789,7 @@ body.lock {
 }
 
 .work-process__part-header {
-  font-size: 2.15rem;
+  font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.4;
 }
