@@ -801,10 +801,15 @@ body.lock {
 }
 
 .work-process__part-descr {
-  margin-right: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   opacity: 0.5;
+}
+@media (min-width: 1200px) {
+  .work-process__part-descr {
+    margin-right: 2rem;
+    font-size: 1.4rem;
+  }
 }
 
 .our-team {
