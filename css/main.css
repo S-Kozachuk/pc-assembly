@@ -683,6 +683,11 @@ body.lock {
 .our-work__descr {
   font-size: calc(var(--main-text) - 60%);
 }
+@media (min-width: 425px) {
+  .our-work__descr {
+    font-size: calc(var(--main-text) - 50%);
+  }
+}
 @media (min-width: 768px) {
   .our-work__descr {
     font-size: calc(var(--main-text) - 45%);
