@@ -590,6 +590,11 @@ body.lock {
 }
 @media (min-width: 1200px) {
   .our-work {
+    padding: 8rem 0 2rem;
+  }
+}
+@media (min-width: 1440px) {
+  .our-work {
     padding: 20rem 0 21rem;
   }
 }
@@ -601,6 +606,16 @@ body.lock {
 @media (min-width: 768px) {
   .our-work__wrap {
     flex-direction: unset;
+  }
+}
+@media (min-width: 1200px) {
+  .our-work__wrap {
+    max-width: 105rem;
+  }
+}
+@media (min-width: 1440px) {
+  .our-work__wrap {
+    max-width: unset;
   }
 }
 
