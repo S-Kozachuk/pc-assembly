@@ -679,7 +679,7 @@ body.lock {
 }
 @media (min-width: 768px) {
   .our-work__descr {
-    font-size: calc(var(--main-text) - 30%);
+    font-size: calc(var(--main-text) - 45%);
   }
 }
 @media (min-width: 1200px) {
