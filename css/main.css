@@ -100,7 +100,7 @@ ul {
 }
 @media (min-width: 768px) {
   .container {
-    width: 74rem;
+    width: 70rem;
   }
 }
 @media (min-width: 1200px) {
