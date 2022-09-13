@@ -608,16 +608,6 @@ body.lock {
     flex-direction: unset;
   }
 }
-@media (min-width: 1200px) {
-  .our-work__wrap {
-    max-width: 105rem;
-  }
-}
-@media (min-width: 1440px) {
-  .our-work__wrap {
-    max-width: unset;
-  }
-}
 
 @media (min-width: 768px) {
   .our-work__img {
