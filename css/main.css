@@ -715,9 +715,15 @@ body.lock {
 }
 
 .work-process__img {
-  margin-left: 1.3rem;
-  width: 7.7rem;
-  height: 7.7rem;
+  width: 3.7rem;
+  height: 3.7rem;
+}
+@media (min-width: 1200px) {
+  .work-process__img {
+    margin-left: 1.3rem;
+    width: 7.7rem;
+    height: 7.7rem;
+  }
 }
 
 .work-process__header {
