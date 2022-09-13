@@ -789,9 +789,20 @@ body.lock {
 }
 
 .work-process__part-header {
+  position: relative;
   font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.4;
+}
+.work-process__part-header:after {
+  position: absolute;
+  left: 48%;
+  top: 95%;
+  transform: translate(-50%, 0);
+  content: "";
+  width: 27rem;
+  height: 0.2rem;
+  background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);
 }
 @media (min-width: 1200px) {
   .work-process__part-header {
