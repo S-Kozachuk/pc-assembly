@@ -28,9 +28,11 @@
 		font-size: 4.8rem
 
 .our-team__performance
-	display: grid
-	grid-template-columns: repeat(3, 1fr)
-	justify-items: center
+
+	@media (min-width: 768px)
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		justify-items: center
 
 .our-team_person 
 	margin-left: 3rem
