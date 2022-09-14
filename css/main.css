@@ -959,15 +959,15 @@ body.lock {
   justify-items: center;
 }
 .our-team_person:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 @media (min-width: 1200px) {
   .our-team_person {
     margin-left: 3rem;
   }
-}
-.our-team_person:not(:last-child) {
-  margin-bottom: unset;
+  .our-team_person:not(:last-child) {
+    margin-bottom: unset;
+  }
 }
 
 @media (min-width: 1200px) {
