@@ -794,8 +794,10 @@ body.lock {
   }
 }
 
-.work-process__part {
-  max-width: 32.4rem;
+@media (min-width: 1200px) {
+  .work-process__part {
+    max-width: 32.4rem;
+  }
 }
 
 .work-process__part-header {
