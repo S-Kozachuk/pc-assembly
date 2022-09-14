@@ -708,6 +708,11 @@ body.lock {
 .work-process {
   padding-bottom: 2rem;
 }
+@media (min-width: 768px) {
+  .work-process {
+    padding-bottom: 5rem;
+  }
+}
 @media (min-width: 1200px) {
   .work-process {
     padding-bottom: 22.7rem;
