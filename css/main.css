@@ -864,10 +864,15 @@ body.lock {
 @media (min-width: 1200px) {
   .work-process__part-header {
     margin-bottom: 6.5rem;
-    font-size: 3.6rem;
+    font-size: 3rem;
   }
   .work-process__part-header::after {
     display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .work-process__part-header {
+    font-size: 3.6rem;
   }
 }
 
