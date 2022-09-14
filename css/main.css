@@ -776,6 +776,13 @@ body.lock {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .work-process__stages {
+    display: grid;
+    grid-template-columns: repeat2(1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (min-width: 1200px) {
   .work-process__stages {
     flex-direction: unset;
