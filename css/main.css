@@ -955,17 +955,25 @@ body.lock {
 }
 
 .our-team_person {
-  margin-left: 3rem;
   display: grid;
   justify-items: center;
 }
-
-.our-team_person:nth-of-type(2) {
-  margin-left: 4.5rem;
+@media (min-width: 1200px) {
+  .our-team_person {
+    margin-left: 3rem;
+  }
 }
 
-.our-team_person:nth-of-type(3) {
-  margin-left: 6rem;
+@media (min-width: 1200px) {
+  .our-team_person:nth-of-type(2) {
+    margin-left: 4.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-team_person:nth-of-type(3) {
+    margin-left: 6rem;
+  }
 }
 
 .our-team__foto {
