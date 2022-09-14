@@ -939,6 +939,13 @@ body.lock {
 }
 @media (min-width: 1200px) {
   .our-team__img {
+    margin-left: 1rem;
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .our-team__img {
     margin-left: 3rem;
     width: 7.7rem;
     height: 7.7rem;
