@@ -735,6 +735,13 @@ body.lock {
 }
 @media (min-width: 1200px) {
   .work-process__img {
+    margin-left: 1rem;
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .work-process__img {
     margin-left: 1.3rem;
     width: 7.7rem;
     height: 7.7rem;
