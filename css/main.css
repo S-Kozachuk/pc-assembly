@@ -1003,7 +1003,7 @@ body.lock {
 
 .our-team__role {
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: calc(var(--main-text) - 30%);
   line-height: 1.6;
   opacity: 0.8;
