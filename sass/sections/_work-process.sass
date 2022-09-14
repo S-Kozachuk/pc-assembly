@@ -56,11 +56,14 @@
 	@media (min-width: 768px)
 		display: grid
 		grid-template-columns: repeat(2, 1fr)
+		justify-items: center
+		column-gap: 3rem
 		flex-direction: unset
 
 	@media (min-width: 1200px)
 		display: flex
 		flex-direction: unset
+		justify-items: unset
 
 		&:after
 			position: absolute

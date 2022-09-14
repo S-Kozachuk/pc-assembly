@@ -780,6 +780,8 @@ body.lock {
   .work-process__stages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    column-gap: 3rem;
     flex-direction: unset;
   }
 }
@@ -787,6 +789,7 @@ body.lock {
   .work-process__stages {
     display: flex;
     flex-direction: unset;
+    justify-items: unset;
   }
   .work-process__stages:after {
     position: absolute;
