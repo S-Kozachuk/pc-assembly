@@ -966,6 +966,9 @@ body.lock {
     margin-left: 3rem;
   }
 }
+.our-team_person:not(:last-child) {
+  margin-bottom: unset;
+}
 
 @media (min-width: 1200px) {
   .our-team_person:nth-of-type(2) {
