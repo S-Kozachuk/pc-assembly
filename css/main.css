@@ -839,6 +839,13 @@ body.lock {
     width: 36rem;
   }
 }
+@media (min-width: 768px) {
+  .work-process__part-header::after {
+    left: 48%;
+    width: 29rem;
+    top: 2.8rem;
+  }
+}
 @media (min-width: 1200px) {
   .work-process__part-header {
     margin-bottom: 6.5rem;
