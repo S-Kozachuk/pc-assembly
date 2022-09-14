@@ -958,6 +958,9 @@ body.lock {
   display: grid;
   justify-items: center;
 }
+.our-team_person:not(:last-child) {
+  margin-bottom: 5rem;
+}
 @media (min-width: 1200px) {
   .our-team_person {
     margin-left: 3rem;
