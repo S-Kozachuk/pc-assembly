@@ -803,11 +803,6 @@ body.lock {
   }
 }
 
-@media (min-width: 768px) {
-  .work-process__part {
-    max-width: 30rem;
-  }
-}
 @media (min-width: 1200px) {
   .work-process__part {
     max-width: 32.4rem;
