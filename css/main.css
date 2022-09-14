@@ -780,8 +780,6 @@ body.lock {
   .work-process__stages {
     flex-direction: unset;
   }
-}
-@media (min-width: 1200px) {
   .work-process__stages:after {
     position: absolute;
     top: 6.5rem;
@@ -818,8 +816,14 @@ body.lock {
 }
 @media (min-width: 375px) {
   .work-process__part-header:after {
-    left: 51%;
+    left: 49%;
     width: 33rem;
+  }
+}
+@media (min-width: 425px) {
+  .work-process__part-header:after {
+    left: 50%;
+    width: 37rem;
   }
 }
 @media (min-width: 1200px) {
