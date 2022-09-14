@@ -757,6 +757,11 @@ body.lock {
   line-height: 1.6;
   opacity: 0.5;
 }
+@media (min-width: 425px) {
+  .work-process__descr {
+    font-size: calc(var(--main-text) - 55%);
+  }
+}
 @media (min-width: 1200px) {
   .work-process__descr {
     margin-bottom: 8.2rem;
