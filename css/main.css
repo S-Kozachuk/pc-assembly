@@ -810,13 +810,19 @@ body.lock {
   }
   .work-process__stages:after {
     position: absolute;
-    top: 6.5rem;
+    top: 4.5rem;
     left: 50%;
     transform: translate(-50%, 0);
     content: "";
-    width: 130rem;
+    width: 115rem;
     height: 0.2rem;
     background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+  }
+}
+@media (min-width: 1440px) {
+  .work-process__stages:after {
+    top: 6.5rem;
+    width: 130rem;
   }
 }
 
