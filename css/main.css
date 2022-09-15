@@ -1122,8 +1122,8 @@ button.cta__button {
   display: grid;
   justify-content: center;
   align-content: center;
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   background: linear-gradient(95deg, #C89AFC 9.51%, #7C6AFA 90.23%);
   border-radius: 50%;
 }
@@ -1133,6 +1133,12 @@ button.cta__button {
 .cta-social__item:hover {
   opacity: 0.5;
   transition: 0.5s;
+}
+@media (min-width: 1200px) {
+  .cta-social__item {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .footer {
