@@ -1088,6 +1088,7 @@ body.lock {
   .cta__title {
     margin-left: 4rem;
     margin-bottom: 1.3rem;
+    max-width: unset;
     font-size: 4.8rem;
     text-align: unset;
   }
@@ -1110,7 +1111,6 @@ body.lock {
   .cta__descr {
     margin-top: unset;
     margin-left: 4rem;
-    margin-bottom: unset;
     font-size: var(--main-text);
     text-align: unset;
   }
