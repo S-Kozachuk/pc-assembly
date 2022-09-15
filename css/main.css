@@ -1104,6 +1104,7 @@ body.lock {
 }
 @media (min-width: 1440px) {
   .cta__title {
+    margin-bottom: 3rem;
     font-size: 4.8rem;
   }
 }
