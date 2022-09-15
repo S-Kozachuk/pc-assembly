@@ -1080,6 +1080,7 @@ body.lock {
 }
 @media (min-width: 375px) {
   .cta__title {
+    margin-bottom: 1.5rem;
     max-width: 32rem;
   }
 }
