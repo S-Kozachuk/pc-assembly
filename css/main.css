@@ -1101,10 +1101,16 @@ body.lock {
   opacity: 0.5;
   text-align: center;
 }
+@media (min-width: 375px) {
+  .cta__descr {
+    margin-bottom: 2.5rem;
+  }
+}
 @media (min-width: 1200px) {
   .cta__descr {
     margin-top: unset;
     margin-left: 4rem;
+    margin-bottom: unset;
     font-size: var(--main-text);
     text-align: unset;
   }
