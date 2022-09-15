@@ -1284,17 +1284,21 @@ button.cta__button {
 
 .modal-window__content {
   position: relative;
-  padding: 9rem;
   display: grid;
   justify-items: center;
-  max-width: 66rem;
-  min-width: 50rem;
   min-height: 20rem;
   text-align: center;
   transform: translate(0, -150%) rotateX(45deg);
   transition: 0.8s;
   background: #2C2C2C;
   opacity: 0;
+}
+@media (min-width: 768px) {
+  .modal-window__content {
+    padding: 9rem;
+    max-width: 66rem;
+    min-width: 50rem;
+  }
 }
 
 .modal-window.open .modal-window__content {

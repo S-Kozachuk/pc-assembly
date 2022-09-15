@@ -37,17 +37,19 @@
 
 .modal-window__content
 	position: relative
-	padding: 9rem
 	display: grid
 	justify-items: center
-	max-width: 66rem
-	min-width: 50rem
 	min-height: 20rem
 	text-align: center
 	transform: translate(0, -150%) rotateX(45deg)
 	transition: .8s
 	background: #2C2C2C
 	opacity: 0
+
+	@media (min-width: 768px)
+		padding: 9rem
+		max-width: 66rem
+		min-width: 50rem
 
 .modal-window.open .modal-window__content
 	transform: perspective(500px) translate(0, 0) rotateX(0deg)
