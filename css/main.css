@@ -1130,6 +1130,11 @@ body.lock {
     text-align: unset;
   }
 }
+@media (min-width: 1440px) {
+  .cta__descr {
+    margin-bottom: 4.4rem;
+  }
+}
 
 button.cta__button {
   margin-bottom: 4.1rem;
