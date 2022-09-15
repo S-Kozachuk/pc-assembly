@@ -1197,13 +1197,17 @@ button.cta__button {
 }
 
 .footer-copyright {
-  margin-left: 4rem;
   display: grid;
   grid: repeat(2, auto)/auto;
   justify-items: center;
   font-size: 1.7rem;
   letter-spacing: 1.5px;
   opacity: 0.2;
+}
+@media (min-width: 1200px) {
+  .footer-copyright {
+    margin-left: 4rem;
+  }
 }
 
 .footer-copyright-name {
