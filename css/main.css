@@ -918,6 +918,11 @@ body.lock {
 @media (min-width: 1200px) {
   .our-team {
     padding-top: 2.1rem;
+    padding-bottom: 15rem;
+  }
+}
+@media (min-width: 1440px) {
+  .our-team {
     padding-bottom: 20rem;
   }
 }
