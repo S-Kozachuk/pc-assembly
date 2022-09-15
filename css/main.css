@@ -917,7 +917,7 @@ body.lock {
 }
 @media (min-width: 1200px) {
   .our-team {
-    padding-top: unset;
+    padding-top: 2.1rem;
     padding-bottom: 20rem;
   }
 }
