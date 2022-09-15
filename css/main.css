@@ -1129,9 +1129,17 @@ button.cta__button {
   display: grid;
   grid: auto/repeat(4, auto);
 }
+@media (min-width: 375px) {
+  .cta-social {
+    margin: 0 auto;
+    width: 28rem;
+  }
+}
 @media (min-width: 1200px) {
   .cta-social {
+    margin: unset;
     margin-left: 4.8rem;
+    width: unset;
   }
 }
 

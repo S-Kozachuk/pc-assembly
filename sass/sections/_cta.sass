@@ -55,8 +55,14 @@ button.cta__button
 	display: grid
 	grid: auto/repeat(4,auto)
 
+	@media (min-width: 375px)
+		margin: 0 auto
+		width: 28rem
+
 	@media (min-width: 1200px)
+		margin: unset
 		margin-left: 4.8rem
+		width: unset
 
 .cta-social__item
 	display: grid
