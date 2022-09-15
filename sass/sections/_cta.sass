@@ -22,11 +22,18 @@
 		text-align: unset
 
 .cta__descr
-	margin-left: 4rem
+	margin-top: .5em
 	margin-bottom: 4.5rem
-	font-size: var(--main-text)
+	font-size: calc(var(--main-text) - 30%)
 	line-height: 1.625
 	opacity: .5
+	text-align: center
+
+	@media (min-width: 1200px)
+		margin-top: unset
+		margin-left: 4rem
+		font-size: var(--main-text)
+		text-align: unset
 
 button.cta__button
 	margin-left: 4.5rem
