@@ -1084,11 +1084,15 @@ body.lock {
     max-width: 32rem;
   }
 }
+@media (min-width: 768px) {
+  .cta__title {
+    max-width: unset;
+  }
+}
 @media (min-width: 1200px) {
   .cta__title {
     margin-left: 4rem;
     margin-bottom: 1.3rem;
-    max-width: unset;
     font-size: 4.8rem;
     text-align: unset;
   }
