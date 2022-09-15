@@ -1062,7 +1062,12 @@ body.lock {
 
 .cta__wrapp {
   display: grid;
-  justify-items: center;
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  .cta__wrapp {
+    justify-items: center;
+  }
 }
 
 .cta__title {
