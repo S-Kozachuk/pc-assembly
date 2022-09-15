@@ -1013,9 +1013,15 @@ body.lock {
 .our-team__foto {
   margin-bottom: 1.5rem;
 }
+@media (min-width: 768px) {
+  .our-team__foto {
+    width: 16rem;
+  }
+}
 @media (min-width: 1200px) {
   .our-team__foto {
     margin-bottom: 3.8rem;
+    width: unset;
   }
 }
 
