@@ -139,10 +139,16 @@ ul {
   right: 2rem;
   border-radius: 50%;
   background: var(--light-gradient);
-  height: 5.8rem;
-  width: 5.8rem;
+  height: 4rem;
+  width: 4rem;
   opacity: 1;
   transition: 0.8s;
+}
+@media (min-width: 1200px) {
+  .scroll_arrow {
+    height: 5.8rem;
+    width: 5.8rem;
+  }
 }
 
 a.scroll_arrow::before {
