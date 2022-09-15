@@ -1151,6 +1151,12 @@ button.cta__button {
   opacity: 0.5;
   transition: 0.5s;
 }
+@media (min-width: 375px) {
+  .cta-social__item {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
 @media (min-width: 1200px) {
   .cta-social__item {
     width: 5rem;
