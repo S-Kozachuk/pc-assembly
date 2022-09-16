@@ -1334,6 +1334,7 @@ button.cta__button {
 }
 
 .form-window__title {
+  margin-top: 4rem;
   margin-bottom: 1.3rem;
   font-size: 2.4rem;
   font-weight: 700;
@@ -1341,6 +1342,7 @@ button.cta__button {
 }
 @media (min-width: 768px) {
   .form-window__title {
+    margin-top: unset;
     font-size: 4.8rem;
   }
 }
