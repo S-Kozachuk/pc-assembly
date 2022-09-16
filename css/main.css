@@ -1403,9 +1403,24 @@ label.error {
   position: absolute;
   top: 0;
   right: 50%;
-  transform: translate(58%, 1.5rem);
-  font-size: 1.4rem;
+  transform: translate(99%, 1.4rem);
+  font-size: 1.3rem;
   color: red;
+}
+@media (min-width: 768px) {
+  label.error {
+    transform: translate(58%, 1.5rem);
+    font-size: 1.4rem;
+  }
+}
+
+#phone-error {
+  transform: translate(97%, 0.7rem);
+}
+@media (min-width: 768px) {
+  #phone-error {
+    transform: unset;
+  }
 }
 
 .contact-form__success {
