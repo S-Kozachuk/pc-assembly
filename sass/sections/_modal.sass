@@ -61,16 +61,22 @@
 
 .modal__close
 	position: absolute
-	top: 2rem
-	right: 2rem
-	width: 4rem
-	height: 4rem
+	top: 1rem
+	right: 1rem
+	width: 3rem
+	height: 3rem
 	cursor: pointer
 
-	img
-		&:hover
-			opacity: .5
-			transition: .5s
+	@media (min-width: 768px)
+		top: 2rem
+		right: 2rem
+		width: 4rem
+		height: 4rem
+
+		img
+			&:hover
+				opacity: .5
+				transition: .5s
 
 .form-window__title
 	margin-bottom: 1.3rem

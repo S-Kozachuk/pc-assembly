@@ -1314,15 +1314,23 @@ button.cta__button {
 
 .modal__close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: 4rem;
-  height: 4rem;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
-.modal__close img:hover {
-  opacity: 0.5;
-  transition: 0.5s;
+@media (min-width: 768px) {
+  .modal__close {
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .modal__close img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
 }
 
 .form-window__title {
