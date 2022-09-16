@@ -135,8 +135,8 @@ ul {
 
 .scroll_arrow {
   position: fixed;
-  bottom: 3rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
   border-radius: 50%;
   background: var(--light-gradient);
   height: 4rem;
@@ -146,6 +146,8 @@ ul {
 }
 @media (min-width: 768px) {
   .scroll_arrow {
+    bottom: 3rem;
+    right: 2rem;
     height: 5.8rem;
     width: 5.8rem;
   }
