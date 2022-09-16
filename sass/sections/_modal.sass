@@ -29,19 +29,20 @@
 	align-content: center
 
 .modal-window__body
-	padding: 30px 10px
+	padding: 0 20px
 	display: flex
 	align-items: center
 	justify-content: center
 	min-height: 100%
 
+	@media (min-width: 768px)
+		padding: 30px 10px
+
 .modal-window__content
+	padding: 1rem .5rem
 	position: relative
-	padding: 9rem
 	display: grid
 	justify-items: center
-	max-width: 66rem
-	min-width: 50rem
 	min-height: 20rem
 	text-align: center
 	transform: translate(0, -150%) rotateX(45deg)
@@ -49,28 +50,44 @@
 	background: #2C2C2C
 	opacity: 0
 
+	@media (min-width: 768px)
+		padding: 9rem
+		max-width: 66rem
+		min-width: 50rem
+
 .modal-window.open .modal-window__content
 	transform: perspective(500px) translate(0, 0) rotateX(0deg)
 	opacity: 1
 
 .modal__close
 	position: absolute
-	top: 2rem
-	right: 2rem
-	width: 4rem
-	height: 4rem
+	top: 1rem
+	right: 1rem
+	width: 3rem
+	height: 3rem
 	cursor: pointer
 
-	img
-		&:hover
-			opacity: .5
-			transition: .5s
+	@media (min-width: 768px)
+		top: 2rem
+		right: 2rem
+		width: 4rem
+		height: 4rem
+
+		img
+			&:hover
+				opacity: .5
+				transition: .5s
 
 .form-window__title
+	margin-top: 4rem
 	margin-bottom: 1.3rem
-	font-size: 4.8rem
+	font-size: 2.4rem
 	font-weight: 700
 	line-height: 1.4
+
+	@media (min-width: 768px)
+		margin-top: unset
+		font-size: 4.8rem
 
 .form-window__subtitle
 	margin-bottom: 2.8rem
@@ -81,17 +98,23 @@
 
 .form-window__elements
 	margin: 0 auto
-	margin-bottom: 3rem
-	width: 45.4rem
+	margin-bottom: 1.5rem
+
+	@media (min-width: 768px)
+		width: 45.4rem
+		margin-bottom: 2rem
 
 .form__item
 	position: relative
 	margin: 0 auto
 	width: 95%
-	height: 4.5rem	
+	height: 4rem	
 
-	&:not(:last-child) 
+	&:not(:last-child)
 		margin-bottom: 1.6rem
+
+	@media (min-width: 768px)
+		height: 4.5rem	
 
 .form__input
 	padding-left: 2rem
@@ -99,25 +122,41 @@
 	height: 100%
 	background-color: rgb(158, 157, 157)
 	border-radius: 5rem
-	font-size: 1.4rem
+	font-size: 1.3rem
 	font-weight: 400
 	line-height: 1.6
 	color: var(--white)
 	
 	&::placeholder 
-		font-size: 1.4rem
+		font-size: 1.3rem
 		font-weight: 400
 		line-height: 1.6
 		color: var(--white)
 		opacity: .5
+	
+	@media (min-width: 768px)
+		font-size: 1.4rem
+
+		&::placeholder 
+		font-size: 1.4rem
 
 label.error
 	position: absolute
 	top: 0
 	right: 50%
-	transform: translate(58%, 1.5rem)
-	font-size: 1.4rem
+	transform: translate(117%, 1.4rem)
+	font-size: 1.3rem
 	color: red
+
+	@media (min-width: 768px)
+		transform: translate(58%, 1.5rem)
+		font-size: 1.4rem
+
+#phone-error
+	transform: translate(97%, .7rem)
+
+	@media (min-width: 768px)
+		transform: translate(58%, 1.5rem)
 
 .contact-form__success
 	margin: 0 auto
@@ -127,3 +166,11 @@ label.error
 
 .noscroll
 	overflow: hidden
+
+#btn-submit
+	margin-bottom: 4rem
+	padding: 0.8rem 5rem
+
+	@media (min-width: 768px)
+		margin-bottom: 0
+		padding: 1rem 3rem

@@ -1275,26 +1275,36 @@ button.cta__button {
 }
 
 .modal-window__body {
-  padding: 30px 10px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100%;
 }
+@media (min-width: 768px) {
+  .modal-window__body {
+    padding: 30px 10px;
+  }
+}
 
 .modal-window__content {
+  padding: 1rem 0.5rem;
   position: relative;
-  padding: 9rem;
   display: grid;
   justify-items: center;
-  max-width: 66rem;
-  min-width: 50rem;
   min-height: 20rem;
   text-align: center;
   transform: translate(0, -150%) rotateX(45deg);
   transition: 0.8s;
   background: #2C2C2C;
   opacity: 0;
+}
+@media (min-width: 768px) {
+  .modal-window__content {
+    padding: 9rem;
+    max-width: 66rem;
+    min-width: 50rem;
+  }
 }
 
 .modal-window.open .modal-window__content {
@@ -1304,22 +1314,37 @@ button.cta__button {
 
 .modal__close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: 4rem;
-  height: 4rem;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
-.modal__close img:hover {
-  opacity: 0.5;
-  transition: 0.5s;
+@media (min-width: 768px) {
+  .modal__close {
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .modal__close img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
 }
 
 .form-window__title {
+  margin-top: 4rem;
   margin-bottom: 1.3rem;
-  font-size: 4.8rem;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .form-window__title {
+    margin-top: unset;
+    font-size: 4.8rem;
+  }
 }
 
 .form-window__subtitle {
@@ -1332,18 +1357,28 @@ button.cta__button {
 
 .form-window__elements {
   margin: 0 auto;
-  margin-bottom: 3rem;
-  width: 45.4rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .form-window__elements {
+    width: 45.4rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .form__item {
   position: relative;
   margin: 0 auto;
   width: 95%;
-  height: 4.5rem;
+  height: 4rem;
 }
 .form__item:not(:last-child) {
   margin-bottom: 1.6rem;
+}
+@media (min-width: 768px) {
+  .form__item {
+    height: 4.5rem;
+  }
 }
 
 .form__input {
@@ -1352,26 +1387,47 @@ button.cta__button {
   height: 100%;
   background-color: rgb(158, 157, 157);
   border-radius: 5rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
   color: var(--white);
 }
 .form__input::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.6;
   color: var(--white);
   opacity: 0.5;
+}
+@media (min-width: 768px) {
+  .form__input {
+    font-size: 1.4rem;
+    font-size: 1.4rem;
+  }
 }
 
 label.error {
   position: absolute;
   top: 0;
   right: 50%;
-  transform: translate(58%, 1.5rem);
-  font-size: 1.4rem;
+  transform: translate(117%, 1.4rem);
+  font-size: 1.3rem;
   color: red;
+}
+@media (min-width: 768px) {
+  label.error {
+    transform: translate(58%, 1.5rem);
+    font-size: 1.4rem;
+  }
+}
+
+#phone-error {
+  transform: translate(97%, 0.7rem);
+}
+@media (min-width: 768px) {
+  #phone-error {
+    transform: translate(58%, 1.5rem);
+  }
 }
 
 .contact-form__success {
@@ -1383,6 +1439,17 @@ label.error {
 
 .noscroll {
   overflow: hidden;
+}
+
+#btn-submit {
+  margin-bottom: 4rem;
+  padding: 0.8rem 5rem;
+}
+@media (min-width: 768px) {
+  #btn-submit {
+    margin-bottom: 0;
+    padding: 1rem 3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
