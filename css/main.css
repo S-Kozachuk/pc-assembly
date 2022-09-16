@@ -1288,7 +1288,7 @@ button.cta__button {
 }
 
 .modal-window__content {
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   position: relative;
   display: grid;
   justify-items: center;
