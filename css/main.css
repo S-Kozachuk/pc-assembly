@@ -1357,11 +1357,12 @@ button.cta__button {
 
 .form-window__elements {
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
   .form-window__elements {
     width: 45.4rem;
+    margin-bottom: 2rem;
   }
 }
 
