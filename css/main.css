@@ -1442,10 +1442,12 @@ label.error {
 }
 
 #btn-submit {
+  margin-bottom: 4rem;
   padding: 0.8rem 5rem;
 }
 @media (min-width: 768px) {
   #btn-submit {
+    margin-bottom: 0;
     padding: 1rem 3rem;
   }
 }
