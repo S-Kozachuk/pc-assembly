@@ -1426,6 +1426,11 @@ label.error {
 #phone-error {
   transform: translate(97%, 0.7rem);
 }
+@media (min-width: 375px) {
+  #phone-error {
+    transform: translate(97%, 1.5rem);
+  }
+}
 @media (min-width: 768px) {
   #phone-error {
     transform: translate(58%, 1.5rem);
