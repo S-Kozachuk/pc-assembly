@@ -1,6 +1,6 @@
 ##  PC Assemble
 
-Landing page of PC assembly company. The main layout (1920p) is made according to the lesson of the school "Go Academy". Figma layout. 
+Landing page of PC assembly company. The main layout (1920p) is made according to the lesson of the school "Go Academy". From Figma layout. 
 
 **Independent revision:**
 - self-adaptation for mobile devices (from 320p)
@@ -9,11 +9,11 @@ Landing page of PC assembly company. The main layout (1920p) is made according t
 - connected jQuery Validate plugin
 - customizing jQuery Validate plugiin
 
-**Technologies::**  HTML, CSS, SASS, JS, PHP
+**Technologies:**  HTML, CSS, SASS, JS, PHP
 
 **Features:**
 - Mobile First
-- Pixel Perfect
+- Pixel Perfect (1920p)
 - SVG graphics
 - Feedback form (testing on a full-fledged hosting with PHP support)
 
