@@ -4,10 +4,10 @@ Landing page of PC assembly company. The main layout (1920p) is made according t
 
 **Independent revision:**
 - self-adaptation for mobile devices (from 320p)
-- pop-up window with feedback form
+- pop-up window with feedback form (Ajax, PHP)
 - clearing fields in the feedback form on JS
-- connected jQuery Validate plugin
-- customizing jQuery Validate plugiin
+- validate by JQuery Validate plugin
+- customizing JQuery Validate plugin
 
 **Technologies:**  HTML, CSS, SASS, JS, PHP
 
