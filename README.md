@@ -19,9 +19,9 @@ Landing page of PC assembly company. The main layout (1920p) is made according t
 
 [Demo online](https://s-kozachuk.github.io/pc-assembly)
 
-<h1 align="center">
+<h4>
 	<a href="https://s-kozachuk.github.io/pc-assembly" target="_blank">Demo online</a>
-</h1>
+</h4>
 
 **Test locally**
 
