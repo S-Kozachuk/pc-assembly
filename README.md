@@ -2,8 +2,6 @@
 
 Landing page of PC assembly company. The main layout (1920p) is made according to the lesson of the school "Go Academy". Figma layout. 
 
-Link to lesson: https://youtu.be/WOVG2kP0Uik 
-
 **Independent revision:**
 - self-adaptation for mobile devices (from 320p)
 - pop-up window with feedback form
