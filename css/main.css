@@ -206,15 +206,11 @@ a.scroll_arrow:before {
 .header-menu {
   margin: 0 auto;
   padding: 1.5rem;
-  position: relative;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 32rem;
-  z-index: 3;
 }
 @media (min-width: 375px) {
   .header-menu {
